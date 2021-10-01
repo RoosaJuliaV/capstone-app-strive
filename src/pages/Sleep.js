@@ -11,12 +11,10 @@ import React from 'react';
 
 const Sleep = () => {
     return (
-        <div style={{ 
-            backgroundImage: `url("https://www.creativefabrica.com/wp-content/uploads/2020/06/04/Dark-Purple-Gradient-Background-Graphics-4278236-1.jpg")` 
-          }}>
+        <div>
         <Row>
         <Col xs={12} sm={12} lg={12}>
-        <h1 className="sleepheading mb-4 mt-5"><strong>Sleep</strong></h1>
+        <h1 className="sleepheading mb-4 mt-5 ml-5"><strong>Sleep</strong></h1>
            <SleepRow/>
         </Col>
        </Row>

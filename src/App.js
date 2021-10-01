@@ -14,8 +14,8 @@ import 'mdbreact/dist/css/mdb.css';
 
 function App() {
   return (
+    <div className="appdiv">
     <Router>
-      <div className="appdiv">
         <div className="sidebardiv">
         <SideBar/>
         </div>
@@ -29,9 +29,9 @@ function App() {
     </Route>
     </Switch>
     </div>
-    </div>
     {/* <Footer/> */}
         </Router>
+        </div>
   );
 }
 

@@ -10,7 +10,7 @@ const SideBar = () => {
 
     return (
         <>
-            <Nav className="pl-1 col-lg-6 col-6 d-block sidebar"
+            <Nav className="pl-1 d-block sidebar"
             activeKey="/home"
             >
                <img

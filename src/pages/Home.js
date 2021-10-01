@@ -11,15 +11,9 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div style={{ 
-            backgroundImage: `url("https://wallpaperaccess.com/full/340434.png")` 
-          }}>
+        <div>
         <Row>
-        <Col xs={12} sm={12} lg={4}>
-            <SideBar/>
-        </Col>
-        <Col xs={12} sm={12} lg={8}>
-        <h1 className="favoritestext">Favorites</h1>
+        <Col xs={12} sm={12} lg={12}>
            <Favorites/>
         </Col>
        </Row>
