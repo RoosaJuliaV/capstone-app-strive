@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+
+#footer {
+ /* background-color: rgb(57, 58, 63); */
+ 
+  background-color: white;
+  margin-top: 5rem;
+  color: black;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#footericon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#copyright {
+  background-color: rgb(227, 230, 233);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#navbar {
+  background-image: linear-gradient(#170725 2%,#290e2e 9%, #6e3f98);
+}
+
+#navlogo {
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: #503047;
+}
+
+.navleft {
+  margin-left: auto;
+}
+
+#navlogin {
+  margin-top: 1.25rem;
+}
+
+
+
+.jumbotron-cover-image {
+  position: relative;
+  background: #000 url("https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_1028850391_366262.jpg") center center;
+  width: 100%;
+  height: 45rem;
+  background-size: cover;
+  color: #fff;
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+.jumbotron {
+    padding: 0rem 0rem 0rem 0rem;
+}
+}
+
+#jumbodiv {
+  background-color: white;
+  justify-content: space-between;
+  max-width: 36rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  position: absolute;
+  top: 12rem;
+  left: 5rem;
+  border-radius: 5rem;
+  color: black;
+}
+
+#jumbobtn {
+  border-radius: 5rem;
+  margin-top: 3rem;
+}
+
+#menu-footer-center {
+  margin-left: 10rem;
+}
+
+.homejumbo {
+  height: 20rem;
+  background-color: rgb(212, 232, 235);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebaricon {
+  color: rgb(102, 102, 102);
+}
+
+#sideNavText {
+  color: rgb(100, 100, 100);
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.homegoals {
+  background-color: blanchedalmond;
+  height: 10rem;
+  border-radius: 2rem;
+}
+
+.hometips {
+  background-color: rgba(223, 157, 157, 0.781);
+  height: 10rem;
+  border-radius: 2rem;
+}
+
+.homeroutines {
+  background-color: rgb(218, 156, 99);
+  height: 10rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.jumbopeopleimg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 40rem;
+  width: 43rem;
+  border-radius: 50%;
+}
+
+.bottomsidebar {
+  margin-top: 14rem;
+}
+
+.sidenavlink {
+  background-color: rgba(217, 223, 221, 0.829);
+  border-radius: 2rem;
+  height: 10rem;
+}
+
+#bottomlefthome {
+  height: 10rem;
+}
+
+#toplefthome {
+  height: 10rem;
+}
+
+#homejumbo {
+  background-color: rgb(57, 30, 87);
+  color: white;
+  height: 16rem;
+}
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.301);
+  z-index: 100;
+  height: 75rem;
+  width: 17rem;
+}
+
+#navText {
+  color: white;
+  font-weight: 400;
+}
+
+.favorite {
+  height: 6rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.favoritestext {
+  color: white;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#naviconbutton {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2,5rem;
+  background: rgb(31,36,0);
+  background: linear-gradient(90deg, rgba(31,36,0,1) 0%, rgba(9,55,121,1) 0%, rgba(0,119,255,1) 0%, rgba(92,5,161,1) 96%);
+border: none;
+}
+
+#naviconbutton:hover {
+  background: transparent;
+}
+
+#naviconbuttonlarge {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  background: rgb(31,36,0);
+  background: linear-gradient(90deg, rgba(31,36,0,1) 0%, rgba(9,55,121,1) 0%, rgba(0,119,255,1) 0%, rgba(92,5,161,1) 96%);
+border: none;
+}
+
+.form-control {
+  border-radius: 2rem;
+}
+
+.topcard {
+  flex-direction: row;
+  margin-bottom: 1rem;
+  height: 6rem;
+  width: 30rem;
+  border-radius: 1rem;
+}
+
+#topcardimg {
+  width: 24%;
+  height: 7rem;
+}
+
+.sleepcard {
+  width: 12.5rem;
+  height: 14.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 1.5rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit:fill;
+}
+
+.sleepcard2 {
+  background-image: url("https://st3.depositphotos.com/1006076/36507/v/380/depositphotos_365071724-stock-illustration-aged-romantic-autumn-downtown-wall.jpg");
+  width: 12.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 1.5rem;
+  flex-direction: row;
+}
+
+#sleepcardtitle {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#navtoplogo {
+  color: white;
+  height: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sleepheading {
+  color: white;
+}
+
+.appdiv {
+  display: flex;
+  flex-direction: column;
 }
