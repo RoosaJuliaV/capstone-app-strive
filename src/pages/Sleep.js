@@ -14,7 +14,6 @@ const Sleep = () => {
         <div>
         <Row>
         <Col xs={12} sm={12} lg={12}>
-        <h1 className="sleepheading mb-4 mt-5 ml-5"><strong>Sleep</strong></h1>
            <SleepRow/>
         </Col>
        </Row>

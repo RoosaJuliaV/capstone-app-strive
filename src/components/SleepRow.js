@@ -1,11 +1,24 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBCard } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBCard, MDBIcon } from "mdbreact";
+import { Button } from "react-bootstrap"
 
 const SleepRow = () => {
   return (
       <div className="sleepcontainer">
               <MDBContainer className="sleepcards">
-            
+            <MDBRow>
+            <div className="d-flex flex-row">
+            <h1 className="sleepheading mb-4 mt-5 ml-2"><strong>Sleep</strong></h1>
+            <Button
+          type="button"
+          className="btn btn-outline-light btn-rounded"
+          data-mdb-ripple-color="dark"
+          id="favoritesbutton"
+          >
+        See all<MDBIcon icon="angle-down" className="ml-2"/>
+        </Button>
+        </div>
+                </MDBRow>
                  <MDBRow>
                   <MDBCard className="topsleepcard w-100">
   <div className="text-white d-flex align-items-center py-5 px-4">

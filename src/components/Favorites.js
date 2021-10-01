@@ -4,8 +4,9 @@ import { Button } from "react-bootstrap"
 
 const Favorites = () => {
   return (
+      <div className="favcontainer">
       <MDBContainer className="ml-4 pr-5">
-          <MDBRow>
+         
           <div className="d-flex flex-row">
           <h1 className="favoritestext mb-4 mt-5"><strong>Favorites</strong></h1>
           <Button
@@ -17,7 +18,7 @@ const Favorites = () => {
         See tracks
         </Button>
         </div>
-        </MDBRow>
+        
           <MDBRow>
               <MDBCard className="mx-0 mb-3" id="favoritecard">
                   <div className="topcard d-flex flex-row">
@@ -37,6 +38,7 @@ const Favorites = () => {
 </MDBCard>
           </MDBRow>
       </MDBContainer>
+      </div>
   )
 }
 
