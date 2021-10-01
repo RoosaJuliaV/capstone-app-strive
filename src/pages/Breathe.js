@@ -4,21 +4,22 @@ import Container from 'react-bootstrap/Container'
 import SideBar from "../components/SideBar"
 import { Row, Col } from "react-bootstrap"
 import HomeJumbo from '../components/HomeJumbo';
-import Favorites from "../components/Favorites"
+import SleepRow from "../components/SleepRow"
+import "./Sleep.css"
   
 import React from 'react';
 
 
-const Home = () => {
+const Breathe = () => {
     return (
-        <div>
+        <div className="sleepmaindiv">
         <Row>
         <Col xs={12} sm={12} lg={12}>
-           <Favorites/>
+           <SleepRow/>
         </Col>
        </Row>
     </div>
     )
 }
 
-export default Home;
+export default Breathe

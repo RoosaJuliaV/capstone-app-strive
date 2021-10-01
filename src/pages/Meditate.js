@@ -10,7 +10,7 @@ import "./Sleep.css"
 import React from 'react';
 
 
-const Sleep = () => {
+const Meditate = () => {
     return (
         <div className="sleepmaindiv">
         <Row>
@@ -22,4 +22,4 @@ const Sleep = () => {
     )
 }
 
-export default Sleep
+export default Meditate
