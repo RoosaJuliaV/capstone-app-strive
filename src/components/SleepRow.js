@@ -41,14 +41,15 @@ const SleepRow = () => {
   </div>
 
 </MDBCard>
+
 <MDBCard className="sleepcard2 px-0">
   <div className="text-white d-flex py-4 px-1">
     <div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
       <h5 className="card-title">This is the card title</h5>
     </div>
   </div>
-
 </MDBCard>
+
 <MDBCard className="sleepcard2 px-0">
   <div className="text-white d-flex py-4 px-1">
     <div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
