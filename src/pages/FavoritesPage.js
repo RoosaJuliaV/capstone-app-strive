@@ -12,7 +12,7 @@ import React from 'react';
 
 const FavoritesPage = () => {
     return (
-        <div id="homediv">
+        <div id="favoriteshadow">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <Favorites/>

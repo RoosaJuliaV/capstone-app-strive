@@ -10,7 +10,7 @@ const SideBar = () => {
 
     return (
         <>
-            <Nav className="pl-1 d-block sidebar-sticky-top" id="sidebar"
+            <Nav className="pl-1 d-block sidebar" id="sidebar"
             activeKey="/home"
             >
                <img
@@ -41,7 +41,7 @@ const SideBar = () => {
             <Nav.Link id="navText" href="/sleep"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="moon" id="sidenavicon"/></Button>Sleep</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link id="navText" eventKey="disabled"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="play" id="sidenavicon"/></Button>3 min relax</Nav.Link>
+                <Nav.Link id="navText" eventKey="disabled"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="play" id="sidenavicon"/></Button>Quickstop</Nav.Link>
             </Nav.Item>
             <br/>
             <div id="sideMenu">

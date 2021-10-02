@@ -150,10 +150,16 @@
 }
 
 .sidebar {
-  background-color: rgba(0, 0, 0, 0.301);
+  background-color: rgba(0, 0, 0, 0.11);
   z-index: 100;
   height: 75rem;
   width: 16rem;
+}
+
+#sidebar {
+  position: -webkit-fixed;
+  position: fixed;
+  top: 0;
 }
 
 #navText {
@@ -259,6 +265,8 @@ border: none;
 .appdiv {
   display: flex;
   flex-direction: row;
+  width: 100vw;
+  height: 100vh;
  /* background: rgb(59,17,83);
 background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rgba(49,21,66,1) 75%, rgba(34,14,50,1) 96%); */
 }
@@ -284,6 +292,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   margin-bottom: 1rem;
   border-radius: 1.5rem;
   flex-direction: row;
+  margin-top: 8rem;
 }
 
 #favoritecard {
@@ -345,13 +354,12 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   width: 82%;
   height: 10rem;
   margin-bottom: 1rem;
+  margin-top: 8rem;
   border-radius: 1.5rem;
   flex-direction: row;
 }
 
-.sleepmaindiv {
-  margin-top: 8rem;
-}
+
 
 #sleepnavdiv {
   margin-left: 1rem;
@@ -359,11 +367,67 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 #sleepnav {
   box-shadow: none !important;
-  margin-left: 17.4rem;
+  margin-left: 17.2rem;
+  border-radius: 0rem 0rem 0rem 1.5rem;
+  background: rgba(39, 29, 85, 0.301);
+  background: linear-gradient(90deg, rgba(21, 14, 32, 0.685) 4%, rgba(18, 12, 39, 0.726) 37%, rgba(34, 18, 53, 0.726) 59%, rgba(43, 24, 54, 0.651) 100%);
+}
+
+#breathenav {
+  box-shadow: none !important;
+  margin-left: 17.2rem;
+  height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(49, 30, 94, 0.808) 4%, rgba(39, 26, 85, 0.726) 37%, rgba(32, 17, 73, 0.726) 59%, rgba(27, 15, 61, 0.726) 100%);
+  background: linear-gradient(90deg, rgba(76, 87, 133, 0.692) 4%, rgba(67, 74, 138, 0.726) 37%, rgba(82, 88, 145, 0.726) 59%, rgba(88, 95, 155, 0.596) 100%);
 }
+
+
+#meditatenav {
+  box-shadow: none !important;
+  margin-left: 17.2rem;
+  height: 8rem;
+  border-radius: 0rem 0rem 0rem 1.5rem;
+  background: rgba(49, 36, 110, 0.301);
+  background: linear-gradient(90deg, rgba(49, 22, 78, 0.733) 4%, rgba(81, 41, 133, 0.726) 37%, rgba(75, 32, 95, 0.726) 59%, rgba(80, 34, 121, 0.726) 100%);
+}
+
+#favoritenav {
+  box-shadow: none !important;
+  margin-left: 17.2rem;
+  height: 8rem;
+  border-radius: 0rem 0rem 0rem 1.5rem;
+  background: rgba(49, 36, 110, 0.301);
+  background: linear-gradient(90deg, rgba(25, 13, 48, 0.733) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(38, 20, 66, 0.726) 59%, rgba(55, 23, 85, 0.726) 100%);
+}
+
+#meditatenavdiv {
+  margin-left: 1rem;
+}
+
+#breathenavdiv {
+  margin-left: 1rem;
+}
+
+.breatheheading {
+  margin-left: 15rem;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.meditateheading {
+  margin-left: 15rem;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.favoriteheading {
+  margin-left: 15rem;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+
 
 #sideinput {
   width: 13rem;
@@ -375,4 +439,61 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   /* ... */
   position: sticky;
   top: var(--offset);
+  height: 100%;
+}
+
+#sleepshadow {
+  background-color: rgba(14, 12, 12, 0.623);
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 15rem;
+}
+
+#meditateshadow {
+  background-color: rgba(86, 2, 119, 0.384);
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 15rem;
+}
+
+#breatheshadow {
+  background-color: rgba(95, 116, 160, 0.685);
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 15rem;
+}
+
+#favoriteshadow {
+  background-color: rgba(20, 7, 43, 0.568);
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 15rem;
+}
+
+.appmaindiv {
+  overflow-y: scroll;
 }

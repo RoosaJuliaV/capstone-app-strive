@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBCard, MDBIcon } from "mdbreact";
-import { Button } from "react-bootstrap"
+import { Button, Nav } from "react-bootstrap"
 
 const Favorites = () => {
   return (
@@ -8,19 +8,23 @@ const Favorites = () => {
     <MDBContainer className="sleepcards">
   <MDBRow>
   <div className="d-flex flex-row">
-  <h1 className="sleepheading mb-4 mt-5 ml-3"><strong>Favourites</strong></h1>
-  <Button
-type="button"
-className="btn btn-outline-light btn-rounded"
-data-mdb-ripple-color="dark"
-id="favoritesbutton"
->
-Sort by name<MDBIcon icon="angle-down" className="ml-2"/>
-</Button>
+  <Nav className="navbar fixed-top navbar" id="favoritenav">
+            <div className="container-fluid" id="meditatenavdiv">
+            <h1 className="favoriteheading mb-4 ml-0"><strong>Favorites</strong></h1>
+            <Button
+          type="button"
+          className="btn btn-outline-light btn-rounded"
+          data-mdb-ripple-color="dark"
+          id="favoritesbutton"
+          >
+        Sort by name<MDBIcon icon="angle-down" className="ml-2"/>
+        </Button>
+        </div>
+        </Nav>
 </div>
       </MDBRow>
        <MDBRow>
-        <MDBCard className="mb-5 mt-2 ml-4" id="favtopcard">
+        <MDBCard className="mb-5 ml-4" id="favtopcard">
 <div className="text-white d-flex align-items-center py-5 px-4">
 <div id="sleepcardtitletop">
 <h3 className="card-title px-3 ml-4">My favourites tracklist</h3>

@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import SideBar from "../components/SideBar"
 import { Row, Col } from "react-bootstrap"
 import HomeJumbo from '../components/HomeJumbo';
-import SleepRow from "../components/SleepRow"
+import MeditateRow from "../components/MeditateRow"
 import "./Sleep.css"
   
 import React from 'react';
@@ -12,10 +12,10 @@ import React from 'react';
 
 const Meditate = () => {
     return (
-        <div className="sleepmaindiv">
+        <div id="meditateshadow">
         <Row>
         <Col xs={12} sm={12} lg={12}>
-           <SleepRow/>
+           <MeditateRow/>
         </Col>
        </Row>
     </div>
