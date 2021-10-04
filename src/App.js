@@ -17,6 +17,7 @@ import { Nav } from "react-bootstrap"
 import Meditate from "./pages/Meditate"
 import Breathe from "./pages/Breathe"
 import FavoritesPage from "./pages/FavoritesPage"
+import Album from "./pages/Album"
 
 
     function App() {
@@ -37,6 +38,8 @@ import FavoritesPage from "./pages/FavoritesPage"
         <Route path="/meditate"> <Meditate/>
         </Route>
         <Route path="/breathe"> <Breathe/>
+        </Route>
+        <Route path="/album"> <Album/>
         </Route>
         </Switch>
         </div>

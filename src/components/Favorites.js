@@ -10,7 +10,7 @@ const Favorites = () => {
   <div className="d-flex flex-row">
   <Nav className="navbar fixed-top navbar" id="favoritenav">
             <div className="container-fluid" id="meditatenavdiv">
-            <h1 className="favoriteheading mb-4 ml-0"><strong>Favorites</strong></h1>
+            <h1 className="favoriteheading mb-4 ml-0"><strong>Favourites</strong></h1>
             <Button
           type="button"
           className="btn btn-outline-light btn-rounded"
@@ -39,63 +39,6 @@ const Favorites = () => {
 <h5 className="card-title">This is the card title</h5>
 </div>
 </div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
-</MDBCard>
-<MDBCard className="sleepcard2 px-0">
-<div className="text-white d-flex py-4 px-1">
-<div className="rgba-black-light mt-auto pr-4 pr-1" id="sleepcardtitle">
-<h5 className="card-title">This is the card title</h5>
-</div>
-</div>
-
 </MDBCard>
 </MDBRow>                 
 </MDBContainer>           
