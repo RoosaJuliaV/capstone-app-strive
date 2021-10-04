@@ -27,7 +27,7 @@ import Album from "./pages/Album"
             <div className="sidebardiv">
             <SideBar/>
             </div>
-            <div className="appmaindiv">
+            <div className="appmaindiv d-flex w-100">
         <Switch>
         <Route path="/login"> <NavBar/><Login/>
         </Route>
@@ -39,7 +39,7 @@ import Album from "./pages/Album"
         </Route>
         <Route path="/breathe"> <Breathe/>
         </Route>
-        <Route path="/album"> <Album/>
+        <Route path="/album/:id"> <Album/>
         </Route>
         </Switch>
         </div>

@@ -73,7 +73,7 @@ const BreatheRow = () => {
                 className="rgba-black-light mt-auto pr-4 pr-1"
                 id="sleepcardtitle"
               >
-                <h5 className="card-title">{albumObj.title_short}</h5>
+                <h5 className="card-title">{albumObj.album.title}</h5>
               </div>
             </div>
           </Link>

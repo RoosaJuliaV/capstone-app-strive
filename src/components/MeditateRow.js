@@ -61,6 +61,7 @@ import {
 
 import { Button, Nav, Card, CardImg } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MeditateRow = () => {
   const [albumsArray, setAlbumsArray] = useState([]);
@@ -116,17 +117,18 @@ const MeditateRow = () => {
           
         </MDBRow>
         <MDBRow className="mx-0">
-       {albumsArray.length> 0 && albumsArray.map((albumObj) => ( <MDBCard key={albumObj.id} className="sleepcard2 px-0">
+       {albumsArray.length > 0 && albumsArray.map((albumObj) => ( <MDBCard key={albumObj.id} className="sleepcard2 px-0">
+       <Link className="text-white" to={"/Album/" + albumObj.album.id}>
        <Card.Img variant="top" className="rounded-0" src={albumObj.album.cover_medium} id="sleepcardimg" />
             <div className="text-white d-flex py-4 px-1">
               <div
                 className="rgba-black-light mt-auto pr-4 pr-1"
                 id="sleepcardtitle"
               >
-                <h5 className="card-title">{albumObj.title_short}</h5>
+                <h5 className="card-title">{albumObj.album.title}</h5>
               </div>
             </div>
-          
+          </Link>
           </MDBCard> 
           
           ))}
