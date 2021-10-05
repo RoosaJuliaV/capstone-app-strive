@@ -125,7 +125,7 @@ const MeditateRow = () => {
                 className="rgba-black-light mt-auto pr-4 pr-1"
                 id="sleepcardtitle"
               >
-                <h5 className="card-title">{albumObj.album.title}</h5>
+                <h5 className="card-title">{albumObj.album.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}</h5>
               </div>
             </div>
           </Link>

@@ -1,5 +1,3 @@
-
-
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBJumbotron } from "mdbreact";
 import { Button } from "react-bootstrap"
   

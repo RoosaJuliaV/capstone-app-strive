@@ -12,6 +12,8 @@ import { Button, Nav, Card, CardImg } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+
 const BreatheRow = () => {
   const [albumsArray, setAlbumsArray] = useState([]);
 
@@ -73,7 +75,7 @@ const BreatheRow = () => {
                 className="rgba-black-light mt-auto pr-4 pr-1"
                 id="sleepcardtitle"
               >
-                <h5 className="card-title">{albumObj.album.title}</h5>
+                <h5 className="card-title">{albumObj.album.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}</h5>
               </div>
             </div>
           </Link>
