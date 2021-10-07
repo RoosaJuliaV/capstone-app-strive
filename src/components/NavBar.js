@@ -1,9 +1,6 @@
 import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaDiceD20 } from "react-icons/fa";
-
-
-
  
 const NavBar = () => {
 

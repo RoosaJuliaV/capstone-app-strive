@@ -2,6 +2,7 @@ import React from "react";
 import {Nav, Button} from "react-bootstrap";
 import { withRouter } from "react-router";
 import { MDBIcon } from "mdbreact"
+import { Link } from "react-router-dom"
 
 
 
@@ -30,7 +31,7 @@ const SideBar = () => {
                 <Nav.Link id="navText" href="/home"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="home" id="sidenavicon" /></Button>Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-            <Nav.Link id="navText" href="/favoritespage"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="heart" id="sidenavicon"/></Button>Favourites</Nav.Link>
+            <Link to="/favoritespage" id="navText" className="favlinkside"><Button className="btn- btn-primary btn-floating mr-3 mb-2 favbtnside" id="naviconbutton"><MDBIcon icon="heart" id="sidenavicon"/></Button>Favourites</Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link id="navText" href="/meditate"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="spa" id="sidenavicon"/></Button>Meditate</Nav.Link>

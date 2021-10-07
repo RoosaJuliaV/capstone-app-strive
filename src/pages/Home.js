@@ -11,7 +11,7 @@ import React from 'react';
 const Home = () => {
     return (
      
-        <div>
+        <div id="homeshadow">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <HomeMain/>

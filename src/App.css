@@ -185,6 +185,7 @@
 #sidenavicon {
   width: 1.2rem;
   height: 1.2rem;
+  margin-top: 0.4rem;
 }
 
 #naviconbutton:hover {
@@ -237,7 +238,7 @@ border: none;
 }
 
 .sleepcard2 {
-  width: 14rem;
+  width: 14.15rem;
   height: 15.5rem;
   margin-bottom: 1rem;
   margin-right: 0.7rem;
@@ -259,7 +260,7 @@ border: none;
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
-  max-width: 14rem !important;
+  max-width: 14.15rem !important;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -422,16 +423,23 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 }
 
 #favtopcard {
-  background-image: url("https://cdn.pixabay.com/photo/2016/07/30/19/47/banner-1557841_960_720.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c2/Northern_Lights-banner1.jpg");
   width: 82%;
   height: 10rem;
   margin-bottom: 1rem;
   margin-top: 8rem;
   border-radius: 1.5rem;
   flex-direction: row;
+  border: none;
 }
 
+.favbtnside {
+  margin-left: 1.4rem;
+}
 
+.favlinkside {
+  text-decoration: none;
+}
 
 #sleepnavdiv {
   margin-left: 1rem;
@@ -467,8 +475,21 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   box-shadow: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
+  background: rgb(20,34,60);
+background: linear-gradient(90deg, rgba(20, 34, 60, 0.781) 0%, rgba(16, 29, 74, 0.692) 37%, rgba(26, 40, 83, 0.692) 63%, rgba(32, 45, 113, 0.719) 100%);
+
+  /* background: rgb(102,29,79);
+background: linear-gradient(90deg, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, rgba(120,59,0,1) 0%, rgba(94,50,121,1) 31%, rgba(51,31,69,1) 98%);
+ background: rgba(49, 36, 110, 0.301);
+  background: linear-gradient(90deg, rgba(25, 13, 48, 0.699) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(37, 20, 63, 0.726) 59%, rgba(38, 19, 75, 0.712) 100%); */
+}
+
+#homenav {
+  box-shadow: none !important;
+  height: 8rem;
+  border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(25, 13, 48, 0.733) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(46, 25, 78, 0.726) 59%, rgba(51, 29, 80, 0.712) 100%);
+  background: linear-gradient(90deg, rgba(29, 21, 46, 0.699) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(63, 35, 109, 0.726) 59%, rgba(81, 50, 110, 0.712) 100%);
 }
 
 #meditatenavdiv {
@@ -555,7 +576,22 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 }
 
 #favoriteshadow {
-  background-color: rgba(29, 11, 63, 0.568);
+  background: rgb(20,34,60);
+background: linear-gradient(90deg, rgba(20,34,60,1) 0%, rgba(16,29,74,1) 37%, rgba(26,40,83,1) 63%, rgba(32,46,113,1) 100%);
+ /* background-color: rgba(11, 35, 63, 0.521); */
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 1rem;
+}
+
+#homeshadow {
+  background-color: rgba(29, 11, 63, 0);
   overflow-y: scroll;
   position:fixed;
   width:100%;

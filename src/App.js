@@ -7,7 +7,7 @@ import './App.css';
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import Login from "./pages/Login"
-import Home from "./pages/FavoritesPage"
+import Home from "./pages/Home"
 import Sleep from "./pages/Sleep"
 import SideBar from "./components/SideBar"
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
@@ -29,9 +29,9 @@ import Album from "./pages/Album"
             </div>
             <div className="appmaindiv d-flex w-100">
         <Switch>
-        <Route path="/home"> <Home/>
-        </Route>
         <Route path="/login"> <NavBar/><Login/>
+        </Route>
+        <Route path="/home"> <Home/>
         </Route>
         <Route path="/favoritespage"> <FavoritesPage/>
         </Route>

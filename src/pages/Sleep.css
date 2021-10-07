@@ -7,12 +7,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 
 
 
 
 body {
-    font-family: 'Mukta', "sans-serif";
+    font-family: 'Noto Sans Display', "sans-serif";
     background: rgb(23,17,47);
     background: linear-gradient(90deg, rgba(23,17,47,1) 11%, rgb(52, 36, 94) 42%, rgb(82, 47, 114) 98%);
     /* background: rgb(66,36,110);
