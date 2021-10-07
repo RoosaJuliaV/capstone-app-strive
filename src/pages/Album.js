@@ -6,27 +6,23 @@ import { connect } from "react-redux";
 import { addSongToPlaylist } from "../actions";
 import { useHistory } from "react-router-dom";
 
-
-/* const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
     playList: state.playList.tracks
   });
-
+  
   const mapDispatchToProps = (dispatch) => ({
     addToPlaylist: (song) => dispatch (addSongToPlaylist(song))
   });
-  */
-
-const Album = ( ) => {
+  
+  const Album = ({ addToPlaylist }) => {
   const params = useParams()
   const history = useHistory()
   const albumId = params.id
   console.log(albumId)
 
-  function handleClick() {
+ /* function handleClick() {
     history.push("/home");
-  }
-
-
+  } */
 
   const [trackArray, setTrackArray] = useState([])
   const [albumName, setAlbumName] = useState("")
@@ -59,28 +55,27 @@ const Album = ( ) => {
     return length;
   }
 
-
   return (
       <div className="albumbg d-flex pr-5 pt-3">
-    <div className ="albumContainer m-auto pr-1">
+    <div className ="albumContainer pr-1">
        
       {console.log(albumName)}
       {console.log(trackArray)}
-      <div className="main-container main-container-album album-songs-container">
+      <div className="main-container main-container-album album-songs-container d-flex flex-row">
         <div className="top-of-artist-songs mb-3 pt-3">
         </div>
-        <div className="col-md-12 justify-content-center d-flex flex-row mt-0">
+        <div className="col-md-12 d-flex flex-row mt-0">
           <table id="albumtable" className="table table-borderless ml-5">
             <thead>
               <tr className="border_bottom">
               <td> 
              
-                  <Link className="text-white" onClick={handleClick} to={"/"}>
+                  <Link className="text-white" href="/">
                       <MDBIcon icon="chevron-left" className="albumArrow mt-2"/>
                       </Link>
                       
                       </td>
-                <td className="align-center albumName"><span>{albumName.replace(/[^a-z\d\s]+/gi, "")}</span></td>
+                <td className="albumName"><span>{albumName.replace(/[^a-z\d\s]+/gi, "")}</span></td>
               <td>
               <MDBIcon far icon="clock" className="albumClock"/>
                   </td>
@@ -93,7 +88,7 @@ const Album = ( ) => {
             <tbody>
               {trackArray.map((track, i) => (
                 <tr>
-                  <td className="align-middle">{i + 1}</td>
+                  <td className="trackNumber align-middle">{i + 1}</td>
                   <td>
                     <div className="albumSong">
                       <strong>{track.title}</strong>
@@ -105,10 +100,11 @@ const Album = ( ) => {
                   {convertDuration(track.duration)}</strong>
                   </td>
                   <td>
-                  
-                  <MDBIcon far icon="heart" className="trackFavorite mt-1 ml-2" />
-                  
+                  <button className="favbtn button-round" onClick={() => addToPlaylist(track)}>
+                  <MDBIcon far icon="heart" className="trackFavorite"/>
+                  </button>
                   </td>
+                 
                 </tr>
               ))}
             </tbody>
@@ -134,10 +130,10 @@ const Album = ( ) => {
                   {convertDuration(track.duration)}</strong>
                   </td>
                   <td>
-                 </td> <td><Button style={{borderRadius: "50%", background: "transparent", border: 'none'}}>
+                 </td> <td><Button style={{borderRadius: "50%", background: "transparent", border: 'none'}}
+                   onClick={()=>addToPlaylist(track)}>
                     <MDBIcon far icon="heart" className="albumFavorite ml-2"/>
               </Button>
-              <MDBBtn gradient="purple">Purple</MDBBtn>
                   </td>
                 </tr>
               ))}
@@ -151,4 +147,4 @@ const Album = ( ) => {
   )
 }
 
-export default withRouter(Album)/* connect(mapStateToProps, mapDispatchToProps)(Album); */
+/* export default withRouter(Album) */ export default connect(mapStateToProps, mapDispatchToProps)(Album);

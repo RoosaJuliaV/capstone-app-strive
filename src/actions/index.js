@@ -1,8 +1,4 @@
-export const playSong = (songToPlay) => ({
-    type: "PLAY_SONG",
-    payload: songToPlay,
-  });
-  
+
   export const addSongToPlaylist = (songToPlaylist) => ({
     type: "ADD_SONG_TO_PLAYLIST",
     payload: songToPlaylist,

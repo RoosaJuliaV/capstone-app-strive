@@ -1,4 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Rubik&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Karla:wght@400;500&family=Rubik&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Arimo:wght@500&family=Karla:wght@400;500&family=Rubik&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+
+
+
 body {
+    font-family: 'Mukta', "sans-serif";
     background: rgb(23,17,47);
     background: linear-gradient(90deg, rgba(23,17,47,1) 11%, rgb(52, 36, 94) 42%, rgb(82, 47, 114) 98%);
     /* background: rgb(66,36,110);

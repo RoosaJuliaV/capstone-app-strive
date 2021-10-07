@@ -29,6 +29,8 @@ import Album from "./pages/Album"
             </div>
             <div className="appmaindiv d-flex w-100">
         <Switch>
+        <Route path="/home"> <Home/>
+        </Route>
         <Route path="/login"> <NavBar/><Login/>
         </Route>
         <Route path="/favoritespage"> <FavoritesPage/>

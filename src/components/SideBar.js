@@ -12,13 +12,15 @@ const SideBar = () => {
             <Nav className="pl-1 d-none d-lg-block sidebar" id="sidebar"
             activeKey="/home"
             >
+                <div className="sidelogodiv">
                <img
-                alt=""
+                alt="logo"
                 src="https://www.calm.com/_n/images/calm-logo.png"
                 width="90"
                 height="auto"
                 className="d-inline-block align-top mt-4 mb-3 ml-4"
             />
+            </div>
                 <div className="sidebar-fixed pr-3">
                 <div id="sideinput" className="form-group ml-3 mt-2">
       <input type="email" className="form-control" placeholder="Search" />

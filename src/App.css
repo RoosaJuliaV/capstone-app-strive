@@ -1,4 +1,5 @@
 
+
 #footer {
  /* background-color: rgb(57, 58, 63); */
  
@@ -174,11 +175,16 @@
 
 #naviconbutton {
   border-radius: 50%;
-  height: 2.5rem;
-  width: 2,5rem;
+  height: 2.5rem !important;
+  width: 2,5rem !important;
   background: rgb(31,36,0);
   background: linear-gradient(90deg, rgba(31,36,0,1) 0%, rgba(9,55,121,1) 0%, rgba(0,119,255,1) 0%, rgba(92,5,161,1) 96%);
   border: none;
+}
+
+#sidenavicon {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 #naviconbutton:hover {
@@ -221,6 +227,7 @@ border: none;
   margin-bottom: 1rem;
   margin-right: 1rem;
   border-radius: 1.5rem;
+
 }
 
 .card-img-top {
@@ -252,9 +259,16 @@ border: none;
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
-  width: 14rem;
+  max-width: 14rem !important;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.sleepCardTitle {
+  max-width: 14rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 
@@ -265,7 +279,6 @@ border: none;
 
 .sleepheading {
   color: white;
-  margin-left: 25rem;
   margin-top: 2.5rem;
 }
 
@@ -285,6 +298,11 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 .sleepcards {
   align-content: space-between;
+  padding-right: 0rem;
+}
+
+.sleepcardsdiv {
+  margin-right: 0rem;
 }
 
 .card-title {
@@ -369,9 +387,8 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   height: 3rem;
   margin-top: auto;
   margin-bottom: 1.5rem;
-  margin-left: 1rem;
-  margin-right: auto;
   border-radius: 5rem;
+  margin-left: 2rem;
 }
 
 #favheart {
@@ -422,43 +439,40 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 #sleepnav {
   box-shadow: none !important;
-  margin-left: 17.2rem;
+  height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(39, 29, 85, 0.301);
-  background: linear-gradient(90deg, rgba(21, 14, 32, 0.685) 4%, rgba(18, 12, 39, 0.726) 37%, rgba(34, 18, 53, 0.726) 59%, rgba(43, 24, 54, 0.651) 100%);
+  background: linear-gradient(90deg, rgba(19, 14, 26, 0.685) 4%, rgba(21, 17, 41, 0.726) 37%, rgba(34, 18, 53, 0.726) 59%, rgba(43, 24, 54, 0.651) 100%);
 }
 
 
 #breathenav {
   box-shadow: none !important;
-  margin-left: 17.2rem;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(76, 87, 133, 0.692) 4%, rgba(67, 74, 138, 0.726) 37%, rgba(82, 88, 145, 0.726) 59%, rgba(88, 95, 155, 0.596) 100%);
+  background: linear-gradient(90deg, rgba(73, 81, 119, 0.692) 4%, rgba(76, 83, 145, 0.726) 37%, rgba(82, 88, 145, 0.726) 59%, rgba(88, 93, 143, 0.596) 100%);
 }
 
 
 #meditatenav {
   box-shadow: none !important;
-  margin-left: 17.2rem;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(49, 22, 78, 0.733) 4%, rgba(81, 41, 133, 0.726) 37%, rgba(75, 32, 95, 0.726) 59%, rgba(80, 34, 121, 0.726) 100%);
+  background: linear-gradient(90deg, rgba(42, 19, 75, 0.733) 4%, rgba(57, 29, 94, 0.726) 37%, rgba(75, 32, 95, 0.726) 59%, rgba(86, 35, 128, 0.726) 100%);
 }
 
 #favoritenav {
   box-shadow: none !important;
-  margin-left: 17.2rem;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(25, 13, 48, 0.733) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(38, 20, 66, 0.726) 59%, rgba(55, 23, 85, 0.726) 100%);
+  background: linear-gradient(90deg, rgba(25, 13, 48, 0.733) 4%, rgba(34, 23, 75, 0.726) 37%, rgba(46, 25, 78, 0.726) 59%, rgba(51, 29, 80, 0.712) 100%);
 }
 
 #meditatenavdiv {
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 #breathenavdiv {
@@ -466,19 +480,16 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 }
 
 .breatheheading {
-  margin-left: 15rem;
   color: white;
   margin-top: 2.5rem;
 }
 
 .meditateheading {
-  margin-left: 10rem;
   color: white;
   margin-top: 2.5rem;
 }
 
 .favoriteheading {
-  margin-left: 15rem;
   color: white;
   margin-top: 2.5rem;
 }
@@ -487,7 +498,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 #sideinput {
   width: 13rem;
-  height: 3rem;
+  height: 2rem;
 }
 
 #sidebar {
@@ -514,11 +525,11 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   right:0px;
   z-index: 90;
   padding-bottom: 10rem;
-  padding-left: 15rem;
+  padding-left: 1rem;
 }
 
 #meditateshadow {
-  background-color: rgba(86, 2, 119, 0.384);
+  background-color: rgba(92, 7, 141, 0.342);
   overflow-y: scroll;
   position:fixed;
   width:100%;
@@ -527,25 +538,24 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   right:0px;
   z-index: 90;
   padding-bottom: 10rem;
-  padding-left: 15rem;
+  padding-left: 1rem;
 }
 
 #breatheshadow {
-  background-color: rgba(95, 116, 160, 0.685);
+  background-color: rgba(88, 113, 165, 0.685);
   overflow-y: scroll;
   position:fixed;
-  display: flex;
   width:100%;
   height:100%;
   bottom:0px;
   right:0px;
   z-index: 90;
   padding-bottom: 10rem;
-  padding-left: 15rem;
+  padding-left: 1rem;
 }
 
 #favoriteshadow {
-  background-color: rgba(20, 7, 43, 0.568);
+  background-color: rgba(29, 11, 63, 0.568);
   overflow-y: scroll;
   position:fixed;
   width:100%;
@@ -554,7 +564,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   right:0px;
   z-index: 90;
   padding-bottom: 10rem;
-  padding-left: 15rem;
+  padding-left: 1rem;
 }
 
 .appmaindiv {
@@ -579,30 +589,37 @@ object-fit:cover;
 
 #albumtable {
   color: whitesmoke;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .albumName {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2rem;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .albumSong {
   font-size: 1.1rem;
-  margin-top: 0.1rem;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .albumFavorite {
   margin-left: 0.4rem;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   font-size: 1.3rem;
 }
 
 .trackFavorite {
   font-size: 1.1rem;
-  margin-top: 0.2rem;
-
+  color: white;
+  margin-left: 0.2rem;
 }
 
 .trackDuration {
@@ -617,7 +634,7 @@ object-fit:cover;
 
 .albumClock {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   margin-left: 0.3rem;
 }
 
@@ -645,5 +662,45 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
 
 .albumContainer {
   max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
 }
 
+.trackNumber {
+  margin-top: 0.2rem;
+}
+
+.sidebarbgdiv {
+  width: 250px;
+}
+
+.breathesidebg {
+  width: 250px !important;
+}
+
+.spinnerdiv {
+  margin-top: 11rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 22rem;
+  width: 22rem;
+}
+
+.spinner {
+  height: 10rem;
+  width: 10rem;
+}
+
+.sidelogodiv {
+  height: 4.5rem;
+}
+
+.favbtn {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50% !important;
+}

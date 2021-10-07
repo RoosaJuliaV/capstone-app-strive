@@ -14,9 +14,9 @@ import {configureStore}  from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={configureStore}> */}
+    <Provider store={configureStore}>
     <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

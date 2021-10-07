@@ -1,6 +1,6 @@
 import { initialState } from "../store";
 
-const playlistReducer = (state = initialState.playList, action) => {
+const playlistReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_SONG_TO_PLAYLIST":
       return {
