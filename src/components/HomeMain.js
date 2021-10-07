@@ -77,7 +77,7 @@ const HomeMain = () => {
           )}
           {albumsArray.length > 0 &&
             albumsArray.map((albumObj) => (
-              <MDBCard key={albumObj.id} className="sleepcard2 px-0">
+              <MDBCard key={albumObj.id} className="homecard px-0">
                 <Link className="text-white" to={"/Album/" + albumObj.album.id}>
                   <Card.Img
                     variant="top"

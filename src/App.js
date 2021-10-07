@@ -17,6 +17,7 @@ import { Nav } from "react-bootstrap"
 import Meditate from "./pages/Meditate"
 import Breathe from "./pages/Breathe"
 import FavoritesPage from "./pages/FavoritesPage"
+import FavoriteTracksList from "./pages/FavoriteTracksList"
 import Album from "./pages/Album"
 
 
@@ -34,6 +35,8 @@ import Album from "./pages/Album"
         <Route path="/home"> <Home/>
         </Route>
         <Route path="/favoritespage"> <FavoritesPage/>
+        </Route>
+        <Route path="/favoritetrackslist"> <FavoriteTracksList/>
         </Route>
         <Route path="/sleep"> <Sleep/>
         </Route>

@@ -7,7 +7,7 @@ import {
   MDBCard,
   MDBIcon,
 } from "mdbreact";
-import { Button, Nav, Spinner, Card } from "react-bootstrap";
+import { Button, Nav, Spinner, Card, ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => ({
   removeFromPlaylist: (i) => dispatch(removeSongFromPlaylist(i)),
 });
 
-const Favorites = ({ playList }) => {
+const FavoriteTracks = ({ playList }) => {
   const params = useParams();
 
   const [trackArray, setTrackArray] = useState([]);
@@ -63,17 +63,17 @@ const Favorites = ({ playList }) => {
           </div>
         </MDBRow>
         <MDBRow>
-          <MDBCard className="mb-5 ml-4" id="favtopcard">
+         {/* <MDBCard className="mb-5 ml-4" id="favtopcard">
             <div className="text-white d-flex align-items-center py-5 px-4">
               <div id="sleepcardtitletop">
                 <h3 className="card-title px-3 ml-4" id="topcardhead">
-                <Link to="/favoritetrackslist" id="navText" className="topfavlink">My favourites tracklist<Button className="btn btn-primary btn-floating" id="topfavbtn"><MDBIcon icon="angle-right" id="sidenavicon"/></Button></Link>
+                  My favourites tracklist
                 </h3>
               </div>
             </div>
-          </MDBCard>
+  </MDBCard> */}
         </MDBRow>
-        <MDBRow className="mx-0">
+        <MDBRow className="favtracks">
         {/*  {isLoading && (
             <div className="spinnerdiv">
               <Spinner
@@ -83,7 +83,7 @@ const Favorites = ({ playList }) => {
         />
             </div>
         )} */}
-          {playList.map((track, i) => (
+          {/* {playList.map((track, i) => (
             <MDBCard key={i} className="sleepcard2 px-0">
               <Link className="text-white" to={"/Album/" + track.artist.id}>
                {/*} <Card.Img
@@ -92,7 +92,7 @@ const Favorites = ({ playList }) => {
                   src={track.cover_medium}
                   id="sleepcardimg"
           /> */}
-                <div className="text-white d-flex py-4 px-1">
+              {/*  <div className="text-white d-flex py-4 px-1">
                   <div
                     className="rgba-black-light mt-auto pr-4 pr-1"
                     id="sleepcardtitle"
@@ -112,7 +112,44 @@ const Favorites = ({ playList }) => {
                 </div>
               </Link>
             </MDBCard>
-          ))}
+          </div> */}
+
+<ListGroup className="w-50 mx-auto favcompanylist">
+        {playList.map((track, i) => (
+          <div className="position-relative">
+            <ListGroup.Item key={i}>
+            <td className="trackNumber align-middle">{i + 1}</td>
+                  <td>
+                    <div className="albumSong">
+                      <strong>{track.title}</strong>
+                    </div>
+               
+                  </td>
+
+                  <td className="align-middle keep-on-page"><strong>
+                  {convertDuration(track.duration)}</strong>
+                  </td>
+                  <td>
+                <button
+                        className="button-round"
+                        onClick={() => removeSongFromPlaylist(i)}
+                      >
+                        <MDBIcon far icon="heart" className="trackFavorite" />
+                      </button>
+                  </td>
+            </ListGroup.Item>
+
+           {/* <Button
+              onClick={() => props.removeFromFavourites(i)}
+              variant="danger"
+              size="sm"
+              className="removebutton"
+            >
+              Remove
+           </Button> */}
+          </div>
+        ))}
+      </ListGroup>
           {/*  <div className="d-flex pr-5 pt-3">
     <div className ="albumContainer pr-1">
       <div className="main-container main-container-album album-songs-container d-flex flex-row">
@@ -175,40 +212,4 @@ const Favorites = ({ playList }) => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
-
-/*} <div className="favcontainer">
-      <MDBContainer className="ml-4 px-5">
-         
-          <div className="d-flex flex-row">
-          <h1 className="favoritestext mb-4 mt-5"><strong>Favorites</strong></h1>
-          <Button
-          type="button"
-          className="btn btn-outline-light btn-rounded"
-          data-mdb-ripple-color="dark"
-          id="favoritesbutton"
-          >
-        See tracks
-        </Button>
-        </div>
-        
-          <MDBRow>
-              <MDBCard className="mx-0 mb-3" id="favoritecard">
-                  <div className="topcard d-flex flex-row">
-  <img src="https://st3.depositphotos.com/1006076/36507/v/380/depositphotos_365071724-stock-illustration-aged-romantic-autumn-downtown-wall.jpg" id="favoriteimg" alt="..."/>
-  <div className="card-body" id="favoritecardbody">
-    <h5 className="favtitle card-title mt-3">Card title<MDBIcon far icon="heart" id="favheart" className="mb-5"/></h5>
-  </div>
-  </div>
-</MDBCard>
-<MDBCard id="favoritecard">
-                  <div className="topcard d-flex flex-row">
-  <img src="https://st3.depositphotos.com/1006076/36507/v/380/depositphotos_365071724-stock-illustration-aged-romantic-autumn-downtown-wall.jpg" id="favoriteimg" alt="..."/>
-  <div className="card-body" id="favoritecardbody">
-    <h5 className="favtitle card-title mt-3">Card title</h5>
-  </div>
-  </div>
-</MDBCard>
-          </MDBRow>
-      </MDBContainer>
-</div> */
+export default connect(mapStateToProps, mapDispatchToProps)(FavoriteTracks);
