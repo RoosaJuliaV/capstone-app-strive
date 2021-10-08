@@ -114,7 +114,7 @@ const MeditateRow = () => {
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3" id="topcardhead">
-                    Listen to the clip of the day now
+                    Listen to the clip of the day now<MDBIcon icon="angle-right" id="topfavicon"/>
                   </h3>
                 </div>
               </div>

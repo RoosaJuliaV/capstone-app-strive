@@ -52,7 +52,7 @@ const HomeMain = () => {
         </MDBRow>
 
         <MDBRow>
-          <MDBCard className="topbreathecard mb-5 ml-4">
+          <MDBCard className="tophomecard mb-5 ml-4">
             <div className="topcardshadow">
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">

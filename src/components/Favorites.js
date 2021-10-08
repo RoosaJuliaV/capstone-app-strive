@@ -63,15 +63,19 @@ const Favorites = ({ playList }) => {
           </div>
         </MDBRow>
         <MDBRow>
+        
           <MDBCard className="mb-5 ml-4" id="favtopcard">
+          <Link to="/favoritetrackslist" id="navText" className="topfavlink">
             <div className="text-white d-flex align-items-center py-5 px-4">
               <div id="sleepcardtitletop">
                 <h3 className="card-title px-3 ml-4" id="topcardhead">
-                <Link to="/favoritetrackslist" id="navText" className="topfavlink">My favourites tracklist<Button className="btn btn-primary btn-floating" id="topfavbtn"><MDBIcon icon="angle-right" id="sidenavicon"/></Button></Link>
+               All your favourites on one playlist<MDBIcon icon="angle-right" id="topfavicon"/>
                 </h3>
               </div>
             </div>
+            </Link>
           </MDBCard>
+          
         </MDBRow>
         <MDBRow className="mx-0">
         {/*  {isLoading && (
@@ -86,12 +90,12 @@ const Favorites = ({ playList }) => {
           {playList.map((track, i) => (
             <MDBCard key={i} className="sleepcard2 px-0">
               <Link className="text-white" to={"/Album/" + track.artist.id}>
-               {/*} <Card.Img
+              <Card.Img
                   variant="top"
                   className="rounded-0"
-                  src={track.cover_medium}
+                  src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
                   id="sleepcardimg"
-          /> */}
+          />
                 <div className="text-white d-flex py-4 px-1">
                   <div
                     className="rgba-black-light mt-auto pr-4 pr-1"
@@ -103,7 +107,7 @@ const Favorites = ({ playList }) => {
                         .substring(0, 25)}
                     </h5>
                     <button
-                      className="favbtn button-round"
+                      className="favbtncard button-round"
                       onClick={() => removeSongFromPlaylist(i)}
                     >
                       <MDBIcon far icon="heart" className="trackFavorite" />

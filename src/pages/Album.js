@@ -3,18 +3,20 @@ import { useParams, Link, withRouter } from "react-router-dom";
 import { Col, Row, Button } from "react-bootstrap";
 import { MDBIcon, MDBBtn } from "mdbreact";
 import { connect } from "react-redux";
-import { addSongToPlaylist } from "../actions";
+import { addSongToPlaylist, playSong } from "../actions";
 import { useHistory } from "react-router-dom";
 
 const mapStateToProps = (state) => ({
+    currentSong: state.play.currentSong,
   playList: state.playList.tracks,
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    addToCurrentSong: (song) => dispatch(playSong(song)),
   addToPlaylist: (song) => dispatch(addSongToPlaylist(song)),
 });
 
-const Album = ({ addToPlaylist }) => {
+const Album = ({ addToPlaylist, addToCurrentSong }) => {
   const params = useParams();
   const history = useHistory();
   const albumId = params.id;
@@ -104,6 +106,12 @@ const Album = ({ addToPlaylist }) => {
                         onClick={() => addToPlaylist(track)}
                       >
                         <MDBIcon far icon="heart" className="trackFavorite" />
+                      </button>
+                      <button
+                        className="favbtn button-round"
+                        onClick={() => addToCurrentSong(track)}
+                      >
+                        <MDBIcon icon="play" className="playIconAlbum" />
                       </button>
                     </td>
                   </tr>

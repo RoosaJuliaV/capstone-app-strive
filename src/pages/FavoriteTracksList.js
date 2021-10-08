@@ -12,7 +12,7 @@ import React from 'react';
 
 const FavoriteTrackList = () => {
     return (
-        <div id="favoriteshadow">
+        <div id="favtracksshadow">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <FavoriteTracks/>

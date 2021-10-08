@@ -43,14 +43,20 @@ const FavoriteTracks = ({ playList }) => {
       <MDBContainer className="sleepcards">
         <MDBRow>
           <div className="d-flex flex-row">
-            <Nav className="navbar fixed-top navbar" id="favoritenav">
+            <Nav
+              className="navbar fixed-top navbar d-flex flex-row"
+              id="favtracksnav"
+            >
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="favoriteheading mb-4 mr-auto">
-                  <strong>Favourites</strong>
+                  <Link to="/favoritespage" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-2" />
+                  </Link>
+                  {/* <strong>Favourites</strong> */}
                   <Button
                     type="button"
-                    className="btn btn-outline-light btn-rounded"
+                    className="btn btn-outline-light btn-rounded mt-3 mr-auto"
                     data-mdb-ripple-color="dark"
                     id="favoritesbutton"
                   >
@@ -63,7 +69,7 @@ const FavoriteTracks = ({ playList }) => {
           </div>
         </MDBRow>
         <MDBRow>
-         {/* <MDBCard className="mb-5 ml-4" id="favtopcard">
+          {/* <MDBCard className="mb-5 ml-4" id="favtopcard">
             <div className="text-white d-flex align-items-center py-5 px-4">
               <div id="sleepcardtitletop">
                 <h3 className="card-title px-3 ml-4" id="topcardhead">
@@ -74,7 +80,7 @@ const FavoriteTracks = ({ playList }) => {
   </MDBCard> */}
         </MDBRow>
         <MDBRow className="favtracks">
-        {/*  {isLoading && (
+          {/*  {isLoading && (
             <div className="spinnerdiv">
               <Spinner
                 animation="border"
@@ -92,7 +98,7 @@ const FavoriteTracks = ({ playList }) => {
                   src={track.cover_medium}
                   id="sleepcardimg"
           /> */}
-              {/*  <div className="text-white d-flex py-4 px-1">
+          {/*  <div className="text-white d-flex py-4 px-1">
                   <div
                     className="rgba-black-light mt-auto pr-4 pr-1"
                     id="sleepcardtitle"
@@ -113,43 +119,36 @@ const FavoriteTracks = ({ playList }) => {
               </Link>
             </MDBCard>
           </div> */}
-
-<ListGroup className="w-50 mx-auto favcompanylist">
-        {playList.map((track, i) => (
-          <div className="position-relative">
-            <ListGroup.Item key={i}>
-            <td className="trackNumber align-middle">{i + 1}</td>
-                  <td>
-                    <div className="albumSong">
-                      <strong>{track.title}</strong>
+          <MDBContainer className="favtrackscard">
+            <ListGroup className="favtrackscards">
+              {playList.map((track, i) => (
+                <ListGroup.Item className="favtrackscard my-2" key={i}>
+                  <div className="favtracksgrid d-flex align-items-center mx-auto">
+                    {" "}
+                    {i + 1}
+                    <div className="ml-4">{track.title}</div>
+                    <div className="favduration">
+                      {convertDuration(track.duration)}
                     </div>
-               
-                  </td>
-
-                  <td className="align-middle keep-on-page"><strong>
-                  {convertDuration(track.duration)}</strong>
-                  </td>
-                  <td>
-                <button
-                        className="button-round"
-                        onClick={() => removeSongFromPlaylist(i)}
-                      >
-                        <MDBIcon far icon="heart" className="trackFavorite" />
-                      </button>
-                  </td>
-            </ListGroup.Item>
-
-           {/* <Button
+                    <button
+                      className="removefavtrackbtn button-light ml-3"
+                      onClick={() => removeSongFromPlaylist(i)}
+                    >
+                      <MDBIcon far icon="heart" className="trackFavorite" />
+                    </button>
+                  </div>
+                </ListGroup.Item>
+                /* <Button
               onClick={() => props.removeFromFavourites(i)}
               variant="danger"
               size="sm"
               className="removebutton"
             >
               Remove
-           </Button> */}
-          </div>
-        ))}
-      </ListGroup>
+           </Button> */
+              ))}
+            </ListGroup>
+          </MDBContainer>
           {/*  <div className="d-flex pr-5 pt-3">
     <div className ="albumContainer pr-1">
       <div className="main-container main-container-album album-songs-container d-flex flex-row">

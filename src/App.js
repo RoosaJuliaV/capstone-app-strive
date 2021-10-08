@@ -47,6 +47,7 @@ import Album from "./pages/Album"
         <Route path="/album/:id"> <Album/>
         </Route>
         </Switch>
+        <Footer/>
         </div>
         {/* <Footer/> */}
             </Router>

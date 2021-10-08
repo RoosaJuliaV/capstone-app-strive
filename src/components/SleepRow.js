@@ -82,7 +82,7 @@ const SleepRow = () => {
   useEffect(() => {
     FetchAlbums();
   }, []);
-  
+
   return (
     <div className="sleepcontainer">
          <div className="sidebarbgdiv col-lg-2 d-none d-lg-block">
@@ -136,7 +136,11 @@ const SleepRow = () => {
                 className="rgba-black-light mt-auto pr-4 pr-1"
                 id="sleepcardtitle"
               >
-                <h5 className="sleepcardTitle card-title">{albumObj.album.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}</h5>
+                <h5 className="sleepCardTitle card-title">
+                    {albumObj.album.title
+                    .replace(/[^a-z\d\s]+/gi, "")
+                    .substring(0, 25)}
+                </h5>
               </div>
             </div>
           </Link>

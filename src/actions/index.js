@@ -8,4 +8,10 @@
     type: "REMOVE_SONG_FROM_PLAYLIST",
     payload: songFromPlaylist,
   });
+
+  export const playSong = (songToPlay) => ({
+    type: "PLAY_SONG",
+    payload: songToPlay,
+  });
+  
   
