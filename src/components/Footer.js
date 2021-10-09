@@ -67,8 +67,8 @@ const Footer = ({ currentSong }) => {
       }
 
   return (
-    <div className="container-fluid playbar fixed-bottom">
-      <div className="row">
+    <div className="container-fluid playbar fixed">
+      <div className="row px-0">
         <div className="col-2 leftFooter d-none d-sm-none d-md-flex">
           <div className="footerCover">
             {/* <img
@@ -82,7 +82,7 @@ const Footer = ({ currentSong }) => {
             {currentSong ? (
               <div className="footerSong ml-2">
                 <p>{currentSong.title}</p>
-                <p className="card-text mr-2 mt-2" id="footerArtist">
+                <p className="card-text mr-2" id="footerArtist">
                   {currentSong.artist.name}
                 </p>
               </div>
@@ -214,7 +214,7 @@ const Footer = ({ currentSong }) => {
           </div>
         </div>
         <div className="col-2 rightFooter mt-4 d-none d-sm-none d-md-flex">
-          <div id="queue">
+         {/* <div id="queue">
             <button id="footerButton">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -266,13 +266,13 @@ const Footer = ({ currentSong }) => {
               </svg>
             </button>
           </div>
-
-          <progress
+            */}
+        {/*  <progress
             id="volumeProgress"
             max="80"
             value="70"
             fill="white"
-          ></progress>
+        ></progress> */}
         </div>
       </div>
     </div>

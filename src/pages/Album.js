@@ -5,6 +5,7 @@ import { MDBIcon, MDBBtn } from "mdbreact";
 import { connect } from "react-redux";
 import { addSongToPlaylist, playSong } from "../actions";
 import { useHistory } from "react-router-dom";
+import Footer from "../components/Footer"
 
 const mapStateToProps = (state) => ({
     currentSong: state.play.currentSong,

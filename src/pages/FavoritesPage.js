@@ -6,19 +6,32 @@ import { Row, Col } from "react-bootstrap"
 import HomeJumbo from '../components/HomeJumbo';
 import Favorites from "../components/Favorites"
 import "./Home.css"
-  
+import Footer from "../components/Footer"
 import React from 'react';
 
 
 const FavoritesPage = () => {
     return (
+        <div>
         <div id="favoriteshadow">
+        <div className="sleepmaindiv">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <Favorites/>
-        </Col>
+           </Col>
        </Row>
+       </div>
     </div>
+    <div id="favpagefootershadow">
+       <Row>
+           <Col>
+           <div>
+           <Footer/>
+           </div>
+           </Col>
+       </Row>
+       </div>
+       </div>
     )
 }
 

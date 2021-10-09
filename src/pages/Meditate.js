@@ -6,19 +6,33 @@ import { Row, Col } from "react-bootstrap"
 import HomeJumbo from '../components/HomeJumbo';
 import MeditateRow from "../components/MeditateRow"
 import "./Sleep.css"
+import Footer from "../components/Footer"
   
 import React from 'react';
 
 
 const Meditate = () => {
     return (
+        <div>
         <div id="meditateshadow">
+            <div id="sleepmaindiv">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <MeditateRow/>
-        </Col>
+           </Col>
        </Row>
+       </div>
     </div>
+    <div id="meditatefootershadow">
+       <Row>
+           <Col>
+           <div>
+           <Footer/>
+           </div>
+           </Col>
+       </Row>
+       </div>
+       </div>
     )
 }
 
