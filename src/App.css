@@ -1073,31 +1073,35 @@ display:table-row-group;
 }
 
 
+
+
 @media screen and (max-width: 1000px) {
 .playbar {
-  display: flex;
+  display:-ms-inline-flexbox;
   flex-grow:var(--offset);
-    min-width: 0rem !important;
+    min-width: 100rem !important;
     /* width: calc(100% - 294px); */
     flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: inherit;
 }
 }
 
 @media screen and (min-width: 1000px) {
   .playbar {
     float: left;
-    display: flex-start;
      position: absolute;
      bottom: 0;
      left: 0;
      width: fit-content;
      flex-direction: column;
-     min-width: 15rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .leftFooter {
+  .footerdiv {
     float: left;
     display: flex-start;
      position: absolute;
@@ -1110,8 +1114,10 @@ display:table-row-group;
 }
 
 @media screen and (max-width: 1000px) {
-  .leftFooter {
+  .footerdiv {
     display: flex;
+    position: absolute;
+    bottom: 0;
     flex-grow:var(--offset);
       min-width: 100rem !important;
       /* width: calc(100% - 294px); */
@@ -1144,10 +1150,30 @@ progress {
   display: inline-block;
   width: 50%;
   max-height: 5px;
-  left: 490px;
-  top: 60px;
   background: rgb(255, 255, 255);
   border-radius: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .progress {
+    display: flex;
+    flex-direction: row;
+     width: 10rem;
+     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .progress {
+  
+    display: flex;
+    
+     bottom: 0;
+     left: 0;
+     width: 8rem;
+     flex-direction: row;
+     padding: none !important;
+  }
 }
 
 /*

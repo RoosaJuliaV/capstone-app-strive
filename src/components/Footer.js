@@ -67,9 +67,9 @@ const Footer = ({ currentSong }) => {
       }
 
   return (
-    <div className="container-fluid playbar fixed d-flex flex-row">
-      <div className="d-flex flex-row px-0">
-        <div className="container-fluid col-md-12 col-lg-2 leftFooter d-lg-flex mb-3">
+    <div className="container-fluid playbar">
+      <div className="footerdiv px-0">
+       <div>
           <div className="footerCover">
             {/* <img
               src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
@@ -111,7 +111,7 @@ const Footer = ({ currentSong }) => {
                 </>
               )}
           </div>
-      
+          </div>
           <div className="d-flex flex-row px-0 ml-2">
             <div id="shuffle">
               <button id="footerButton">
@@ -196,7 +196,7 @@ const Footer = ({ currentSong }) => {
               </button>
             </div>
           </div>
-          <div className="d-flex flex-row px-0 ml-4">
+       <div className="d-flex">
             <p id="minute1" className="" color="white">
               <small>1:32</small>
             </p>
@@ -213,7 +213,7 @@ const Footer = ({ currentSong }) => {
           </div>
         </div>
         </div>
-      </div>
+      
     
   );
 };
