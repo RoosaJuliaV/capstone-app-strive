@@ -23,10 +23,10 @@ const Breathe = () => {
        </Row>
        </div>
     </div>
-    <div id="breathefootershadow">
+    <div>
        <Row>
-           <Col>
-           <div>
+           <Col xs={12} sm={12} lg={2}>
+           <div id="breathefootershadow">
            <Footer/>
            </div>
            </Col>

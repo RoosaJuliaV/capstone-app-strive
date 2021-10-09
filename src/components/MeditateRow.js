@@ -91,14 +91,14 @@ const MeditateRow = () => {
             <Nav className="navbar fixed-top navbar" id="meditatenav">
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
-                <h1 className="meditateheading mb-4 mr-auto">
+                <h1 className="meditateheading mb-4 ml-4 mr-auto">
                   <strong>Meditate</strong>
 
                   <Button
                     type="button"
                     className="btn btn-outline-light btn-rounded"
                     data-mdb-ripple-color="dark"
-                    id="favoritesbutton"
+                    id="meditatebutton"
                   >
                     See all
                     <MDBIcon icon="angle-down" className="ml-2" />
@@ -110,7 +110,7 @@ const MeditateRow = () => {
         </MDBRow>
         <MDBRow>
           <MDBCard className="topmeditatecard mb-5 ml-4">
-            <div className="topcardshadow">
+         
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3" id="topcardhead">
@@ -118,7 +118,7 @@ const MeditateRow = () => {
                   </h3>
                 </div>
               </div>
-            </div>
+        
           </MDBCard>
         </MDBRow>
 

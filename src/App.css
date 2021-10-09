@@ -175,8 +175,18 @@
 
 #naviconbutton {
   border-radius: 50%;
-  height: 2.5rem !important;
-  width: 2,5rem !important;
+  height: 2.8rem !important;
+  width: 2.8rem !important;
+  background: rgb(31,36,0);
+  background: linear-gradient(90deg, rgba(31,36,0,1) 0%, rgba(9,55,121,1) 0%, rgba(0,119,255,1) 0%, rgba(92,5,161,1) 96%);
+  border: none;
+}
+
+#footerplaybutton {
+  border-radius: 50%;
+  margin-bottom: 0.2rem;
+  height: 2.8rem !important;
+  width: 2.8rem !important;
   background: rgb(31,36,0);
   background: linear-gradient(90deg, rgba(31,36,0,1) 0%, rgba(9,55,121,1) 0%, rgba(0,119,255,1) 0%, rgba(92,5,161,1) 96%);
   border: none;
@@ -185,7 +195,7 @@
 #sidenavicon {
   width: 1.2rem;
   height: 1.2rem;
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
 }
 
 #naviconbutton:hover {
@@ -336,6 +346,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   border-radius: 1.5rem;
   flex-direction: row;
   margin-top: 8rem;
+  border: none !important;
 }
 
 .topsleepcard:hover {
@@ -441,7 +452,32 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
   margin-top: auto;
   margin-bottom: 1.5rem;
   border-radius: 5rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 30%;
+  left: 25%;
+}
+
+#meditatebutton {
+  height: 3rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 5rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 30%;
+  left: 18%;
+}
+
+#bynamebutton {
+  height: 3rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 5rem;
+  margin-left: 0rem;
+  position: relative;
+  top: 30%;
+  left: 8%;
 }
 
 .removefavtrackbtn {
@@ -498,21 +534,130 @@ border: none !important;
 }
 
 #homefootershadow {
-  background: rgb(19, 31, 82);
+  background: rgb(64, 36, 110);
+  background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(34, 23, 75) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
  /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
-  width: max-content;
-  height: max-content;
+  width: 100rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+  
+  @media screen and (min-width: 1000px) {
+    #homefootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #albumfootershadow {
+    background: rgb(19, 31, 82);
+   /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+    width: 100rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #albumfootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #breathefootershadow {
+    background: rgb(26,41,71);
+background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb(39, 64, 110) 100%, rgb(55, 78, 117) 1020%);
+   /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+    width: 100rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #breathefootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #favfootershadow {
+    background: rgb(30,15,54);
+    background: linear-gradient(90deg, rgba(30,15,54,1) 0%, rgba(33,18,70,1) 21%, rgba(31,24,70,1) 32%, rgba(33,37,116,1) 98%, rgba(48,71,107,1) 1020%);
+   /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+    width: 100rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #favfootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+#meditatefootershadow {
+  background: rgb(41, 9, 83);
+  background: linear-gradient(90deg, rgb(48, 9, 80) 2%, rgb(67, 14, 100) 59%, rgb(38, 10, 65) 98%, rgb(38, 8, 71) 1020%);
+ /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+  width: 100rem;
+  height: 6rem;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1000;
 }
 
-#homefootershadow:hover {
-  background: rgb(39, 29, 85);
-  background: linear-gradient(90deg, rgb(16, 12, 22) 4%, rgb(21, 17, 41) 37%, rgb(34, 18, 53) 59%, rgb(43, 24, 54) 100%);
-  height: 110px;
-}
+
+  
+  @media screen and (min-width: 1000px) {
+    #meditatefootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
+  #sleepfootershadow {
+    background: rgb(18,10,34);
+background: linear-gradient(90deg, rgb(16, 11, 27) 0%, rgba(48,71,107,1) 1020%);
+   /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+    width: 100rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #sleepfootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
 
 /* .playbar {
   position: fixed;
@@ -533,22 +678,6 @@ border: none !important;
   background: linear-gradient(90deg, rgba(19, 14, 26, 0.685) 4%, rgba(21, 17, 41, 0.726) 37%, rgba(34, 18, 53, 0.726) 59%, rgba(43, 24, 54, 0.651) 100%);
 }
 
-#sleepfootershadow {
-  background: rgba(39, 29, 85, 0.301);
-  background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%);
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-#sleepfootershadow:hover {
-  background: rgb(39, 29, 85);
-  background: linear-gradient(90deg, rgb(16, 12, 22) 4%, rgb(21, 17, 41) 37%, rgb(34, 18, 53) 59%, rgb(43, 24, 54) 100%);
-  height: 110px;
-}
 
 
 #breathenav {
@@ -556,7 +685,7 @@ border: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
   background: rgb(26,41,71);
-background: linear-gradient(90deg, rgba(29, 44, 75, 0.726) 11%, rgba(28, 45, 75, 0.747) 51%, rgba(33, 55, 97, 0.747) 100%, rgba(48, 71, 107, 0.747) 1020%);
+background: linear-gradient(90deg, rgba(22, 34, 58, 0.726) 11%, rgba(28, 45, 75, 0.747) 51%, rgba(33, 55, 97, 0.747) 100%, rgba(48, 71, 107, 0.747) 1020%);
  /* background: rgb(45,65,103);
 background: linear-gradient(90deg, rgba(45,65,103,1) 91%, rgba(48,71,107,1) 1020%); */
   /* background: rgb(46,62,92);
@@ -565,59 +694,7 @@ background: linear-gradient(90deg, rgba(46,62,92,1) 91%, rgba(48,71,107,1) 1020%
   background: linear-gradient(90deg, rgba(73, 81, 119, 0.692) 4%, rgba(76, 83, 145, 0.726) 37%, rgba(82, 88, 145, 0.726) 59%, rgba(88, 93, 143, 0.596) 100%); */
 }
 
-#breathefootershadow {
-  background: rgb(26,41,71);
-background: linear-gradient(90deg, rgba(26, 41, 71, 0.726) 11%, rgba(33, 52, 88, 0.747) 51%, rgba(32, 57, 104, 0.747) 100%, rgba(42, 71, 119, 0.747) 1020%);
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
 
-#breathefootershadow:hover {
-  background: rgba(17, 17, 17, 0.897);
- /* background: rgb(26,41,71);
-background: linear-gradient(90deg, rgb(23, 36, 63) 11%, rgb(24, 39, 65) 51%, rgb(34, 54, 95) 90%, rgb(53, 53, 99) 1020%); */
-height: 110px;
- /*  background: rgb(26,41,71);
-background: linear-gradient(90deg, rgba(26,41,71,1) 11%, rgba(33,52,88,1) 51%, rgba(33,55,97,1) 100%, rgba(48,71,107,1) 1020%); */
-}
-
-#favfootershadow {
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 14%, rgba(25, 27, 77, 0.795) 37%, rgba(19, 31, 82, 0.788) 58%, rgba(18, 44, 96, 0.781) 91%, rgba(42, 79, 138, 0.781) 1020%);
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-#favfootershadow:hover {
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgb(27, 17, 51) 14%, rgb(24, 27, 75) 37%, rgb(19, 31, 82) 58%, rgb(18, 44, 96) 91%, rgb(42, 79, 138) 1020%);
-  height: 110px;
-}
-
-#favpagefootershadow {
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgba(27, 17, 51, 0.76) 14%, rgba(26, 30, 80, 0.815) 37%, rgba(28, 36, 77, 0.829) 58%, rgba(39, 44, 102, 0.781) 91%, rgba(37, 49, 87, 0.774) 1020%);
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-#favpagefootershadow:hover {
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgb(27, 17, 51) 14%, rgb(26, 30, 80) 37%, rgb(28, 36, 77) 58%, rgb(39, 44, 102) 91%, rgb(37, 49, 87) 1020%);
-  height: 110px;
-}
 
 
 
@@ -629,22 +706,7 @@ background: linear-gradient(90deg, rgba(26,41,71,1) 11%, rgba(33,52,88,1) 51%, r
   background: linear-gradient(90deg, rgba(42, 19, 75, 0.733) 4%, rgba(57, 29, 94, 0.726) 37%, rgba(75, 32, 95, 0.726) 59%, rgba(86, 35, 128, 0.726) 100%);
 }
 
-#meditatefootershadow {
-  background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgba(41, 17, 71, 0.733) 4%, rgba(51, 26, 83, 0.726) 37%, rgba(75, 32, 95, 0.726) 59%, rgba(86, 35, 128, 0.726) 100%);
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-}
 
-#meditatefootershadow:hover {
-  background: rgba(49, 36, 110, 0.301);
-  background: linear-gradient(90deg, rgb(43, 12, 70) 4%, rgb(45, 23, 73) 37%, rgb(75, 32, 95) 59%, rgb(86, 35, 128) 100%);
-  height: 110px;
-}
 
 #favoritenav {
   box-shadow: none !important;
@@ -692,7 +754,7 @@ background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 0%, rgba(25, 41, 94, 
 }
 
 #meditatenavdiv {
-  margin-left: 3rem;
+  margin-left: 1rem;
 }
 
 #breathenavdiv {
@@ -763,7 +825,7 @@ background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 0%, rgba(25, 41, 94, 
 
 #breatheshadow {
   background: rgb(26,41,71);
-background: linear-gradient(90deg, rgba(26,41,71,1) 11%, rgba(33,52,88,1) 51%, rgba(33,55,97,1) 100%, rgba(48,71,107,1) 1020%);
+background: linear-gradient(90deg, rgb(22, 34, 59) 11%, rgba(33,52,88,1) 51%, rgba(33,55,97,1) 100%, rgba(48,71,107,1) 1020%);
   /*
   background: rgb(32,44,69);
 background: linear-gradient(90deg, rgba(32,44,69,1) 11%, rgba(41,60,96,1) 51%, rgba(47,68,108,1) 100%, rgba(48,71,107,1) 1020%); */
@@ -855,7 +917,7 @@ object-fit:cover;
 .sleepcard2:hover {
   -ms-transform: scale(1.05); /* IE 9 */
   -webkit-transform: scale(1.05); /* Safari 3-8 */
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 #albumtable {
@@ -1010,8 +1072,8 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
 color: white;
 border: none !important;
 background-color: transparent !important;
-width: 100%;
 display:table-row-group;
+max-width: 500px !important;
 }
 
 .favtracksgrid {
@@ -1019,7 +1081,6 @@ display:table-row-group;
   border: none !important;
   box-shadow: none !important;
   background-color: transparent !important;
-  width: 35%;
 }
 
 #topfavicon {
@@ -1042,9 +1103,53 @@ display:table-row-group;
 }
 
 #footerButton {
-  margin-left: 0.3rem;
+  margin-left: 0rem;
+  color: white !important;
   background-color: transparent !important;
   border: 0;
+}
+
+#footerButtonLeft {
+  margin-right: 0.5rem;
+  color: white !important;
+  background-color: transparent !important;
+  border: 0;
+}
+
+#footerButtonRight {
+  margin-left: 0.5rem;
+  color: white !important;
+  background-color: transparent !important;
+  border: 0;
+}
+
+#footerButtonRedo {
+  margin-left: 0.3rem;
+  margin-bottom: 0.15rem;
+  color: white !important;
+  background-color: transparent !important;
+  border: 0;
+}
+
+#footerButtonRandom {
+margin-left: 0.3rem;
+margin-right: 0.2rem;
+margin-bottom: 0.1rem;
+  color: white !important;
+  background-color: transparent !important;
+  border: 0;
+}
+
+#footerIconRight {
+  font-size: 1.5rem !important;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+#footerIconLeft {
+  font-size: 1.5rem !important;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 /* .playbar .middleFooter .col-12 {
@@ -1058,8 +1163,7 @@ display:table-row-group;
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
-  max-width: 14.15rem !important;
-  margin-bottom: 1rem;
+  max-width: 13rem !important;
 }
 
 
@@ -1068,16 +1172,13 @@ display:table-row-group;
   color: white;
 }
 
-#footerSong {
-  margin-top: 3rem !important;
-}
 
 
 
 
 @media screen and (max-width: 1000px) {
 .playbar {
-  display:-ms-inline-flexbox;
+  display: flex;
   flex-grow:var(--offset);
     min-width: 100rem !important;
     /* width: calc(100% - 294px); */
@@ -1097,6 +1198,8 @@ display:table-row-group;
      left: 0;
      width: fit-content;
      flex-direction: column;
+     display: flex;
+     margin-left: 0.8rem;
   }
 }
 
@@ -1110,6 +1213,7 @@ display:table-row-group;
      width: 13rem;
      flex-direction: column;
      padding: none !important;
+     align-content: center;
   }
 }
 
@@ -1119,11 +1223,42 @@ display:table-row-group;
     position: absolute;
     bottom: 0;
     flex-grow:var(--offset);
-      min-width: 100rem !important;
+      min-width: 1000px !important;
       /* width: calc(100% - 294px); */
       flex-direction: row;
+      overflow: hidden;
+      align-content: center !important;
   }
   }
+
+  @media screen and (min-width: 1000px) {
+    .footermaindiv {
+    margin: 0;
+    display: flex;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .footermaindiv {
+      margin-bottom: 1.05rem;
+      display: flex;
+    }
+    }
+
+    @media screen and (max-width: 630px) {
+      .footerdiv {
+        width: 630px !important;
+        position: relative !important;
+      }
+      }
+
+      @media screen and (max-width: 630px) {
+        .footermaindiv {
+          max-width: 630px !important;
+         justify-content: center;
+        }
+        }
+
 
 ::-webkit-progress-value {
   background: rgb(131, 129, 129);
@@ -1158,8 +1293,9 @@ progress {
   .progress {
     display: flex;
     flex-direction: row;
-     width: 10rem;
+     min-width: 100% !important;
      flex-direction: row;
+     width: 30%;
   }
 }
 
@@ -1167,12 +1303,107 @@ progress {
   .progress {
   
     display: flex;
-    
      bottom: 0;
      left: 0;
-     width: 8rem;
+     width: 50%;
      flex-direction: row;
      padding: none !important;
+     margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .progress {
+   display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .progressdiv {
+    display: flex;
+    flex-direction: row;
+     min-width: 10% !important;
+     flex-direction: row;
+     margin-top: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .progressdiv {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .progressdiv {
+    margin-top:  1rem !important;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footerrightdiv {
+  margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footerrightdiv {
+   margin-top: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .footerrightdiv {
+   display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footerHeart {
+    margin-left: 0rem;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footerHeart {
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footerAlbum {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footerAlbum {
+    margin-left: 2.3rem;
+    margin-right: 0.2rem;
+    margin-top: 0.2rem !important;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .footerSong {
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footerSong {
+    margin-left: 1.5rem;
   }
 }
 

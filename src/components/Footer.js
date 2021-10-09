@@ -50,6 +50,7 @@ export default Footer; */
 import React from "react";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap"
+import { MDBIcon } from "mdbreact";
 
 const mapStateToProps = (state) => ({
   currentSong: state.play.currentSong,
@@ -67,9 +68,10 @@ const Footer = ({ currentSong }) => {
       }
 
   return (
+   
     <div className="container-fluid playbar">
-      <div className="footerdiv px-0">
-       <div>
+      <div className="footerdiv pb-1">
+       <div className="footerrightdiv">
           <div className="footerCover">
             {/* <img
               src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
@@ -80,24 +82,18 @@ const Footer = ({ currentSong }) => {
           </div>
           <div id="footerArtist" className="text-white">
           {currentSong ? (
-              <div className="footerSong ml-2">
-                <p>{currentSong.title}
+              <div className="footerSong">
+                <p><strong>{currentSong.title}</strong>
+                <button id="footerButton">
+                <MDBIcon icon="record-vinyl" className="footerAlbum" />
+                </button>
             <button id="footerButton">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="lightgrey"
-                className="bi bi-suit-heart ml-2"
-                viewBox="0 0 16 16"
-              >
-                <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
-              </svg>
+            <MDBIcon far icon="heart" className="footerHeart"/>
             </button>
           </p>
-                <p className="card-text mr-2" id="footerArtist">
+                {/* <p className="card-text mr-2" id="footerArtist">
                   {currentSong.artist.name}
-                </p>
+          </p> */}
               
         </div>
              ) : (
@@ -112,8 +108,8 @@ const Footer = ({ currentSong }) => {
               )}
           </div>
           </div>
-          <div className="d-flex flex-row px-0 ml-2">
-            <div id="shuffle">
+          <div className="footermaindiv px-0 ml-3">
+           {/* <div id="shuffle">
               <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,9 +126,14 @@ const Footer = ({ currentSong }) => {
                   <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
                 </svg>
               </button>
-            </div>
-
-            <div id="backward">
+             </div> */}
+  <button id="footerButtonRandom">
+  <MDBIcon icon="random" />
+  </button>
+  <button id="footerButtonLeft">
+  <MDBIcon icon="caret-left" id="footerIconLeft"/>
+  </button>
+           {/* <div id="backward">
               <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,10 +146,10 @@ const Footer = ({ currentSong }) => {
                   <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                 </svg>
               </button>
-            </div>
+            </div> */}
 
-            <div id="play">
-              <button id="footerButton">
+           
+             {/* <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -159,10 +160,13 @@ const Footer = ({ currentSong }) => {
                 >
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
                 </svg>
-              </button>
-            </div>
-
-            <div id="forward">
+             </button> */}
+             <button className="btn- btn-primary btn-floating" id="footerplaybutton"><MDBIcon icon="play" id="sidenavicon"/></button>
+          
+             <button id="footerButtonRight">
+  <MDBIcon icon="caret-right" id="footerIconRight"/>
+  </button>
+          {/*  <div id="forward">
               <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -175,10 +179,12 @@ const Footer = ({ currentSong }) => {
                   <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                 </svg>
               </button>
-            </div>
-
-            <div id="repeat">
-              <button id="footerButton">
+            </div> */}
+ <button id="footerButtonRedo">           
+<MDBIcon icon="redo" />
+</button>
+           {/* <div id="repeat">
+          <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -194,20 +200,20 @@ const Footer = ({ currentSong }) => {
                   />
                 </svg>
               </button>
-            </div>
+        </div> */}
           </div>
-       <div className="d-flex">
-            <p id="minute1" className="" color="white">
+       <div className="progressdiv flex-row ml-4">
+            <p id="minute1" className="mt-1" color="white">
               <small>1:32</small>
             </p>
             <progress
-              className="progress mx-3 my-2"
+              className="progress mx-3 mt-3"
               id="file"
               max="190"
               value="120"
               fill="white"
             ></progress>
-            <p id="minute2" className="" color="white">
+            <p id="minute2" className="mt-1" color="white">
               <small>{convertDuration(currentSong.duration)}</small>
             </p>
           </div>

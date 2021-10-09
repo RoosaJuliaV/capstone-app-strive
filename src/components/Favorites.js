@@ -46,15 +46,15 @@ const Favorites = ({ playList }) => {
             <Nav className="navbar fixed-top navbar" id="favoritenav">
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
-                <h1 className="favoriteheading mb-4 mr-auto">
+                <h1 className="favoriteheading mb-4 ml-4 mr-auto">
                   <strong>Favourites</strong>
                   <Button
                     type="button"
                     className="btn btn-outline-light btn-rounded"
                     data-mdb-ripple-color="dark"
-                    id="favoritesbutton"
+                    id="bynamebutton"
                   >
-                    Sort by name
+                    By name
                     <MDBIcon icon="angle-down" className="ml-2" />
                   </Button>
                 </h1>
@@ -64,7 +64,7 @@ const Favorites = ({ playList }) => {
         </MDBRow>
         <MDBRow>
         
-          <MDBCard className="mb-5 ml-4" id="favtopcard">
+          <MDBCard className="mb-5 ml-4"  id="favtopcard">
           <Link to="/favoritetrackslist" id="navText" className="topfavlink">
             <div className="text-white d-flex align-items-center py-5 px-4">
               <div id="sleepcardtitletop">

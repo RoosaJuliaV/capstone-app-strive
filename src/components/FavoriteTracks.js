@@ -44,19 +44,19 @@ const FavoriteTracks = ({ playList }) => {
         <MDBRow>
           <div className="d-flex flex-row">
             <Nav
-              className="navbar fixed-top navbar d-flex flex-row"
+              className="navbar fixed-top navbar"
               id="favtracksnav"
             >
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
-                <h1 className="favoriteheading mb-4 mr-auto">
-                  <Link to="/favoritespage" className="favtrackslink">
+                <h1 className="favoriteheading mb-4 ml-4 mr-auto">
+                <Link to="/favoritespage" className="favtrackslink">
                     <MDBIcon icon="angle-left" className="favarrow ml-2" />
                   </Link>
                   {/* <strong>Favourites</strong> */}
                   <Button
                     type="button"
-                    className="btn btn-outline-light btn-rounded mt-3 mr-auto"
+                    className="btn btn-outline-light btn-rounded mt-3"
                     data-mdb-ripple-color="dark"
                     id="favoritesbutton"
                   >

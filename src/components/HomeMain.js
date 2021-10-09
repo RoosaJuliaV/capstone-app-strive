@@ -53,7 +53,6 @@ const HomeMain = () => {
 
         <MDBRow>
           <MDBCard className="tophomecard mb-5 ml-4">
-            <div className="topcardshadow">
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3" id="topcardhead">
@@ -61,10 +60,10 @@ const HomeMain = () => {
                   </h3>
                 </div>
               </div>
-            </div>
           </MDBCard>
         </MDBRow>
-
+        <h3 className="heading mb-4 ml-4 mr-auto text-white">
+                  <strong>Recommended for you</strong></h3>
         <MDBRow className="mx-0">
           {isLoading && (
             <div className="spinnerdiv">
@@ -76,7 +75,43 @@ const HomeMain = () => {
             </div>
           )}
           {albumsArray.length > 0 &&
-            albumsArray.map((albumObj) => (
+            albumsArray.slice(0, 8).map((albumObj) => (
+              <MDBCard key={albumObj.id} className="homecard px-0">
+                <Link className="text-white" to={"/Album/" + albumObj.album.id}>
+                  <Card.Img
+                    variant="top"
+                    className="rounded-0"
+                    src={albumObj.album.cover_medium}
+                    id="sleepcardimg"
+                  />
+                  <div className="text-white d-flex py-4 px-1">
+                    <div
+                      className="rgba-black-light mt-auto pr-4 pr-1"
+                      id="sleepcardtitle"
+                    >
+                      <h5 className="sleepCardTitle card-title">
+                        {albumObj.album.title.replace(/[^a-z\d\s]+/gi, "")}
+                      </h5>
+                    </div>
+                  </div>
+                </Link>
+              </MDBCard>
+            ))}
+        </MDBRow>
+        <h3 className="heading mb-4 mt-5 ml-4 mr-auto text-white">
+                  <strong>Recommended for you</strong></h3>
+        <MDBRow className="mx-0">
+          {isLoading && (
+            <div className="spinnerdiv">
+              <Spinner
+                animation="border"
+                variant="light"
+                className="spinner mb-3"
+              />
+            </div>
+          )}
+          {albumsArray.length > 0 &&
+            albumsArray.slice(0, 8).map((albumObj) => (
               <MDBCard key={albumObj.id} className="homecard px-0">
                 <Link className="text-white" to={"/Album/" + albumObj.album.id}>
                   <Card.Img

@@ -23,10 +23,10 @@ const Sleep = () => {
        </Row>
        </div>
     </div>
-    <div id="sleepfootershadow">
+    <div>
        <Row>
-           <Col>
-           <div>
+           <Col xs={12} sm={12} lg={2}>
+           <div id="sleepfootershadow">
            <Footer/>
            </div>
            </Col>
