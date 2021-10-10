@@ -74,14 +74,12 @@ const HomeMain = () => {
               />
             </div>
           )}
-          {albumsArray.length > 0 &&
-            albumsArray.slice(0, 8).map((albumObj) => (
-              <MDBCard key={albumObj.id} className="homecard px-0">
-                <Link className="text-white" to={"/Album/" + albumObj.album.id}>
+              <MDBCard className="homecard px-0">
+                <Link className="text-white" to="/home/">
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src={albumObj.album.cover_medium}
+                    src=""
                     id="sleepcardimg"
                   />
                   <div className="text-white d-flex py-4 px-1">
@@ -90,13 +88,73 @@ const HomeMain = () => {
                       id="sleepcardtitle"
                     >
                       <h5 className="sleepCardTitle card-title">
-                        {albumObj.album.title.replace(/[^a-z\d\s]+/gi, "")}
+                        Favourites
                       </h5>
                     </div>
                   </div>
                 </Link>
               </MDBCard>
-            ))}
+              <MDBCard className="homecard px-0">
+                <Link className="text-white" to="/home/">
+                  <Card.Img
+                    variant="top"
+                    className="rounded-0"
+                    src=""
+                    id="sleepcardimg"
+                  />
+                  <div className="text-white d-flex py-4 px-1">
+                    <div
+                      className="rgba-black-light mt-auto pr-4 pr-1"
+                      id="sleepcardtitle"
+                    >
+                      <h5 className="sleepCardTitle card-title">
+                        Meditate
+                      </h5>
+                    </div>
+                  </div>
+                </Link>
+              </MDBCard>
+              <MDBCard className="homecard px-0">
+                <Link className="text-white" to="/home/">
+                  <Card.Img
+                    variant="top"
+                    className="rounded-0"
+                    src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    id="sleepcardimg"
+                  />
+                  <div className="text-white d-flex py-4 px-1">
+                    <div
+                      className="rgba-black-light mt-auto pr-4 pr-1"
+                      id="sleepcardtitle"
+                    >
+                      <h5 className="sleepCardTitle card-title">
+                        Breathe
+                      </h5>
+                    </div>
+                  </div>
+                </Link>
+              </MDBCard>
+              <MDBCard className="homecard px-0">
+                <Link className="text-white" to="/home/">
+                  <Card.Img
+                    variant="top"
+                    className="rounded-0"
+                    src=""
+                    id="sleepcardimg"
+                  />
+                  <div className="text-white d-flex py-4 px-1">
+                    <div
+                      className="rgba-black-light mt-auto pr-4 pr-1"
+                      id="sleepcardtitle"
+                    >
+                      <h5 className="sleepCardTitle card-title">
+                        Sleep
+                      </h5>
+                    </div>
+                  </div>
+                </Link>
+              </MDBCard>
+            ))
         </MDBRow>
         <h3 className="heading mb-4 mt-5 ml-4 mr-auto text-white">
                   <strong>Recommended for you</strong></h3>

@@ -51,10 +51,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap"
 import { MDBIcon } from "mdbreact";
+import { useState } from "react"
 
 const mapStateToProps = (state) => ({
   currentSong: state.play.currentSong,
-});
+})
+
 const Footer = ({ currentSong }) => {
 
     function convertDuration(time) {
@@ -68,7 +70,10 @@ const Footer = ({ currentSong }) => {
       }
 
   return (
-   
+   /* <div 
+   style={{ backgroundColor: "black" }} 
+    onClick={this.onChange} 
+   > */
     <div className="container-fluid playbar">
       <div className="footerdiv pb-1">
        <div className="footerrightdiv">
@@ -219,7 +224,7 @@ const Footer = ({ currentSong }) => {
           </div>
         </div>
         </div>
-      
+    //  </div>
     
   );
 };

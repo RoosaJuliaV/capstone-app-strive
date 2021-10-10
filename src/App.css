@@ -535,7 +535,7 @@ border: none !important;
 
 #homefootershadow {
   background: rgb(64, 36, 110);
-  background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(34, 23, 75) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
+  background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(55, 29, 97) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
  /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
   width: 100rem;
   height: 6rem;
