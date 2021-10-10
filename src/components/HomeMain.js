@@ -56,14 +56,14 @@ const HomeMain = () => {
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3" id="topcardhead">
-                    Listen to the clip of the day now
+                    Listen to the clip of the day now<MDBIcon icon="angle-right" id="topfavicon"/>
                   </h3>
                 </div>
               </div>
           </MDBCard>
         </MDBRow>
-        <h3 className="heading mb-4 ml-4 mr-auto text-white">
-                  <strong>Recommended for you</strong></h3>
+        <h3 className="heading mb-4 ml-3 mr-auto text-white">
+                  <strong>Categories</strong></h3>
         <MDBRow className="mx-0">
           {isLoading && (
             <div className="spinnerdiv">
@@ -88,7 +88,7 @@ const HomeMain = () => {
                       id="sleepcardtitlehome"
                     >
                       <h5 className="sleepCardTitleHome card-title">
-                        Favourites
+                        Favourites<MDBIcon icon="angle-right" id="topfavicon"/>
                       </h5>
                     </div>
                   </div>
@@ -105,10 +105,10 @@ const HomeMain = () => {
                   <div className="text-white d-flex py-4 px-1">
                     <div
                       className="rgba-black-light mt-auto pr-4 pr-1"
-                      id="sleepcardtitle"
+                      id="sleepcardtitlehome"
                     >
-                      <h5 className="sleepCardTitle card-title">
-                        Meditate
+                      <h5 className="sleepCardTitleHome card-title">
+                        Meditate<MDBIcon icon="angle-right" id="topfavicon"/>
                       </h5>
                     </div>
                   </div>
@@ -125,10 +125,10 @@ const HomeMain = () => {
                   <div className="text-white d-flex py-4 px-1">
                     <div
                       className="rgba-black-light mt-auto pr-4 pr-1"
-                      id="sleepcardtitle"
+                      id="sleepcardtitlehome"
                     >
-                      <h5 className="sleepCardTitle card-title">
-                        Breathe
+                      <h5 className="sleepCardTitleHome card-title">
+                        Breathe<MDBIcon icon="angle-right" id="topfavicon"/>
                       </h5>
                     </div>
                   </div>
@@ -145,19 +145,26 @@ const HomeMain = () => {
                   <div className="text-white d-flex py-4 px-1">
                     <div
                       className="rgba-black-light mt-auto pr-4 pr-1"
-                      id="sleepcardtitle"
+                      id="sleepcardtitlehome"
                     >
-                      <h5 className="sleepCardTitle card-title">
-                        Sleep
+                      <h5 className="sleepCardTitleHome card-title">
+                        Sleep<MDBIcon icon="angle-right" id="topfavicon"/>
                       </h5>
                     </div>
                   </div>
                 </Link>
               </MDBCard>
-            ))
         </MDBRow>
-        <h3 className="heading mb-4 mt-5 ml-4 mr-auto text-white">
-                  <strong>Recommended for you</strong></h3>
+        <h3 className="heading mb-1 mt-4 ml-3 mr-auto text-white">
+                  <strong>Recommended for you</strong>  <Button
+                    type="button"
+                    className="btn btn-outline-light btn-rounded"
+                    data-mdb-ripple-color="dark"
+                    id="recommendedbutton"
+                  >
+                    See all
+                    <MDBIcon icon="angle-down" className="ml-2" />
+                  </Button></h3>
         <MDBRow className="mx-0">
           {isLoading && (
             <div className="spinnerdiv">
