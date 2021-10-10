@@ -1,8 +1,20 @@
+import React from "react"
 import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaDiceD20 } from "react-icons/fa";
+import { useState } from "react"
  
 const NavBar = () => {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => { 
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
 return (
    /* } <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -22,7 +34,7 @@ return (
 <Navbar collapseOnSelect expand="lg" variant="light" id="navbar">
 <Container>
   <Navbar.Brand>
-  <Nav.Link href="/login">
+  <Nav.Link href="/home">
                <img
                 alt="logo"
                 src="https://www.calm.com/_n/images/calm-logo.png"
@@ -38,8 +50,8 @@ return (
   
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navleft">
-      <Nav.Link href="/login" id="navlogin">LOGIN</Nav.Link>
-      <Nav.Link href="/signup"><Button variant="outline-dark" id="navbutton">GET STARTED</Button></Nav.Link>
+      <Nav.Link href="/login"><Button variant="outline-dark" id="navbutton">JOIN NOW</Button></Nav.Link>
+      <Nav.Link href="/signup"><Button variant="outline-dark" id="navbutton">Login</Button></Nav.Link>
   </Nav>
   </Navbar.Collapse>
 </Container>

@@ -3,16 +3,24 @@
 #footer {
  /* background-color: rgb(57, 58, 63); */
  
-  background-color: white;
+ background-color: rgb(7, 3, 12) !important;
   margin-top: 5rem;
-  color: black;
+  color: white;
+  padding-bottom: 2rem;
   
+}
+
+.loginwrap {
+  background-color: rgb(7, 3, 12) !important;
+  height: 60rem !important;
+  width: 100rem !important;
+  z-index: 100;
 }
 
 #footericon {
   height: 1.5rem;
   width: 1.5rem;
-  color: black;
+  color: white;
 }
 
 #copyright {
@@ -26,8 +34,10 @@
 #navbar {
   background: transparent !important;
   color: white !important;
-  box-shadow: 0 !important;
+  box-shadow: none !important;
 }
+
+
 
 #navlogo {
   margin-right: 0.5rem;
@@ -41,6 +51,24 @@
 
 #navlogin {
   margin-top: 1.25rem;
+  color: white;
+}
+
+#navbutton {
+  border-radius: 2rem;
+  color: white !important;
+  border-color: rgb(255, 255, 255) !important;
+  border: transparent !important;
+}
+
+#navbutton:hover {
+  border-radius: 2rem;
+  color: white !important;
+  border: white !important;
+  background-color: rgba(33, 11, 48, 0.411) !important;
+  -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari 3-8 */
+  transform: scale(1.15); 
 }
 
 .loginbgdiv {
@@ -156,6 +184,13 @@ z-index: 1 !important;
   background-color: rgb(57, 30, 87);
   color: white;
   height: 16rem;
+}
+
+.loginwrap {
+  background-color: rgb(7, 3, 12) !important;
+  height: 60rem !important;
+  width: 100rem !important;
+  z-index: 100;
 }
 
 .sidebar {
