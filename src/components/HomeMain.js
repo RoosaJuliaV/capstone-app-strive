@@ -75,19 +75,19 @@ const HomeMain = () => {
             </div>
           )}
               <MDBCard className="homecard px-0">
-                <Link className="text-white" to="/home/">
+                <Link className="text-white" to="/favoritespage/">
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src=""
+                    src="https://windows10spotlight.com/wp-content/uploads/2018/11/07817ccc52899d971def2ba59ec7e8e7.jpg"
                     id="sleepcardimg"
                   />
                   <div className="text-white d-flex py-4 px-1">
                     <div
                       className="rgba-black-light mt-auto pr-4 pr-1"
-                      id="sleepcardtitle"
+                      id="sleepcardtitlehome"
                     >
-                      <h5 className="sleepCardTitle card-title">
+                      <h5 className="sleepCardTitleHome card-title">
                         Favourites
                       </h5>
                     </div>
@@ -95,11 +95,11 @@ const HomeMain = () => {
                 </Link>
               </MDBCard>
               <MDBCard className="homecard px-0">
-                <Link className="text-white" to="/home/">
+                <Link className="text-white" to="/meditate/">
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src=""
+                    src="https://www.crystal-life.com/wp-content/uploads/Information-Center/Info2017/mindfulness-info.jpg"
                     id="sleepcardimg"
                   />
                   <div className="text-white d-flex py-4 px-1">
@@ -115,11 +115,11 @@ const HomeMain = () => {
                 </Link>
               </MDBCard>
               <MDBCard className="homecard px-0">
-                <Link className="text-white" to="/home/">
+                <Link className="text-white" to="/breathe/">
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src="https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    src="https://images.unsplash.com/photo-1526732928503-5c58853877ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"/*"https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"*/
                     id="sleepcardimg"
                   />
                   <div className="text-white d-flex py-4 px-1">
@@ -135,11 +135,11 @@ const HomeMain = () => {
                 </Link>
               </MDBCard>
               <MDBCard className="homecard px-0">
-                <Link className="text-white" to="/home/">
+                <Link className="text-white" to="/sleep/">
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src=""
+                    src="https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616__340.jpg"
                     id="sleepcardimg"
                   />
                   <div className="text-white d-flex py-4 px-1">
