@@ -65,15 +65,6 @@ const HomeMain = () => {
         <h3 className="heading mb-4 ml-3 mr-auto text-white">
                   <strong>Categories</strong></h3>
         <MDBRow className="mx-0">
-          {isLoading && (
-            <div className="spinnerdiv">
-              <Spinner
-                animation="border"
-                variant="light"
-                className="spinner mb-3"
-              />
-            </div>
-          )}
               <MDBCard className="homecard px-0">
                 <Link className="text-white" to="/favoritespage/">
                   <Card.Img
@@ -155,8 +146,8 @@ const HomeMain = () => {
                 </Link>
               </MDBCard>
         </MDBRow>
-        <h3 className="heading mb-1 mt-4 ml-3 mr-auto text-white">
-                  <strong>Recommended for you</strong>  <Button
+        <h3 className="heading mb-4 mt-4 ml-3 mr-auto text-white">
+                  <strong>Recommended for you</strong> {/* <Button
                     type="button"
                     className="btn btn-outline-light btn-rounded"
                     data-mdb-ripple-color="dark"
@@ -164,10 +155,10 @@ const HomeMain = () => {
                   >
                     See all
                     <MDBIcon icon="angle-down" className="ml-2" />
-                  </Button></h3>
+                  </Button>*/}</h3>
         <MDBRow className="mx-0">
           {isLoading && (
-            <div className="spinnerdiv">
+            <div className="spinnerdivhome">
               <Spinner
                 animation="border"
                 variant="light"

@@ -24,7 +24,9 @@
 }
 
 #navbar {
-  background-image: linear-gradient(#170725 2%,#290e2e 9%, #6e3f98);
+  background: transparent !important;
+  color: white !important;
+  box-shadow: 0 !important;
 }
 
 #navlogo {
@@ -41,6 +43,12 @@
   margin-top: 1.25rem;
 }
 
+.loginbgdiv {
+background-image: url("https://3.bp.blogspot.com/-0uTYbhRviZo/XFUltMXwpmI/AAAAAAAABz0/8qFN2fjMUBYCb8MOlLia1gRbRrrH9sNBQCKgBGAs/w1440-h900-c/mountain-purple-sky-nature-scenery-4-4K.jpg");/* url("https://www.teahub.io/photos/full/226-2263628_wallpaper-winter-cold-mountain-shadow-lake-landscape-klntalersee.jpg"); */
+width: 100vw !important;
+height: 100vh !important;
+z-index: 1 !important;
+}
 
 
 .jumbotron-cover-image {
@@ -567,6 +575,17 @@ border: none !important;
   margin-left: 1rem;
 }
 
+.spinnerdivhome {
+  margin-left: 25.5rem !important;
+}
+
+.loginshadowdiv {
+  background-color: rgba(8, 8, 8, 0.281) !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 100 !important;
+}
+
 #homefootershadow {
   background: rgb(64, 36, 110);
   background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(55, 29, 97) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
@@ -607,8 +626,10 @@ border: none !important;
   }
 
   #breathefootershadow {
-    background: rgb(26,41,71);
-background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb(39, 64, 110) 100%, rgb(55, 78, 117) 1020%);
+    background: rgb(26, 33, 71);
+    background: linear-gradient(90deg, rgb(22, 31, 59) 11%, rgb(33, 41, 88) 51%, rgb(33, 45, 97) 100%, rgb(48, 54, 107) 1020%);
+   /* background: rgb(26,41,71);
+background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb(39, 64, 110) 100%, rgb(55, 78, 117) 1020%); */
    /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
     width: 100rem;
     height: 6rem;
@@ -718,8 +739,10 @@ background: linear-gradient(90deg, rgb(16, 11, 27) 0%, rgba(48,71,107,1) 1020%);
   box-shadow: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
-  background: rgb(26,41,71);
-background: linear-gradient(90deg, rgba(22, 34, 58, 0.726) 11%, rgba(28, 45, 75, 0.747) 51%, rgba(33, 55, 97, 0.747) 100%, rgba(48, 71, 107, 0.747) 1020%);
+  background: rgba(26, 33, 71, 0.767);
+  background: linear-gradient(90deg, rgba(22, 31, 59, 0.781) 11%, rgba(33, 41, 88, 0.764) 51%, rgba(33, 45, 97, 0.774) 100%, rgba(48, 54, 107, 0.712) 1020%);
+  /* background: rgb(26,41,71);
+background: linear-gradient(90deg, rgba(22, 34, 58, 0.726) 11%, rgba(28, 45, 75, 0.747) 51%, rgba(33, 55, 97, 0.747) 100%, rgba(48, 71, 107, 0.747) 1020%); */
  /* background: rgb(45,65,103);
 background: linear-gradient(90deg, rgba(45,65,103,1) 91%, rgba(48,71,107,1) 1020%); */
   /* background: rgb(46,62,92);
@@ -858,8 +881,8 @@ background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 0%, rgba(25, 41, 94, 
 }
 
 #breatheshadow {
-  background: rgb(26,41,71);
-background: linear-gradient(90deg, rgb(22, 34, 59) 11%, rgba(33,52,88,1) 51%, rgba(33,55,97,1) 100%, rgba(48,71,107,1) 1020%);
+  background: rgb(26, 33, 71);
+background: linear-gradient(90deg, rgb(22, 31, 59) 11%, rgb(33, 41, 88) 51%, rgb(33, 45, 97) 100%, rgb(48, 54, 107) 1020%);
   /*
   background: rgb(32,44,69);
 background: linear-gradient(90deg, rgba(32,44,69,1) 11%, rgba(41,60,96,1) 51%, rgba(47,68,108,1) 100%, rgba(48,71,107,1) 1020%); */

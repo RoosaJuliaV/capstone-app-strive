@@ -25,14 +25,14 @@ import Album from "./pages/Album"
       return (
         <div className="appdiv">
         <Router>
-            <div className="sidebardiv d-none d-lg-block">
+        <div className="sidebardiv d-none d-lg-block">
             <SideBar/>
             </div>
             <div className="appmaindiv d-flex w-100">
         <Switch>
-        <Route path="/login"> <NavBar/><Login/>
+        <Route path="/login"><Login/>
         </Route>
-        <Route path="/home"> <Home/>
+        <Route path="/home"><Home/>
         </Route>
         <Route path="/favoritespage"> <FavoritesPage/>
         </Route>

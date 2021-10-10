@@ -21,12 +21,18 @@ return (
 </Navbar> */
 <Navbar collapseOnSelect expand="lg" variant="light" id="navbar">
 <Container>
-<Nav.Link href="/home">
   <Navbar.Brand>
-  <FaDiceD20 id="navlogo"/>
-  Reboost
+  <Nav.Link href="/login">
+               <img
+                alt="logo"
+                src="https://www.calm.com/_n/images/calm-logo.png"
+                width="90"
+                height="auto"
+                className="d-inline-block align-top"
+            />
+            </Nav.Link>
   </Navbar.Brand>
-  </Nav.Link>
+
  
   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
   

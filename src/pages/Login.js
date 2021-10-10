@@ -1,13 +1,15 @@
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBJumbotron } from "mdbreact";
 import { Button } from "react-bootstrap"
-  
+import NavBar from "../components/NavBar";
 import React from 'react';
 
 
 const Login = () => {
     return (
-        <div>
-        <MDBJumbotron fluid className="jumbotron">
+        <div className="loginbgdiv">
+        <div className="loginshadowdiv">
+            <NavBar/>
+       {/* <MDBJumbotron fluid className="jumbotron">
       <div className="jumbotron-cover-image">
           <MDBContainer id="jumbodiv">
         <h1 className="mt-5 ml-5">Mindfulness from home</h1>
@@ -22,9 +24,10 @@ const Login = () => {
         </Button>
         </div>
         </MDBContainer>
-        {/* <img className="jumbopeopleimg" src="https://v7v2n5e8.rocketcdn.me/wp-content/uploads/happy-black-woman.png"/> */}
+        {/* <img className="jumbopeopleimg" src="https://v7v2n5e8.rocketcdn.me/wp-content/uploads/happy-black-woman.png"/>
         </div>
-    </MDBJumbotron>
+    </MDBJumbotron> */}
+    </div>
     </div>
     )
 }
