@@ -38,7 +38,7 @@ const FavoriteTracks = ({ playList }) => {
   }
 
   return (
-    <div className="sleepcontainer">
+    <div>
       <div className="breathesidebg col-lg-2 d-none d-lg-block"></div>
       <MDBContainer className="sleepcards">
         <MDBRow>
@@ -48,7 +48,7 @@ const FavoriteTracks = ({ playList }) => {
               id="favtracksnav"
             >
               <div className="container-fluid" id="meditatenavdiv">
-                <div className="col-lg-2 d-none d-lg-block"></div>
+              <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="favoriteheading mb-4 ml-4 mr-auto">
                 <Link to="/favoritespage" className="favtrackslink">
                     <MDBIcon icon="angle-left" className="favarrow ml-2" />

@@ -14,7 +14,7 @@ const FavoriteTrackList = () => {
     return (
         <div>
         <div id="favtracksshadow">
-        <div className="sleepmaindiv">
+        <div className="favmaindiv">
         <Row>
         <Col xs={12} sm={12} lg={12}>
            <FavoriteTracks/>
@@ -25,7 +25,7 @@ const FavoriteTrackList = () => {
     <div>
        <Row>
            <Col xs={12} sm={12} lg={2}>
-           <div id="favfootershadow">
+           <div id="favtracksfootershadow">
            <Footer/>
            </div>
            </Col>

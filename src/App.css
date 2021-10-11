@@ -312,6 +312,17 @@ border: none;
   border-radius: 1.5rem;
 
 }
+.favmaindiv {
+  background-color: rgba(5, 5, 5, 0.726) !important;
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+}
 
 .card-img-top {
   width: 100;
@@ -741,6 +752,27 @@ background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb
     }
   }
 
+  #favtracksfootershadow {
+    background: rgb(15, 4, 26);
+   /* background: rgb(30,15,54);
+    background: linear-gradient(90deg, rgba(30,15,54,1) 0%, rgba(33,18,70,1) 21%, rgba(31,24,70,1) 32%, rgba(33,37,116,1) 98%, rgba(48,71,107,1) 1020%); */
+   /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
+    width: 100rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #favtracksfootershadow {
+      background: transparent;
+      width: 5rem !important;
+      margin-bottom: 1rem;
+    }
+  }
+
 #meditatefootershadow {
   background: rgb(41, 9, 83);
   background: linear-gradient(90deg, rgb(48, 9, 80) 2%, rgb(67, 14, 100) 59%, rgb(38, 10, 65) 98%, rgb(38, 8, 71) 1020%);
@@ -864,8 +896,9 @@ background: linear-gradient(90deg, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, rg
   box-shadow: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(28, 29, 80, 0.767) 37%, rgba(37, 42, 97, 0.685) 85%, rgba(255, 255, 255, 0.774) 1020%);
+  background: transparent !important;
+ /* background: rgb(30,20,60);
+  background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(28, 29, 80, 0.767) 37%, rgba(37, 42, 97, 0.685) 85%, rgba(255, 255, 255, 0.774) 1020%); */
  /* background: rgb(30,20,60);
   background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(25, 27, 77, 0.767) 37%, rgba(19, 31, 82, 0.74) 58%, rgba(39, 45, 100, 0.719) 91%, rgba(38, 53, 104, 0.76) 1020%); */
  /* background: rgb(30,20,60);
@@ -996,8 +1029,10 @@ background: linear-gradient(90deg, rgba(20,34,60,1) 0%, rgba(16,29,74,1) 37%, rg
 }
 
 #favtracksshadow {
-  background: rgb(30,20,60);
-  background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(25, 27, 77, 0.767) 37%, rgba(19, 31, 82, 0.74) 58%, rgba(18, 44, 96, 0.719) 91%, rgba(42, 79, 138, 0.76) 1020%);
+  background-image: url("https://3.bp.blogspot.com/-0uTYbhRviZo/XFUltMXwpmI/AAAAAAAABz0/8qFN2fjMUBYCb8MOlLia1gRbRrrH9sNBQCKgBGAs/w1440-h900-c/mountain-purple-sky-nature-scenery-4-4K.jpg");/* url("https://www.teahub.io/photos/full/226-2263628_wallpaper-winter-cold-mountain-shadow-lake-landscape-klntalersee.jpg"); */
+z-index: 1 !important;
+  /* background: rgb(30,20,60);
+  background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(25, 27, 77, 0.767) 37%, rgba(19, 31, 82, 0.74) 58%, rgba(18, 44, 96, 0.719) 91%, rgba(42, 79, 138, 0.76) 1020%); */
   /* background: rgb(30,20,60);
   background: linear-gradient(90deg, rgba(30,20,60,1) 14%, rgba(25,27,77,1) 37%, rgba(19,31,82,1) 58%, rgba(18,44,96,1) 91%, rgba(42,79,138,1) 1020%); */ 
  /* background: rgb(30,20,60);
