@@ -47,37 +47,36 @@ const Footer = () => {
 
 export default Footer; */
 
-
 import React from "react";
 import { connect } from "react-redux";
-import { Button } from "react-bootstrap"
+import { Button } from "react-bootstrap";
 import { MDBIcon } from "mdbreact";
-import { useState } from "react"
+import { useState } from "react";
+import ReactAudioPlayer from 'react-audio-player';
 
 const mapStateToProps = (state) => ({
   currentSong: state.play.currentSong,
-})
+});
 
 const Footer = ({ currentSong }) => {
+  function convertDuration(time) {
+    let time2 = Math.floor(time % 60);
 
-    function convertDuration(time) {
-        let time2 = Math.floor(time % 60);
-    
-        if (time2.toString().length < 2) {
-          time2 = time2 * 10;
-        }
-        let length = Math.floor(time / 60) + ":" + time2;
-        return length;
-      }
-
+    if (time2.toString().length < 2) {
+      time2 = time2 * 10;
+    }
+    let length = Math.floor(time / 60) + ":" + time2;
+    return length;
+  }
+  console.log(currentSong);
   return (
-   /* <div 
+    /* <div 
    style={{ backgroundColor: "black" }} 
     onClick={this.onChange} 
    > */
     <div className="container-fluid playbar">
       <div className="footerdiv pb-1">
-       <div className="footerrightdiv">
+        <div className="footerrightdiv">
           <div className="footerCover">
             {/* <img
               src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
@@ -87,62 +86,53 @@ const Footer = ({ currentSong }) => {
             /> */}
           </div>
           <div id="footerArtist" className="text-white">
-          {currentSong ? (
+            {currentSong ? (
               <div className="footerSong d-flex">
-                <div className="d-flex flex-row"><p className="footerTitle"><strong>{currentSong.title}</strong></p>
-                <button id="footerButton">
-                <MDBIcon icon="record-vinyl" className="footerAlbum" />
-                </button>
-            <button id="footerButton">
-            <MDBIcon far icon="heart" className="footerHeart"/>
-            </button>
-          </div>
+                <div className="d-flex flex-row">
+                  <p className="footerTitle">
+                    <strong>{currentSong.title}</strong>
+                  </p>
+                  <button id="footerButton">
+                    <MDBIcon icon="record-vinyl" className="footerAlbum" />
+                  </button>
+                  <button id="footerButton">
+                    <MDBIcon far icon="heart" className="footerHeart" />
+                  </button>
+                </div>
                 {/* <p className="card-text mr-2" id="footerArtist">
                   {currentSong.artist.name}
           </p> */}
-              
+              </div>
+            ) : (
+              <>
+                <div className="footerSong ml-2">
+                  <p>Blond</p>
+                  <p className="card-text my-1 ml-2" id="footerArtist">
+                    <small>Frank Ocean</small>
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
         </div>
-             ) : (
-                <>
-                  <div className="footerSong ml-2">
-                    <p>Blond</p>
-                    <p className="card-text my-1 ml-2" id="footerArtist">
-                      <small>Frank Ocean</small>
-                    </p>
-                  </div>
-                </>
-              )}
-          </div>
-          </div>
-          <div className="footermaindiv d-flex flex-row px-0 ml-3">
-          <audio controls>
-    <source src={currentSong.preview} type='audio/mpeg' />
-</audio>
-           {/* <div id="shuffle">
-              <button id="footerButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="lightgrey"
-                  className="bi bi-shuffle"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"
-                  />
-                  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
-                </svg>
-              </button>
-             </div> */}
-  <button id="footerButtonRandom">
-  <MDBIcon icon="random" />
-  </button>
-  <button id="footerButtonLeft">
-  <MDBIcon icon="caret-left" id="footerIconLeft"/>
-  </button>
-           {/* <div id="backward">
+        <div className="footermaindiv d-flex flex-row px-0 ml-3">
+          {currentSong && (
+            /*<audio controls>
+              <source src={currentSong.preview} type="audio/mpeg" />
+            </audio> */
+            <ReactAudioPlayer
+  src={currentSong.preview}
+  autoPlay
+  controls
+/>
+          )}
+          <button id="footerButtonRandom">
+            <MDBIcon icon="random" />
+          </button>
+          <button id="footerButtonLeft">
+            <MDBIcon icon="caret-left" id="footerIconLeft" />
+          </button>
+          {/* <div id="backward">
               <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,9 +146,7 @@ const Footer = ({ currentSong }) => {
                 </svg>
               </button>
             </div> */}
-
-           
-             {/* <button id="footerButton">
+          {/* <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -170,11 +158,15 @@ const Footer = ({ currentSong }) => {
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
                 </svg>
              </button> */}
-             <button className="btn- btn-primary btn-floating" id="footerplaybutton"><MDBIcon icon="play" id="sidenavicon"/></button>
-          
-             <button id="footerButtonRight">
-  <MDBIcon icon="caret-right" id="footerIconRight"/>
-  </button>
+          <button
+            className="btn- btn-primary btn-floating"
+            id="footerplaybutton"
+          >
+            <MDBIcon icon="play" id="sidenavicon" />
+          </button>
+          <button id="footerButtonRight">
+            <MDBIcon icon="caret-right" id="footerIconRight" />
+          </button>
           {/*  <div id="forward">
               <button id="footerButton">
                 <svg
@@ -189,10 +181,10 @@ const Footer = ({ currentSong }) => {
                 </svg>
               </button>
             </div> */}
- <button id="footerButtonRedo">           
-<MDBIcon icon="redo" />
-</button>
-           {/* <div id="repeat">
+          <button id="footerButtonRedo">
+            <MDBIcon icon="redo" />
+          </button>
+          {/* <div id="repeat">
           <button id="footerButton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -210,26 +202,25 @@ const Footer = ({ currentSong }) => {
                 </svg>
               </button>
         </div> */}
-          </div>
-       <div className="progressdiv flex-row ml-4">
-            <p id="minute1" className="mt-1" color="white">
-              <small>1:32</small>
-            </p>
-            <progress
-              className="progress mx-3 mt-3"
-              id="file"
-              max="190"
-              value="120"
-              fill="white"
-            ></progress>
-            <p id="minute2" className="mt-1" color="white">
-              <small>{convertDuration(currentSong.duration)}</small>
-            </p>
-          </div>
         </div>
+        <div className="progressdiv flex-row ml-4">
+          <p id="minute1" className="mt-1" color="white">
+            <small>1:32</small>
+          </p>
+          <progress
+            className="progress mx-3 mt-3"
+            id="file"
+            max="190"
+            value="120"
+            fill="white"
+          ></progress>
+          <p id="minute2" className="mt-1" color="white">
+            {/*<small>{convertDuration(currentSong.duration)}</small>*/}
+          </p>
         </div>
+      </div>
+    </div>
     //  </div>
-    
   );
 };
 
