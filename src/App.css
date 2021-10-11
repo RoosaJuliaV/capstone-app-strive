@@ -1107,7 +1107,7 @@ object-fit:cover;
 }
 
 .albumSong {
-  max-width: 250px;
+  max-width: 200px !important;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

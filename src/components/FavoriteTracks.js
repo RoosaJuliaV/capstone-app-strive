@@ -126,7 +126,7 @@ const FavoriteTracks = ({ playList }) => {
                   <div className="favtracksgrid d-flex align-items-center mx-auto">
                     {" "}
                     {i + 1}
-                    <div className="ml-4">{track.title}</div>
+                    <div className="albumSong ml-4">{track.title}</div>
                     <div className="favduration">
                       {convertDuration(track.duration)}
                     </div>
