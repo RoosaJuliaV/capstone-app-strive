@@ -64,7 +64,8 @@
   border-radius: 2rem;
   color: white !important;
   border: white !important;
-  background-color: rgba(33, 11, 48, 0.411) !important;
+  background-color: rgba(35, 14, 126, 0.884) !important;
+  /* background-color: rgba(33, 11, 48, 0.411) !important; */
   -ms-transform: scale(1.15); /* IE 9 */
   -webkit-transform: scale(1.15); /* Safari 3-8 */
   transform: scale(1.15); 
@@ -87,7 +88,7 @@ z-index: 1 !important;
     border-radius: 2rem;
     color: white !important;
     border: white !important;
-    background-color: rgba(153, 91, 161, 0.644) !important;
+    background-color: rgba(35, 14, 126, 0.884) !important;
     -ms-transform: scale(1.15); /* IE 9 */
     -webkit-transform: scale(1.15); /* Safari 3-8 */
     transform: scale(1.15);
