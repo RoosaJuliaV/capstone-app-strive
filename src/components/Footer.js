@@ -47,6 +47,7 @@ const Footer = () => {
 
 export default Footer; */
 
+
 import React from "react";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap"
@@ -114,6 +115,9 @@ const Footer = ({ currentSong }) => {
           </div>
           </div>
           <div className="footermaindiv d-flex flex-row px-0 ml-3">
+          <audio controls>
+    <source src={currentSong.preview} type='audio/mpeg' />
+</audio>
            {/* <div id="shuffle">
               <button id="footerButton">
                 <svg
@@ -230,4 +234,3 @@ const Footer = ({ currentSong }) => {
 };
 
 export default connect(mapStateToProps)(Footer);
-
