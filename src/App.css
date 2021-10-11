@@ -1306,7 +1306,6 @@ justify-content: center !important;
 
 #footerButtonRedo {
   margin-left: 0.3rem;
-  margin-bottom: 0.15rem;
   color: white !important;
   background-color: transparent !important;
   border: 0;
@@ -1315,7 +1314,6 @@ justify-content: center !important;
 #footerButtonRandom {
 margin-left: 0.3rem;
 margin-right: 0.2rem;
-margin-bottom: 0.1rem;
   color: white !important;
   background-color: transparent !important;
   border: 0;
@@ -1341,10 +1339,14 @@ margin-bottom: 0.1rem;
 } */
 
 .footerSong {
+  width: 20rem !important;
+}
+
+.footerTitle {
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
-  max-width: 13rem !important;
+  width: 7rem !important;
 }
 
 
@@ -1547,12 +1549,13 @@ progress {
     margin-left: 0rem;
     font-size: 1.2rem;
     color: white;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .footerHeart {
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     color: white;
   }
@@ -1563,14 +1566,14 @@ progress {
     margin-left: 1rem;
     font-size: 1.2rem;
     color: white;
+    margin-bottom: 1rem;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .footerAlbum {
-    margin-left: 2.3rem;
-    margin-right: 0.2rem;
-    margin-top: 0.2rem !important;
+    margin-left: 0.7rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     color: white;
   }

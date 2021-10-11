@@ -85,7 +85,9 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
                   <div className="favtracksgrid d-flex align-items-center mx-auto">
                     {" "}
                     {i + 1}
-                    <div className="albumSong ml-4">{track.title}</div>
+                    <div className="albumSong ml-4" style={{ cursor: "pointer" }}
+                        onClick={() => addToCurrentSong(track)}
+>{track.title}</div>
                     <div className="favduration">
                       {convertDuration(track.duration)}
                     </div>

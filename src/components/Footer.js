@@ -87,15 +87,15 @@ const Footer = ({ currentSong }) => {
           </div>
           <div id="footerArtist" className="text-white">
           {currentSong ? (
-              <div className="footerSong">
-                <p><strong>{currentSong.title}</strong>
+              <div className="footerSong d-flex">
+                <div className="d-flex flex-row"><p className="footerTitle"><strong>{currentSong.title}</strong></p>
                 <button id="footerButton">
                 <MDBIcon icon="record-vinyl" className="footerAlbum" />
                 </button>
             <button id="footerButton">
             <MDBIcon far icon="heart" className="footerHeart"/>
             </button>
-          </p>
+          </div>
                 {/* <p className="card-text mr-2" id="footerArtist">
                   {currentSong.artist.name}
           </p> */}
@@ -113,7 +113,7 @@ const Footer = ({ currentSong }) => {
               )}
           </div>
           </div>
-          <div className="footermaindiv px-0 ml-3">
+          <div className="footermaindiv d-flex flex-row px-0 ml-3">
            {/* <div id="shuffle">
               <button id="footerButton">
                 <svg
