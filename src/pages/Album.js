@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, withRouter } from "react-router-dom";
-import { Col, Row, Button } from "react-bootstrap";
-import { MDBIcon, MDBBtn } from "mdbreact";
+import { Col, Row, Button, ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { addSongToPlaylist, playSong } from "../actions";
 import { useHistory } from "react-router-dom";
 import Footer from "../components/Footer"
+import {
+    MDBCol,
+    MDBContainer,
+    MDBRow,
+    MDBFooter,
+    MDBCard,
+    MDBIcon,
+  } from "mdbreact";
 
 const mapStateToProps = (state) => ({
     currentSong: state.play.currentSong,
@@ -59,100 +66,52 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
   }
 
   return (
-    <div className="albumbg d-flex pr-5 pt-3">
-      <div className="albumContainer pr-1">
+    <div className="albumbg d-flex">
+        <div className="albumshadowdiv">
+      <div className="albumContainer d-flex pr-1 justify-content-center">
         {console.log(albumName)}
         {console.log(trackArray)}
-        <div className="main-container main-container-album album-songs-container d-flex flex-row">
-          <div className="top-of-artist-songs mb-3 pt-3"></div>
-          <div className="col-md-12 d-flex flex-row mt-0">
-            <table id="albumtable" className="table table-borderless ml-5">
-              <thead>
-                <tr className="border_bottom">
-                  <td>
-                    <Link className="text-white" href="/">
-                      <MDBIcon
-                        icon="chevron-left"
-                        className="albumArrow mt-2"
-                      />
-                    </Link>
-                  </td>
-                  <td className="albumName">
-                    <span>{albumName.replace(/[^a-z\d\s]+/gi, "")}</span>
-                  </td>
-                  <td>
-                    <MDBIcon far icon="clock" className="albumClock" />
-                  </td>
-                  <td>
-                    <MDBIcon far icon="heart" className="albumFavorite" />
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                {trackArray.map((track, i) => (
-                  <tr key={i}>
-                    <td className="trackNumber align-middle">{i + 1}</td>
-                    <td>
-                      <div className="albumSong">
-                        <strong>{track.title}</strong>
-                      </div>
-                    </td>
-
-                    <td className="align-middle keep-on-page">
-                      <strong>{convertDuration(track.duration)}</strong>
-                    </td>
-                    <td>
-                      <button
-                        className="favbtn button-round"
-                        onClick={() => addToPlaylist(track)}
-                      >
-                        <MDBIcon far icon="heart" className="trackFavorite" />
-                      </button>
-                      <button
-                        className="favbtn button-round"
-                        onClick={() => addToCurrentSong(track)}
-                      >
-                        <MDBIcon icon="play" className="playIconAlbum" />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <MDBRow className="albumrow  d-flex flex-row">
+        <MDBCol xs={12} sm={12} lg={12} className="albummain">
+            <div className="albumnamediv">
+            <div className="albumName mb-3">{albumName.replace(/[^a-z\d\s]+/gi, "")}
+           {/* <MDBIcon far icon="clock" className="albumClock" />
+             <MDBIcon far icon="heart" className="albumFavorite" /> */}</div>
+             </div>
+                 <MDBContainer className="favtrackscard">
+            <ListGroup className="favtrackscards">
+              {trackArray.map((track, i) => (
+                <ListGroup.Item className="favtrackscard my-2" key={i}>
+                  <div className="favtracksgrid d-flex align-items-center mx-auto">
+                    {" "}
+                    {i + 1}
+                    <div className="albumSong ml-4">{track.title}</div>
+                    <div className="favduration">
+                      {convertDuration(track.duration)}
+                    </div>
+                    <button
+                      className="removefavtrackbtn button-light ml-3"
+                      onClick={() => addToPlaylist(track)}
+                    >
+                      <MDBIcon far icon="heart" className="trackFavorite" />
+                    </button>
+                  </div>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </MDBContainer>
+         </MDBCol>
+        </MDBRow>
       </div>
     </div>
-    /*
-            <tbody>
-              {trackArray.map((track, i) => (
-                <tr>
-                  <td className="trackNumber align-middle mb-1">{i + 1}</td>
-                  <td>
-                    <div className="albumSong">
-                      <span>{track.title}</span>
-                    </div>
-               
-                  </td>
-
-                  <td className="trackDuration align-middle keep-on-page"><strong>
-                  {convertDuration(track.duration)}</strong>
-                  </td>
-                  <td>
-                 </td> <td><Button style={{borderRadius: "50%", background: "transparent", border: 'none'}}
-                   onClick={()=>addToPlaylist(track)}>
-                    <MDBIcon far icon="heart" className="albumFavorite ml-2"/>
-              </Button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-            </table>
-            </div>
-            </div>
-          
-            </div>
-          </div> */
+     <Row>
+     <Col xs={12} sm={12} lg={2}>
+     <div id="albumfootershadow">
+     <Footer/>
+     </div>
+     </Col>
+ </Row>
+ </div>
   );
 };
 

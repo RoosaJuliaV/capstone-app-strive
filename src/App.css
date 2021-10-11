@@ -38,7 +38,6 @@
 }
 
 
-
 #navlogo {
   margin-right: 0.5rem;
   margin-bottom: 0.2rem;
@@ -78,6 +77,29 @@ height: 100vh !important;
 z-index: 1 !important;
 }
 
+#modalbtn {
+  border-radius: 2rem;
+  background-color: transparent !important;
+  border-color: white;
+}
+
+#modalbtn:hover {
+    border-radius: 2rem;
+    color: white !important;
+    border: white !important;
+    background-color: rgba(153, 91, 161, 0.644) !important;
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.15);
+}
+
+.modaldiv {
+  margin-top: 8rem;
+}
+
+.modalbtndiv {
+  margin-left: auto;
+}
 
 .jumbotron-cover-image {
   position: relative;
@@ -580,6 +602,10 @@ border: none !important;
   color: rgb(26, 25, 25);
 }
 
+.favcardtitle {
+  max-width: 200px;
+}
+
 .favarrow {
   font-size: 2rem;
 }
@@ -621,6 +647,19 @@ border: none !important;
   z-index: 100 !important;
 }
 
+.albumshadowdiv {
+  background-color: rgba(5, 5, 5, 0.726) !important;
+  overflow-y: scroll;
+  position:fixed;
+  width:100%;
+  height:100%;
+  bottom:0px;
+  right:0px;
+  z-index: 90;
+  padding-bottom: 10rem;
+  padding-left: 1rem;
+}
+
 #homefootershadow {
   background: rgb(64, 36, 110);
   background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(55, 29, 97) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
@@ -642,7 +681,7 @@ border: none !important;
   }
 
   #albumfootershadow {
-    background: rgb(19, 31, 82);
+    background: rgb(15, 4, 26);
    /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
     width: 100rem;
     height: 6rem;
@@ -1017,18 +1056,22 @@ object-fit:cover;
   /* justify-content: center; */
 }
 
+.albumrow {
+  margin-top: 4.5rem;
+}
+
 .albumName {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  color: white;
   font-weight: 600;
-  margin-bottom: 2rem;
   max-width: 250px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-left: 1.3rem;
 }
 
 .albumSong {
-  font-size: 1.1rem;
   max-width: 250px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1036,9 +1079,9 @@ object-fit:cover;
 }
 
 .albumFavorite {
-  margin-left: 0.4rem;
+  margin-left: 1.35rem;
   margin-top: 0.4rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .trackFavorite {
@@ -1060,7 +1103,7 @@ object-fit:cover;
 .albumClock {
   font-size: 1.2rem;
   margin-top: 0.4rem;
-  margin-left: 0.3rem;
+  margin-left: 3rem;
 }
 
 .albumArrow {
@@ -1080,13 +1123,13 @@ object-fit:cover;
   bottom:0px;
   right:0px;
   margin-left: 20rem;
-  background-image: url("https://images.hdqwalls.com/download/purple-sky-tz-1920x1080.jpg");
+  background-image: url("https://3.bp.blogspot.com/-0uTYbhRviZo/XFUltMXwpmI/AAAAAAAABz0/8qFN2fjMUBYCb8MOlLia1gRbRrrH9sNBQCKgBGAs/w1440-h900-c/mountain-purple-sky-nature-scenery-4-4K.jpg");/* url("https://www.teahub.io/photos/full/226-2263628_wallpaper-winter-cold-mountain-shadow-lake-landscape-klntalersee.jpg");
   /* background: rgb(102,29,79);
 background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, rgba(94,50,121,1) 31%, rgba(122,40,117,1) 49%, rgba(51,31,69,1) 98%); */
 }
 
 .albumContainer {
-  max-width: 30rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -1146,6 +1189,12 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
   background-color: transparent !important;
 }
 
+.albumtracks {
+  margin-top: 5rem;
+  border: none !important;
+  background-color: transparent !important;
+}
+
 .favtrackslist {
   width: 40vw !important;
   border: none !important;
@@ -1164,8 +1213,8 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
 color: white;
 border: none !important;
 background-color: transparent !important;
-display:table-row-group;
-max-width: 500px !important;
+display: table-row-group;
+width: 400px;
 }
 
 .favtracksgrid {
@@ -1173,6 +1222,11 @@ max-width: 500px !important;
   border: none !important;
   box-shadow: none !important;
   background-color: transparent !important;
+  
+}
+
+.albummain {
+justify-content: center !important;
 }
 
 #topfavicon {
@@ -1314,11 +1368,11 @@ margin-bottom: 0.1rem;
     display: flex;
     position: absolute;
     bottom: 0;
-    flex-grow:var(--offset);
-      min-width: 1000px !important;
+    justify-content: stretch;
+    flex-flow: row wrap;
+    min-width: fit-content;
       /* width: calc(100% - 294px); */
       flex-direction: row;
-      overflow: hidden;
       align-content: center !important;
   }
   }
@@ -1326,28 +1380,29 @@ margin-bottom: 0.1rem;
   @media screen and (min-width: 1000px) {
     .footermaindiv {
     margin: 0;
-    display: flex;
     }
   }
   
   @media screen and (max-width: 1000px) {
     .footermaindiv {
       margin-bottom: 1.05rem;
-      display: flex;
+      flex-grow: 2;
+      
     }
     }
 
     @media screen and (max-width: 630px) {
       .footerdiv {
-        width: 630px !important;
+        width: fit-content !important;
         position: relative !important;
       }
       }
 
       @media screen and (max-width: 630px) {
         .footermaindiv {
-          max-width: 630px !important;
+          width: fit-content !important;
          justify-content: center;
+         flex-grow: 2;
         }
         }
 

@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaDiceD20 } from "react-icons/fa";
 import { useState } from "react"
+import LoginMod from "./LoginMod";
  
 const NavBar = () => {
 
@@ -40,7 +41,7 @@ return (
                 src="https://www.calm.com/_n/images/calm-logo.png"
                 width="90"
                 height="auto"
-                className="d-inline-block align-top"
+                className="navbarlogo d-inline-block align-top"
             />
             </Nav.Link>
   </Navbar.Brand>
@@ -51,7 +52,7 @@ return (
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navleft">
       <Nav.Link href="/login"><Button variant="outline-dark" id="navbutton">JOIN NOW</Button></Nav.Link>
-      <Nav.Link href="/signup"><Button variant="outline-dark" id="navbutton">Login</Button></Nav.Link>
+      <div className="header__search mt-2"><Button onClick={handleOpen} variant="outline-dark" id="navbutton">  <LoginMod open={open} handleOpen={handleOpen} handleClose={handleClose}  />Login</Button></div>
   </Nav>
   </Navbar.Collapse>
 </Container>
