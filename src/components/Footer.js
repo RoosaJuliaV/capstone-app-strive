@@ -148,7 +148,6 @@ const Footer = ({ currentSong }) => {
             </audio> */
             <AudioPlayer className="audio"
   src={currentSong.preview}
-  autoPlay
   controls
 />
           )}
