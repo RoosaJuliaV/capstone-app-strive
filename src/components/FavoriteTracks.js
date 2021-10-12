@@ -11,17 +11,19 @@ import { Button, Nav, Spinner, Card, ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { removeSongFromPlaylist } from "../actions";
+import { removeSongFromPlaylist, playSong } from "../actions";
 
 const mapStateToProps = (state) => ({
+    currentSong: state.play.currentSong,
   playList: state.playList.tracks,
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    addToCurrentSong: (song) => dispatch(playSong(song)),
   removeFromPlaylist: (i) => dispatch(removeSongFromPlaylist(i)),
 });
 
-const FavoriteTracks = ({ playList }) => {
+const FavoriteTracks = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
   const params = useParams();
 
   const [trackArray, setTrackArray] = useState([]);
@@ -126,13 +128,14 @@ const FavoriteTracks = ({ playList }) => {
                   <div className="favtracksgrid d-flex align-items-center mx-auto">
                     {" "}
                     {i + 1}
-                    <div className="albumSong ml-4">{track.title}</div>
+                    <div className="albumSong ml-4" style={{ cursor: "pointer" }}
+                        onClick={() => addToCurrentSong(track)}>{track.title}</div>
                     <div className="favduration">
                       {convertDuration(track.duration)}
                     </div>
                     <button
                       className="removefavtrackbtn button-light ml-3"
-                      onClick={() => removeSongFromPlaylist(i)}
+                      onClick={() => removeFromPlaylist(i)}
                     >
                       <MDBIcon far icon="heart" className="trackFavorite" />
                     </button>

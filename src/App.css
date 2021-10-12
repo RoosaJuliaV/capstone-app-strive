@@ -55,16 +55,18 @@
 
 #navbutton {
   border-radius: 2rem;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
   color: white !important;
-  border-color: rgb(255, 255, 255) !important;
-  border: transparent !important;
+  background-color: transparent !important;
+  border-color: white !important;
 }
 
 #navbutton:hover {
   border-radius: 2rem;
   color: white !important;
   border: white !important;
-  background-color: rgba(35, 14, 126, 0.884) !important;
+  background-color: rgba(13, 2, 41, 0.884) !important;
   /* background-color: rgba(33, 11, 48, 0.411) !important; */
   -ms-transform: scale(1.15); /* IE 9 */
   -webkit-transform: scale(1.15); /* Safari 3-8 */
@@ -495,7 +497,7 @@ border: none;
   left: 0;
   right: 0;
   border-radius: 1.4rem 1.4rem 1.4rem 1.4rem;
-  background-color: rgba(20, 0, 27, 0.432);
+  background-color: rgba(0, 0, 0, 0.404);
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
@@ -578,6 +580,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 }
 
 .tophomecard {
+ /* background-image: url("https://wallpapercave.com/wp/wp6410576.jpg"); */
   background-image: url("https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/26-04-2021_Unsplash_forest.jpg/image1170x530cropped.jpg");
   width: 82%;
   height: 10rem;

@@ -49,19 +49,53 @@ export default Footer; */
 
 import React from "react";
 import { connect } from "react-redux";
+import { addSongToPlaylist, playSong } from "../actions";
 import { Button } from "react-bootstrap";
 import { MDBIcon } from "mdbreact";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, Link, withRouter } from "react-router-dom";
 // import ReactAudioPlayer from 'react-audio-player';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
+
 const mapStateToProps = (state) => ({
   currentSong: state.play.currentSong,
+  playList: state.playList.tracks,
   /* isPlaying: false, */
 });
 
-const Footer = ({ currentSong }) => {
+const mapDispatchToProps = (dispatch) => ({
+  addToCurrentSong: (song) => dispatch(playSong(song)),
+addToPlaylist: (song) => dispatch(addSongToPlaylist(song)),
+});
+
+const Footer = ({ currentSong, addToPlaylist }) => {
+  const params = useParams();
+  const albumId = params.id;
+  console.log(albumId);
+
+  const [trackArray, setTrackArray] = useState([]);
+  const [albumName, setAlbumName] = useState("");
+
+  const searchTrackList = async () => {
+    try {
+      let response = await fetch(
+        `https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`
+      );
+
+      let trackList = await response.json();
+      setAlbumName(trackList.title);
+      setTrackArray(trackList.tracks.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchTrackList();
+  }, []);
+
   function convertDuration(time) {
     let time2 = Math.floor(time % 60);
 
@@ -122,7 +156,7 @@ const Footer = ({ currentSong }) => {
                   <button id="footerButton">
                     <MDBIcon icon="record-vinyl" className="footerAlbum" />
                   </button>
-                  <button id="footerButton">
+                  <button id="footerButton"  onClick={() => addToPlaylist(currentSong)}>
                     <MDBIcon far icon="heart" className="footerHeart" />
                   </button>
                 
@@ -157,4 +191,4 @@ const Footer = ({ currentSong }) => {
   );
 };
 
-export default connect(mapStateToProps)(Footer);
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);
