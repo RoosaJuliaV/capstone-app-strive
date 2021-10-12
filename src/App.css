@@ -71,6 +71,98 @@
   transform: scale(1.15); 
 }
 
+.rhap_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: inherit;
+  width: 100% !important;
+  height: fit-content !important;
+  padding: 10px 15px;
+  background-color: transparent !important;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
+} 
+
+.rhap_rewind-button {
+  margin: 0 3px;
+  color: white !important;
+  font-size: 1.5rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.rhap_forward-button {
+  margin: 0 3px;
+  color: white !important;
+  font-size: 1.5rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.rhap_play-pause-button {
+  margin: 0.8rem 0.8rem !important;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  color: white !important;
+  border-radius: 50% !important;
+}
+
+.rhap_volume-bar {
+  display: none !important;
+}
+
+.rhap_volume-bar-area {
+  display: none !important;
+}
+
+.rhap_volume-button {
+  margin: 0.3rem;
+  color: white !important;
+  font-size: 1.5rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.rhap_time {
+  color: white !important;
+  font-size: 0.8rem !important;
+}
+
+.rhap_repeat-button {
+  margin: 0.3rem !important;
+  color: white !important;
+  height: 2rem !important;
+  font-size: 1.2rem !important;
+}
+
+.rhap_progress-section {
+  margin-left: 0.2rem !important;
+  margin-top: 5rem !important;
+}
+
+.rhap_progress-indicator {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3;
+  width: 10px !important;
+  height: 10px !important;
+  margin-top: 0.4rem !important;
+  margin-left: 0rem !important;
+  background: white !important;
+  border-radius: 50px;
+  box-shadow: rgb(134 134 134 / 50%) 0 0 5px;
+}
+
+.rhap_progress-filled {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(56, 32, 190) !important;
+  border-radius: 2px;
+}
+
 .loginbgdiv {
 background-image: url("https://3.bp.blogspot.com/-0uTYbhRviZo/XFUltMXwpmI/AAAAAAAABz0/8qFN2fjMUBYCb8MOlLia1gRbRrrH9sNBQCKgBGAs/w1440-h900-c/mountain-purple-sky-nature-scenery-4-4K.jpg");/* url("https://www.teahub.io/photos/full/226-2263628_wallpaper-winter-cold-mountain-shadow-lake-landscape-klntalersee.jpg"); */
 width: 100vw !important;

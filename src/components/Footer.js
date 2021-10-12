@@ -52,10 +52,13 @@ import { connect } from "react-redux";
 import { Button } from "react-bootstrap";
 import { MDBIcon } from "mdbreact";
 import { useState } from "react";
-import ReactAudioPlayer from 'react-audio-player';
+// import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 const mapStateToProps = (state) => ({
   currentSong: state.play.currentSong,
+  /* isPlaying: false, */
 });
 
 const Footer = ({ currentSong }) => {
@@ -69,6 +72,25 @@ const Footer = ({ currentSong }) => {
     return length;
   }
   console.log(currentSong);
+
+  /* const playPause = () => {
+
+    // Get state of song
+    let isPlaying = this.state.isPlaying;
+
+    if (isPlaying) {
+      // Pause the song if it is playing
+      this.state.audio.pause();
+    } else {
+
+      // Play the song if it is paused
+      this.state.audio.play();
+    }
+
+    // Change the state of song
+    this.setState({ isPlaying: !isPlaying });
+  };
+*/
   return (
     /* <div 
    style={{ backgroundColor: "black" }} 
@@ -76,7 +98,6 @@ const Footer = ({ currentSong }) => {
    > */
     <div className="container-fluid playbar">
       <div className="footerdiv pb-1">
-        <div className="footerrightdiv">
           <div className="footerCover">
             {/* <img
               src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
@@ -89,6 +110,12 @@ const Footer = ({ currentSong }) => {
             {currentSong ? (
               <div className="footerSong d-flex">
                 <div className="d-flex flex-row">
+                
+         {/* <p> {this.state.isPlaying ? 
+            "Song is Playing" : 
+            "Song is Paused"}
+         </p> */}
+
                   <p className="footerTitle">
                     <strong>{currentSong.title}</strong>
                   </p>
@@ -114,113 +141,20 @@ const Footer = ({ currentSong }) => {
               </>
             )}
           </div>
-        </div>
-        <div className="footermaindiv d-flex flex-row px-0 ml-3">
+        <div className="footermaindiv d-flex flex-row px-0 ml-2">
           {currentSong && (
             /*<audio controls>
               <source src={currentSong.preview} type="audio/mpeg" />
             </audio> */
-            <ReactAudioPlayer
+            <AudioPlayer className="audio"
   src={currentSong.preview}
   autoPlay
   controls
 />
           )}
-          <button id="footerButtonRandom">
-            <MDBIcon icon="random" />
-          </button>
-          <button id="footerButtonLeft">
-            <MDBIcon icon="caret-left" id="footerIconLeft" />
-          </button>
-          {/* <div id="backward">
-              <button id="footerButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="lightgrey"
-                  className="bi bi-caret-right-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                </svg>
-              </button>
-            </div> */}
-          {/* <button id="footerButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="white"
-                  className="bi bi-play-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
-                </svg>
-             </button> */}
-          <button
-            className="btn- btn-primary btn-floating"
-            id="footerplaybutton"
-          >
-            <MDBIcon icon="play" id="sidenavicon" />
-          </button>
-          <button id="footerButtonRight">
-            <MDBIcon icon="caret-right" id="footerIconRight" />
-          </button>
-          {/*  <div id="forward">
-              <button id="footerButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="lightgrey"
-                  className="bi bi-caret-right-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                </svg>
-              </button>
-            </div> */}
-          <button id="footerButtonRedo">
-            <MDBIcon icon="redo" />
-          </button>
-          {/* <div id="repeat">
-          <button id="footerButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="lightgrey"
-                  className="bi bi-arrow-repeat"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
-                  />
-                </svg>
-              </button>
-        </div> */}
-        </div>
-        <div className="progressdiv flex-row ml-4">
-          <p id="minute1" className="mt-1" color="white">
-            <small>1:32</small>
-          </p>
-          <progress
-            className="progress mx-3 mt-3"
-            id="file"
-            max="190"
-            value="120"
-            fill="white"
-          ></progress>
-          <p id="minute2" className="mt-1" color="white">
-            {/*<small>{convertDuration(currentSong.duration)}</small>*/}
-          </p>
-        </div>
-      </div>
-    </div>
-    //  </div>
+     </div>
+     </div>
+     </div>
   );
 };
 
