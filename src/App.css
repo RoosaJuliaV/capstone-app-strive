@@ -137,11 +137,11 @@
 }
 
 .rhap_volume-button {
-  margin: 0.3rem;
+  margin: 0.3rem !important;
   color: white !important;
-  font-size: 1.5rem !important;
-  width: 1.5rem !important;
-  height: 1.5rem !important;
+  font-size: 1.3rem !important;
+  width: 1.3rem !important;
+  height: 1.3rem !important;
 }
 
 .rhap_time {
@@ -495,7 +495,7 @@ border: none;
   left: 0;
   right: 0;
   border-radius: 1.4rem 1.4rem 1.4rem 1.4rem;
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(20, 0, 27, 0.432);
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
