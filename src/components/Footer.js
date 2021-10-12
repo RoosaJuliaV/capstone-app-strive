@@ -96,7 +96,7 @@ const Footer = ({ currentSong }) => {
    style={{ backgroundColor: "black" }} 
     onClick={this.onChange} 
    > */
-    <div className="container-fluid playbar">
+    <div className="container playbar">
       <div className="footerdiv pb-1">
           <div className="footerCover">
             {/* <img
@@ -108,8 +108,8 @@ const Footer = ({ currentSong }) => {
           </div>
           <div id="footerArtist" className="text-white">
             {currentSong ? (
-              <div className="footerSong d-flex">
-                <div className="d-flex flex-row">
+              <div className="footerSong d-flex flex-row">
+               
                 
          {/* <p> {this.state.isPlaying ? 
             "Song is Playing" : 
@@ -125,7 +125,7 @@ const Footer = ({ currentSong }) => {
                   <button id="footerButton">
                     <MDBIcon far icon="heart" className="footerHeart" />
                   </button>
-                </div>
+                
                 {/* <p className="card-text mr-2" id="footerArtist">
                   {currentSong.artist.name}
           </p> */}
@@ -141,7 +141,7 @@ const Footer = ({ currentSong }) => {
               </>
             )}
           </div>
-        <div className="footermaindiv d-flex flex-row px-0 ml-2">
+        <div className="footermaindiv d-flex flex-row px-0">
           {currentSong && (
             /*<audio controls>
               <source src={currentSong.preview} type="audio/mpeg" />

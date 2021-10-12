@@ -71,18 +71,37 @@
   transform: scale(1.15); 
 }
 
+.rhap_loop-off audio {
+  box-shadow: none !important;
+}
+
 .rhap_container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 0.5;
   font-family: inherit;
   width: 100% !important;
-  height: fit-content !important;
-  padding: 10px 15px;
+  height: 7rem !important;
+  padding-bottom: 0rem !important; 
   background-color: transparent !important;
-  box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
+  box-shadow: none !important;
 } 
+
+@media screen and (max-width: 1000px) {
+  .rhap-container {
+    padding-top: 1rem !important;
+    height: 7rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .rhap-container {
+    margin: 0;
+    }
+  }
 
 .rhap_rewind-button {
   margin: 0 3px;
@@ -138,8 +157,8 @@
 }
 
 .rhap_progress-section {
-  margin-left: 0.2rem !important;
-  margin-top: 5rem !important;
+  margin-left: 0.4rem !important;
+  width: 11.6rem !important;
 }
 
 .rhap_progress-indicator {
@@ -1456,7 +1475,6 @@ margin-right: 0.2rem;
 .playbar {
   display: flex;
   flex-grow:var(--offset);
-    min-width: 100rem !important;
     /* width: calc(100% - 294px); */
     flex-direction: row;
     position: absolute;
@@ -1474,7 +1492,6 @@ margin-right: 0.2rem;
      left: 0;
      width: fit-content;
      flex-direction: column;
-     display: flex;
      margin-left: 0.8rem;
   }
 }
@@ -1482,7 +1499,7 @@ margin-right: 0.2rem;
 @media screen and (min-width: 1000px) {
   .footerdiv {
     float: left;
-    display: flex-start;
+    display: flex;
      position: absolute;
      bottom: 0;
      left: 0;
@@ -1495,15 +1512,7 @@ margin-right: 0.2rem;
 
 @media screen and (max-width: 1000px) {
   .footerdiv {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    justify-content: stretch;
-    flex-flow: row wrap;
-    min-width: fit-content;
-      /* width: calc(100% - 294px); */
-      flex-direction: row;
-      align-content: center !important;
+    flex-direction: row !important;
   }
   }
 
@@ -1654,6 +1663,8 @@ progress {
   }
 }
 
+
+
 @media screen and (max-width: 1000px) {
   .footerAlbum {
     margin-left: 1rem;
@@ -1675,7 +1686,7 @@ progress {
 
 @media screen and (max-width: 1000px) {
   .footerSong {
-    margin-left: 0rem;
+    display: none !important;
   }
 }
 
