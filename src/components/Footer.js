@@ -97,7 +97,7 @@ const Footer = ({ currentSong }) => {
     onClick={this.onChange} 
    > */
     <div className="container playbar">
-      <div className="footerdiv pb-1">
+      <div className="footerdiv">
           <div className="footerCover">
             {/* <img
               src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"

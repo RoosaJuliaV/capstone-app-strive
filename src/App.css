@@ -1506,7 +1506,7 @@ margin-right: 0.2rem;
      left: 0;
      width: 13rem;
      flex-direction: column;
-     padding: none !important;
+     padding-bottom: 1rem !important;
      align-content: center;
   }
 }
