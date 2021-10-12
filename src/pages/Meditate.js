@@ -26,9 +26,9 @@ const Meditate = () => {
     <div>
        <Row>
            <Col xs={12} sm={12} lg={2}>
-           <div id="meditatefootershadow">
-           <Footer/>
-           </div>
+           {/* <div id="meditatefootershadow">
+     <Footer/>
+              </div> */}
            </Col>
        </Row>
        </div>

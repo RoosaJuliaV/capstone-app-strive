@@ -23,9 +23,9 @@ const Home = () => {
     <div>
        <Row>
            <Col xs={12} sm={12} lg={2}>
-           <div id="homefootershadow">
-           <Footer/>
-           </div>
+          {/* <div id="homefootershadow">
+     <Footer/>
+              </div> */}
            </Col>
        </Row>
        </div>

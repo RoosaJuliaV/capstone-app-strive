@@ -3,6 +3,7 @@ import {Nav, Button} from "react-bootstrap";
 import { withRouter, useLocation } from "react-router";
 import { MDBIcon } from "mdbreact"
 import { Link } from "react-router-dom"
+import Footer from "./Footer"
 
 const withouSidebarRoutes = ["/login"];
 
@@ -53,6 +54,7 @@ const SideBar = () => {
             </Nav.Item>
             <br/>
             <div id="sideMenu">
+<Footer/>
             </div>
             </Nav>
         </>

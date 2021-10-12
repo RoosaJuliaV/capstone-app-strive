@@ -819,6 +819,7 @@ border: none !important;
       background: transparent;
       width: 5rem !important;
       margin-bottom: 1rem;
+      z-index: 100;
     }
   }
 
