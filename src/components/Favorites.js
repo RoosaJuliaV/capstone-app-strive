@@ -11,17 +11,20 @@ import { Button, Nav, Spinner, Card } from "react-bootstrap";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { removeSongFromPlaylist } from "../actions";
+import { removeSongFromPlaylist, playSong } from "../actions";
 
 const mapStateToProps = (state) => ({
+    currentSong: state.play.currentSong,
   playList: state.playList.tracks,
+
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    addToCurrentSong: (song) => dispatch(playSong(song)),
   removeFromPlaylist: (i) => dispatch(removeSongFromPlaylist(i)),
 });
 
-const Favorites = ({ playList }) => {
+const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
   const params = useParams();
 
   const [trackArray, setTrackArray] = useState([]);
@@ -89,7 +92,6 @@ const Favorites = ({ playList }) => {
         )} */}
           {playList.map((track, i) => (
             <MDBCard key={i} className="sleepcard2 px-0">
-              <Link className="text-white" to={"/Album/" + track.artist.id}>
               <Card.Img
                   variant="top"
                   className="rounded-0"
@@ -101,20 +103,21 @@ const Favorites = ({ playList }) => {
                     className="rgba-black-light mt-auto pr-4 pr-1"
                     id="sleepcardtitle"
                   >
+                      <Link className="text-white" className="favcardlink" to={"/home"}>
                     <h5 className="sleepCardTitle card-title">
                       {track.title
                         .replace(/[^a-z\d\s]+/gi, "")
                         .substring(0, 25)}
                     </h5>
+                    </Link>
                     <button
                       className="favbtncard button-round"
-                      onClick={() => removeSongFromPlaylist(i)}
+                      onClick={() => removeFromPlaylist(i)}
                     >
                       <MDBIcon far icon="heart" className="trackFavorite" />
                     </button>
                   </div>
                 </div>
-              </Link>
             </MDBCard>
           ))}
           {/*  <div className="d-flex pr-5 pt-3">

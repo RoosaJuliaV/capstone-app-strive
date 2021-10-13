@@ -96,10 +96,14 @@ const HomeMain = () => {
                   <Card.Img
                     variant="top"
                     className="rounded-0"
+                    // src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg"
+                   // src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg"
+                    src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg"
+                    // src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/woman-meditating-in-sunset-aleaimage.jpg"
                    // src="https://image.freepik.com/free-photo/yoga-silhouette-with-sunset-background_1048-1482.jpg"
                     // src="https://dunescholar.com/wp-content/uploads/2020/08/yoga-sunset.jpg"
                    // src="https://cdn.powerofpositivity.com/wp-content/uploads/2014/12/meditate-meditation-sunset-1200x900.jpg"
-                    src="https://mmipeace.org/wp-content/uploads/2019/05/woman-practices-yoga-1080x675.jpg"
+                   // src="https://mmipeace.org/wp-content/uploads/2019/05/woman-practices-yoga-1080x675.jpg"
                    // src="https://c0.wallpaperflare.com/preview/56/956/1001/yoga-zen-meditating-pose-thumbnail.jpg"
                     // src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/woman-meditating-in-sunset-aleaimage.jpg"
                    // src="https://p0.pikist.com/photos/677/36/sunset-yoga-zen-meditation-woman-silhouette-installation-relaxation-the-year.jpg"
@@ -124,7 +128,7 @@ const HomeMain = () => {
                   <Card.Img
                     variant="top"
                     className="rounded-0"
-                    src="https://i.imgur.com/DWlDeEX.jpg"
+                   src="https://i.imgur.com/DWlDeEX.jpg"
                     // src="https://cdn141.picsart.com/331672482005201.jpg"
                    // src="https://images.unsplash.com/photo-1597242051386-c0a24ceae025?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVycGxlJTIwY2xvdWRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"/*"https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"*/
                     id="sleepcardimg"
