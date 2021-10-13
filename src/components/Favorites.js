@@ -26,8 +26,11 @@ const mapDispatchToProps = (dispatch) => ({
 
 const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
   const params = useParams();
+  const albumId = params.id;
+  console.log(albumId);
 
   const [trackArray, setTrackArray] = useState([]);
+  const [albumsArray, setAlbumsArray] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   function convertDuration(time) {
@@ -39,6 +42,22 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
     let length = Math.floor(time / 60) + ":" + time2;
     return length;
   }
+
+  const FetchAlbums = async () => {
+    setIsLoading(true)
+    const response = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/search?q=Relaxing_Sounds`
+    );
+    if (response.ok) {
+        setIsLoading(false)
+      const result = await response.json();
+      setAlbumsArray(result.data);
+      console.log(result);
+    }
+  };
+  useEffect(() => {
+    FetchAlbums();
+  }, []);
 
   return (
     <div className="sleepcontainer">
@@ -90,12 +109,13 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
         />
             </div>
         )} */}
-          {playList.map((track, i) => (
+          {playList.map((track, i, albumObj) => (
             <MDBCard key={i} className="sleepcard2 px-0">
               <Card.Img
                   variant="top"
                   className="rounded-0"
-                  src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
+                 // src={albumObj.cover_medium}
+                 src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
                   id="sleepcardimg"
           />
                 <div className="text-white d-flex py-4 px-1">
@@ -103,13 +123,16 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                     className="rgba-black-light mt-auto pr-4 pr-1"
                     id="sleepcardtitle"
                   >
-                      <Link className="text-white" className="favcardlink" to={"/home"}>
+                      <div className="text-white" className="favcardlink"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => addToCurrentSong(track)}
+                      >
                     <h5 className="sleepCardTitle card-title">
                       {track.title
                         .replace(/[^a-z\d\s]+/gi, "")
                         .substring(0, 25)}
                     </h5>
-                    </Link>
+                    </div>
                     <button
                       className="favbtncard button-round"
                       onClick={() => removeFromPlaylist(i)}
