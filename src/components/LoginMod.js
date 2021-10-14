@@ -5,16 +5,17 @@ import { MDBInput } from "mdbreact";
 import { Link } from "react-router-dom"
 
 
-const LoginMod = ({open, handleClose, handleOpen, closeModal, state }) => {
+const LoginMod = ({ open }) => {
 
-    const [on, setOn] = useState(false)
-    const onToggle = e => { setOn(!on) }
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <div>
         <Modal
-        open={open}
-        onClose={handleClose}
+         open={open}
+         onClose={handleClose}
         >{/*<button onClick={handleClose}>Button</button>*/}
         <div className="modaldiv col-lg-6 mx-auto">
         <h4 className="text-white ml-2"><strong>Login</strong></h4>
@@ -36,7 +37,7 @@ const LoginMod = ({open, handleClose, handleOpen, closeModal, state }) => {
       </div>
       <div className="modalbtndiv d-flex flex-row">
       <Link className="text-white" to="/home"><Button id="modalbtn">Login</Button></Link>
-      <Button id="modalbtn" closeButton>Close</Button>
+      <Button id="modalbtn" onClick={handleClose}>Close</Button>
       </div>
       </div>
       </Modal>

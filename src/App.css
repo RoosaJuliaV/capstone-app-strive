@@ -40,7 +40,25 @@
   margin-top: 0.15rem !important;
 }
 
+.navbar.navbar-light .navbar-toggler {
+  color: white !important;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .footericoncol {
+    margin-left: 0rem !important;
+  }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    .footericoncol {
+      margin-left: 0.2rem !important;
+    }
+    }
+
 #footericon {
+
   height: 1.5rem;
   width: 1.5rem;
   color: white;
