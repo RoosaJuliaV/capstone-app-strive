@@ -17,7 +17,7 @@ const LoginMod = ({open, handleClose, handleOpen }) => {
         <h4 className="text-white ml-2"><strong>Login</strong></h4>
         <div className="form-group">
         <input
-          type="text"
+          type="email"
           className="form-control form-control-lg mt-3"
           id="formGroupExampleInput"
           placeholder="E-mail"
@@ -25,7 +25,7 @@ const LoginMod = ({open, handleClose, handleOpen }) => {
       </div>
       <div className="form-group">
         <input
-          type="text"
+          type="password"
           className="form-control form-control-lg mt-4"
           id="formGroupExampleInput"
           placeholder="Password"

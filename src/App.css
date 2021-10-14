@@ -17,6 +17,24 @@
   z-index: 100;
 }
 
+.loginfooterdiv {
+  justify-content: center !important;
+  margin-left:  3rem !important;
+}
+
+.loginfooterlist {
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-right: 7rem !important;
+  list-style: none !important;
+}
+
+.loginfootertitle {
+  margin-right: 12.5rem !important;
+}
+
 #footericon {
   height: 1.5rem;
   width: 1.5rem;
@@ -66,7 +84,8 @@
   border-radius: 2rem;
   color: white !important;
   border: white !important;
-  background-color: rgba(13, 2, 41, 0.884) !important;
+ background-color: rgba(35, 14, 126, 0.884) !important;
+  /* background-color: rgba(13, 2, 41, 0.884) !important; */
   /* background-color: rgba(33, 11, 48, 0.411) !important; */
   -ms-transform: scale(1.15); /* IE 9 */
   -webkit-transform: scale(1.15); /* Safari 3-8 */
