@@ -13,13 +13,15 @@
 .loginwrap {
   background-color: rgb(7, 3, 12) !important;
   height: 60rem !important;
-  width: 100rem !important;
+  width: 120rem !important;
   z-index: 100;
 }
 
 .loginfooterdiv {
   justify-content: center !important;
   margin-left:  0rem !important;
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
 }
 
 .loginfooterlist {
@@ -38,6 +40,7 @@
 .loginfootercentertitle {
   margin-left: 1rem !important;
   margin-top: 0.15rem !important;
+  font-size: 1rem !important;
 }
 
 .navbar.navbar-light .navbar-toggler {
