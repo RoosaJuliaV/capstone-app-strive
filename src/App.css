@@ -19,7 +19,7 @@
 
 .loginfooterdiv {
   justify-content: center !important;
-  margin-left:  3rem !important;
+  margin-left:  0rem !important;
 }
 
 .loginfooterlist {
@@ -27,18 +27,34 @@
   align-items: center !important;
   display: flex !important;
   flex-direction: column !important;
-  margin-right: 7rem !important;
   list-style: none !important;
+  margin-right: 3rem !important;
 }
 
 .loginfootertitle {
-  margin-right: 12.5rem !important;
+  margin-right: 0rem !important;
+}
+
+.loginfootercentertitle {
+  margin-left: 1rem !important;
+  margin-top: 0.15rem !important;
 }
 
 #footericon {
   height: 1.5rem;
   width: 1.5rem;
   color: white;
+  font-size: 1.3rem !important;
+}
+
+#footericon:hover {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: rgb(49, 153, 250);
+  font-size: 1.3rem !important;
+  -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari 3-8 */
+  transform: scale(1.15); 
 }
 
 #copyright {
@@ -84,7 +100,7 @@
   border-radius: 2rem;
   color: white !important;
   border: white !important;
- background-color: rgba(35, 14, 126, 0.884) !important;
+ background-color: rgba(35, 14, 126, 0.76) !important;
   /* background-color: rgba(13, 2, 41, 0.884) !important; */
   /* background-color: rgba(33, 11, 48, 0.411) !important; */
   -ms-transform: scale(1.15); /* IE 9 */
@@ -220,7 +236,7 @@ z-index: 1 !important;
     border-radius: 2rem;
     color: white !important;
     border: white !important;
-    background-color: rgba(35, 14, 126, 0.884) !important;
+    background-color: rgba(35, 14, 126, 0.76) !important;
     -ms-transform: scale(1.15); /* IE 9 */
     -webkit-transform: scale(1.15); /* Safari 3-8 */
     transform: scale(1.15);

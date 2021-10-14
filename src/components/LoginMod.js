@@ -5,7 +5,10 @@ import { MDBInput } from "mdbreact";
 import { Link } from "react-router-dom"
 
 
-const LoginMod = ({open, handleClose, handleOpen }) => {
+const LoginMod = ({open, handleClose, handleOpen, closeModal, state }) => {
+
+    const [on, setOn] = useState(false)
+    const onToggle = e => { setOn(!on) }
 
     return (
         <div>
@@ -33,7 +36,7 @@ const LoginMod = ({open, handleClose, handleOpen }) => {
       </div>
       <div className="modalbtndiv d-flex flex-row">
       <Link className="text-white" to="/home"><Button id="modalbtn">Login</Button></Link>
-      <Button id="modalbtn">Close</Button>
+      <Button id="modalbtn" closeButton>Close</Button>
       </div>
       </div>
       </Modal>
