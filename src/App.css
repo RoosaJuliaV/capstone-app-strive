@@ -131,25 +131,26 @@
 
 #navbuttonlogin:hover {
   border-radius: 2rem;
-  color: white !important;
+  color: white !important;;
   border-color: transparent !important;
-  background-color: rgb(106, 108, 248) !important;
-  -ms-transform: scale(1.15); /* IE 9 */
-  -webkit-transform: scale(1.15); /* Safari 3-8 */
-  transform: scale(1.15); 
+  background-color: rgb(106, 127, 248) !important;;
+  /* background-color: rgb(106, 108, 248) !important; */
+  -ms-transform: scale(1.10); /* IE 9 */
+  -webkit-transform: scale(1.10); /* Safari 3-8 */
+  transform: scale(1.10); 
 }
 
 #navbutton:hover {
   border-radius: 2rem;
+ background-color: rgb(0, 21, 117) !important;
   color: white !important;
-  background-color: rgb(51, 0, 117) !important;
-  /* background-color: rgb(92, 7, 204) !important; */
   border-color: transparent !important;
+  /* background-color: rgb(92, 7, 204) !important; */
   /* background-color: rgba(13, 2, 41, 0.884) !important; */
   /* background-color: rgba(33, 11, 48, 0.411) !important; */
-  -ms-transform: scale(1.15); /* IE 9 */
-  -webkit-transform: scale(1.15); /* Safari 3-8 */
-  transform: scale(1.15); 
+  -ms-transform: scale(1.10); /* IE 9 */
+  -webkit-transform: scale(1.10); /* Safari 3-8 */
+  transform: scale(1.10); 
 }
 
 .rhap_loop-off audio {
@@ -304,7 +305,7 @@ z-index: 1 !important;
 
 #modalbtn {
   border-radius: 2rem;
-  background-color: rgb(106, 108, 248) !important;
+  background-color: rgb(106, 127, 248) !important;
   /* background-color: rgb(112, 110, 255) !important; */
  /* background-color: rgb(124, 122, 255) !important; */
   border-color: transparent !important;
@@ -924,7 +925,7 @@ border: none !important;
 
 #homefootershadow {
   background: rgb(64, 36, 110);
-  background: linear-gradient(90deg, rgb(24, 14, 46) 4%, rgb(55, 29, 97) 37%, rgb(73, 35, 109) 59%, rgb(81, 50, 110) 100%);
+  background: linear-gradient(90deg, rgb(20, 11, 37) 4%, rgb(28, 15, 49) 37%, rgb(50, 24, 73) 59%, rgb(44, 26, 61) 100%);
  /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
   width: 100rem;
   height: 6.3rem;
@@ -962,7 +963,7 @@ border: none !important;
 
   #breathefootershadow {
     background: rgb(26, 33, 71);
-    background: linear-gradient(90deg, rgb(22, 31, 59) 11%, rgb(33, 41, 88) 51%, rgb(33, 45, 97) 100%, rgb(48, 54, 107) 1020%);
+    background: linear-gradient(90deg, rgb(15, 21, 41) 11%, rgb(20, 25, 54) 51%, rgb(26, 35, 77) 100%, rgb(35, 39, 78) 1020%);
    /* background: rgb(26,41,71);
 background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb(39, 64, 110) 100%, rgb(55, 78, 117) 1020%); */
    /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
@@ -984,7 +985,7 @@ background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb
 
   #favfootershadow {
     background: rgb(30,15,54);
-    background: linear-gradient(90deg, rgba(30,15,54,1) 0%, rgba(33,18,70,1) 21%, rgba(31,24,70,1) 32%, rgba(33,37,116,1) 98%, rgba(48,71,107,1) 1020%);
+    background: linear-gradient(90deg, rgb(21, 10, 39) 0%, rgb(23, 12, 49) 21%, rgb(21, 17, 48) 32%, rgb(25, 28, 85) 98%, rgb(15, 52, 110) 1020%);
    /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
     width: 100rem;
     height: 6.3rem;
@@ -1025,7 +1026,7 @@ background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb
 
 #meditatefootershadow {
   background: rgb(41, 9, 83);
-  background: linear-gradient(90deg, rgb(48, 9, 80) 2%, rgb(67, 14, 100) 59%, rgb(38, 10, 65) 98%, rgb(38, 8, 71) 1020%);
+  background: linear-gradient(90deg, rgb(29, 5, 49) 2%, rgb(33, 7, 49) 59%, rgb(43, 11, 73) 98%, rgb(36, 8, 68) 1020%);
  /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
   width: 100rem;
   height: 6.3rem;
@@ -1049,7 +1050,7 @@ background: linear-gradient(90deg, rgb(23, 35, 59) 11%, rgb(31, 49, 85) 51%, rgb
 
   #sleepfootershadow {
     background: rgb(18,10,34);
-background: linear-gradient(90deg, rgb(16, 11, 27) 0%, rgba(48,71,107,1) 1020%);
+background: linear-gradient(90deg, rgb(16, 11, 27) 0%, rgb(17, 25, 39) 1020%);
    /* background: linear-gradient(90deg, rgba(19, 14, 26, 0.74) 4%, rgba(21, 17, 41, 0.76) 37%, rgba(34, 18, 53, 0.774) 59%, rgba(43, 24, 54, 0.767) 100%); */
     width: 100rem;
     height: 6.3rem;
@@ -1349,11 +1350,11 @@ object-fit:cover;
   font-size: 1.4rem;
   color: white;
   font-weight: 600;
-  max-width: 250px;
+  max-width: 340px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin-left: 1.3rem;
+  margin-left: 1rem;
 }
 
 .albumSong {
@@ -1414,7 +1415,7 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
 }
 
 .albumContainer {
-  max-width: 50rem;
+  max-width: fit-content !important;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -1499,7 +1500,7 @@ color: white;
 border: none !important;
 background-color: transparent !important;
 display: table-row-group;
-width: 400px;
+width: 370px !important;
 }
 
 .favtracksgrid {
