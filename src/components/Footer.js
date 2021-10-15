@@ -132,19 +132,9 @@ const Footer = ({ currentSong, addToPlaylist }) => {
    > */
     <div className="container playbar">
       <div className="footerdiv">
-          <div className="footerCover">
-            {/* <img
-              src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
-              alt=""
-              className="img-fluid"
-              id="footercover"
-            /> */}
-          </div>
           <div id="footerArtist" className="text-white">
             {currentSong ? (
-              <div className="footerSong d-flex flex-row">
-               
-                
+              <div className="footerSong d-flex flex-row">                
          {/* <p> {this.state.isPlaying ? 
             "Song is Playing" : 
             "Song is Paused"}
@@ -175,7 +165,7 @@ const Footer = ({ currentSong, addToPlaylist }) => {
               </>
             )}
           </div>
-        <div className="footermaindiv d-flex flex-row px-0">
+        <div className="footermaindiv px-0">
           {currentSong && (
             /*<audio controls>
               <source src={currentSong.preview} type="audio/mpeg" />
@@ -185,6 +175,16 @@ const Footer = ({ currentSong, addToPlaylist }) => {
   controls
 />
           )}
+          <div className="footerCover">
+               <img
+                 src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
+                 alt=""
+                 className="img-fluid"
+                 id="footercover"
+                 height="67rem"
+                 width="67rem"
+               />
+             </div>
      </div>
      </div>
      </div>

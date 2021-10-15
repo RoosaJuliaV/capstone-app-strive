@@ -25,7 +25,7 @@ import Album from "./pages/Album"
       return (
         <div className="appdiv">
         <Router>
-        <div className="sidebardiv d-none d-lg-block">
+        <div className="sidebardiv">
             <SideBar/>
             </div>
             <div className="appmaindiv d-flex w-100">

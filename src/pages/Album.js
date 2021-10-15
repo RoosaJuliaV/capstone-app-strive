@@ -108,9 +108,8 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
     </div>
      <Row>
      <Col xs={12} sm={12} lg={2}>
-    {/* <div id="albumfootershadow">
-     <Footer/>
-              </div> */}
+    <div id="albumfootershadow">
+              </div>
      </Col>
  </Row>
  </div>

@@ -14,6 +14,7 @@ const SideBar = () => {
 
     return (
         <>
+        <div className="sidebarsection">
             <Nav className="pl-1 d-none d-lg-block sidebar" id="sidebar"
             activeKey="/home"
             >
@@ -53,10 +54,11 @@ const SideBar = () => {
                 <Nav.Link id="navText" eventKey="disabled"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="bell" id="sidenavicon"/></Button>Alerts</Nav.Link>
             </Nav.Item>
             <br/>
+            </Nav>
             <div id="sideMenu">
 <Footer/>
             </div>
-            </Nav>
+            </div>
         </>
         )
   }

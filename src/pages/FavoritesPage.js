@@ -25,9 +25,8 @@ const FavoritesPage = () => {
     <div>
        <Row>
            <Col xs={12} sm={12} lg={2}>
-         {/* <div id="favfootershadow">
-     <Footer/>
-              </div> */}
+         <div id="favfootershadow">
+              </div>
            </Col>
        </Row>
        </div>

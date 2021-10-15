@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import Modal from '@mui/material/Modal'
 import { Button } from "react-bootstrap"
-import { MDBInput } from "mdbreact";
+import { MDBInput, MDBIcon } from "mdbreact";
 import { Link } from "react-router-dom"
 
 
@@ -35,9 +35,9 @@ const LoginMod = ({ open }) => {
           placeholder="Password"
         />
       </div>
-      <div className="modalbtndiv d-flex flex-row">
-      <Link className="text-white" to="/home"><Button id="modalbtn">Login</Button></Link>
-      <Button id="modalbtn" onClick={handleClose}>Close</Button>
+      <div className="modalbtndiv ml-auto d-flex">
+      <Button id="modalbtnclose" className="ml-1" onClick={handleClose}>Close</Button>
+      <Link className="text-white ml-auto" to="/home"><Button id="modalbtn">Login</Button></Link>
       </div>
       </div>
       </Modal>

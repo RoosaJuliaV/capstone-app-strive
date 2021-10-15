@@ -52,7 +52,7 @@ return (
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navleft">
       <Nav.Link href="/login"><Button variant="outline-dark" id="navbutton">JOIN NOW</Button></Nav.Link>
-      <div className="header__search mt-2"><Button onClick={handleOpen} variant="outline-dark" id="navbutton">  <LoginMod open={open} handleOpen={handleOpen} handleClose={handleClose}  />Login</Button></div>
+      <div className="header__search mt-2"><Button onClick={handleOpen} variant="outline-dark" id="navbuttonlogin">  <LoginMod open={open} handleOpen={handleOpen} handleClose={handleClose}  />Login</Button></div>
   </Nav>
   </Navbar.Collapse>
 </Container>
