@@ -41,6 +41,9 @@ const BreatheRow = () => {
               <div className="container-fluid" id="breathenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="breatheheading mb-5 ml-4 mr-auto">
+                <Link to="/home" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-1 mr-4" />
+                  </Link>
                   <strong>Breathe</strong>
 
                   <Button

@@ -133,9 +133,12 @@ background-color: rgb(7, 3, 12) !important;
   border-radius: 2rem;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
+  height: 3.5rem !important;
+  width: 10rem !important;
   background-color: rgb(68, 1, 155) !important;
   color: white !important;
   border-color: transparent !important;
+  font-size: 1.25rem !important;
  /* color: white !important;
   background-color: transparent !important;
   border-color: white !important; */
@@ -381,16 +384,10 @@ z-index: 1 !important;
 }
 
 .modaldiv {
-  margin-top: 9rem;
+  margin-top: 10rem;
   background-color: transparent !important;
   margin-right: 7rem !important;
 }
-
-@media screen and (max-width: 1000px) {
-  .modaldiv {
-    margin-top: 9rem !important;
-  }
-  }
   
 
 .modalbtndiv {
@@ -495,6 +492,7 @@ z-index: 1 !important;
 
 #jumbotitle {
   font-weight: 700 !important;
+  margin-top: 2rem !important;
 }
 
 .sidebaricon {
@@ -1327,8 +1325,6 @@ background: linear-gradient(90deg, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, rg
   box-shadow: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
-  background: rgb(75, 45, 62);
-  background: linear-gradient(90deg, rgba(68, 27, 53, 0.918) 2%, rgba(75, 36, 50, 0.87) 74%, rgba(73, 37, 52, 0.884) 98%);
  /* background: rgb(30,20,60); rgb(82, 47, 114) 98%)
   background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(28, 29, 80, 0.767) 37%, rgba(37, 42, 97, 0.685) 85%, rgba(255, 255, 255, 0.774) 1020%); */
  /* background: rgb(30,20,60);
@@ -1339,6 +1335,20 @@ background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(25, 27, 77, 
   background: linear-gradient(90deg, rgba(30, 20, 60, 0.733) 14%, rgba(23, 19, 77, 0.74) 37%, rgba(14, 31, 80, 0.753) 58%, rgba(16, 49, 116, 0.753) 91%, rgba(42, 79, 138, 0.733) 1020%); */
   /* background: rgb(30,20,60);
 background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 0%, rgba(25, 41, 94, 0.76) 37%, rgba(24, 44, 112, 0.733) 56%, rgba(39, 54, 122, 0.76) 68%, rgba(40, 85, 129, 0.801) 100%); */
+}
+
+@media screen and (min-width: 1000px) {
+  #favtracksnav {
+    background: rgb(75, 45, 62);
+  background: linear-gradient(90deg, rgba(68, 27, 53, 0.918) 2%, rgba(75, 35, 54, 0.87) 74%, rgba(73, 37, 55, 0.884) 98%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #favtracksnav {
+    background: rgb(75, 45, 62);
+    background: linear-gradient(90deg, rgba(66, 30, 53, 0.918) 2%, rgba(68, 32, 53, 0.87) 74%, rgba(73, 31, 54, 0.884) 98%);
+  }
 }
 
 #homenav {

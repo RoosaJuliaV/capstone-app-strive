@@ -95,6 +95,9 @@ const SleepRow = () => {
               <div className="col-lg-2 d-none d-lg-block">
                 </div>
                 <h1 className="sleepheading mb-4 ml-4 mr-auto">
+                <Link to="/home" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-1 mr-4" />
+                  </Link>
                   <strong>Sleep</strong>
                 <Button
                   type="button"

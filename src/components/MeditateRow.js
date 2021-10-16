@@ -92,6 +92,9 @@ const MeditateRow = () => {
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="meditateheading mb-4 ml-4 mr-auto">
+                <Link to="/home" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-1 mr-4" />
+                  </Link>
                   <strong>Meditate</strong>
 
                   <Button

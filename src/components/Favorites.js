@@ -68,6 +68,9 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="favoriteheading mb-4 ml-4 mr-auto">
+                <Link to="/home" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-1 mr-4" />
+                  </Link>
                   <strong>Favourites</strong>
                   <Button
                     type="button"
@@ -128,9 +131,7 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                     onClick={() => addToCurrentSong(track)}
                   >
                     <h5 className="sleepCardTitle card-title">
-                      {track.title
-                        .replace(/[^a-z\d\s]+/gi, "")
-                        .substring(0, 25)}
+                      {track.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}
                     </h5>
                   </div>
                   <button
@@ -178,7 +179,6 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                     </div>
                
                   </td>
-
                   <td className="align-middle keep-on-page"><strong>
                   {convertDuration(track.duration)}</strong>
                   </td>

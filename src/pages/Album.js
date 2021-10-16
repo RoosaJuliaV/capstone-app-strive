@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, withRouter } from "react-router-dom";
-import { Col, Row, Button, ListGroup } from "react-bootstrap";
+import { Col, Row, Button, ListGroup, Nav } from "react-bootstrap";
 import { connect } from "react-redux";
 import { addSongToPlaylist, playSong } from "../actions";
 import { useHistory } from "react-router-dom";
@@ -86,8 +86,35 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
         <div className="albumContainer d-flex pr-1 justify-content-center">
           {console.log(albumName)}
           {console.log(trackArray)}
-          <MDBRow className="albumrow  d-flex flex-row">
-            <MDBCol xs={12} sm={12} lg={12} className="albummain">
+          <MDBRow>
+          <div className="d-flex flex-row">
+            <Nav
+              className="navbar fixed-top navbar"
+              id="favtracksnav"
+            >
+              <div className="container-fluid" id="meditatenavdiv">
+              <div className="col-lg-2 d-none d-lg-block"></div>
+                <h1 className="favoriteheading mb-4 ml-4 mr-auto">
+                <Link to="/favoritespage" className="favtrackslink">
+                    <MDBIcon icon="angle-left" className="favarrow ml-1" />
+                  </Link>
+                  {/* <strong>Favourites</strong> */}
+                 {/* <Button
+                    type="button"
+                    className="btn btn-outline-light btn-rounded mt-3"
+                    data-mdb-ripple-color="dark"
+                    id="favoritesbutton"
+                  >
+                    Sort by name
+                    <MDBIcon icon="angle-down" className="ml-2" />
+                 </Button> */}
+                </h1>
+              </div>
+            </Nav>
+          </div>
+        </MDBRow>
+          <MDBRow className="albumrow d-flex flex-row">
+            <MDBCol xs={12} sm={12} lg={12} className="albummain mt-5">
               <div className="albumnamediv">
                 <div className="albumName mb-3">
                   {albumName.replace(/[^a-z\d\s]+/gi, "")}
