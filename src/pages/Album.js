@@ -4,23 +4,23 @@ import { Col, Row, Button, ListGroup } from "react-bootstrap";
 import { connect } from "react-redux";
 import { addSongToPlaylist, playSong } from "../actions";
 import { useHistory } from "react-router-dom";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import {
-    MDBCol,
-    MDBContainer,
-    MDBRow,
-    MDBFooter,
-    MDBCard,
-    MDBIcon,
-  } from "mdbreact";
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+  MDBFooter,
+  MDBCard,
+  MDBIcon,
+} from "mdbreact";
 
 const mapStateToProps = (state) => ({
-    currentSong: state.play.currentSong,
+  currentSong: state.play.currentSong,
   playList: state.playList.tracks,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addToCurrentSong: (song) => dispatch(playSong(song)),
+  addToCurrentSong: (song) => dispatch(playSong(song)),
   addToPlaylist: (song) => dispatch(addSongToPlaylist(song)),
 });
 
@@ -30,12 +30,25 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
   const albumId = params.id;
   console.log(albumId);
 
+  const playlistAddFunction = (track) => {
+    let editedTrack = { ...track };
+    editedTrack.albumcover = albumImage;
+    addToPlaylist(editedTrack);
+  };
+
+  const playlistAddNewFunction = (currentSong) => {
+    let editedTrack = { ...currentSong };
+    editedTrack.albumcover = albumImage;
+    addToPlaylist(editedTrack);
+  };
+
   /* function handleClick() {
     history.push("/home");
   } */
 
   const [trackArray, setTrackArray] = useState([]);
   const [albumName, setAlbumName] = useState("");
+  const [albumImage, setAlbumImage] = useState("");
 
   const searchTrackList = async () => {
     try {
@@ -45,8 +58,9 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
 
       let trackList = await response.json();
       setAlbumName(trackList.title);
-      console.log(trackList)
+      console.log(trackList);
       setTrackArray(trackList.tracks.data);
+      setAlbumImage(trackList.cover_medium);
     } catch (error) {
       console.log(error);
     }
@@ -68,52 +82,58 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
 
   return (
     <div className="albumbg d-flex">
-        <div className="albumshadowdiv">
-      <div className="albumContainer d-flex pr-1 justify-content-center">
-        {console.log(albumName)}
-        {console.log(trackArray)}
-        <MDBRow className="albumrow  d-flex flex-row">
-        <MDBCol xs={12} sm={12} lg={12} className="albummain">
-            <div className="albumnamediv">
-            <div className="albumName mb-3">{albumName.replace(/[^a-z\d\s]+/gi, "")}
-           {/* <MDBIcon far icon="clock" className="albumClock" />
-             <MDBIcon far icon="heart" className="albumFavorite" /> */}</div>
-             </div>
-                 <MDBContainer className="favtrackscard">
-            <ListGroup className="favtrackscards">
-              {trackArray.map((track, i) => (
-                <ListGroup.Item className="favtrackscard my-2" key={i}>
-                  <div className="favtracksgrid d-flex align-items-center mx-auto">
-                    {" "}
-                    {i + 1}
-                    <div className="albumSong ml-4" style={{ cursor: "pointer" }}
-                        onClick={() => addToCurrentSong(track)}
->{track.title}</div>
-                    <div className="favduration">
-                      {convertDuration(track.duration)}
-                    </div>
-                    <button
-                      className="removefavtrackbtn button-light ml-3"
-                      onClick={() => addToPlaylist(track)}
-                    >
-                      <MDBIcon far icon="heart" className="trackFavorite" />
-                    </button>
-                  </div>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </MDBContainer>
-         </MDBCol>
-        </MDBRow>
-      </div>
-    </div>
-     <Row>
-     <Col xs={12} sm={12} lg={2}>
-    <div id="albumfootershadow">
+      <div className="albumshadowdiv">
+        <div className="albumContainer d-flex pr-1 justify-content-center">
+          {console.log(albumName)}
+          {console.log(trackArray)}
+          <MDBRow className="albumrow  d-flex flex-row">
+            <MDBCol xs={12} sm={12} lg={12} className="albummain">
+              <div className="albumnamediv">
+                <div className="albumName mb-3">
+                  {albumName.replace(/[^a-z\d\s]+/gi, "")}
+                  {/* <MDBIcon far icon="clock" className="albumClock" />
+             <MDBIcon far icon="heart" className="albumFavorite" /> */}
+                </div>
               </div>
-     </Col>
- </Row>
- </div>
+              <MDBContainer className="favtrackscard">
+                <ListGroup className="favtrackscards">
+                  {trackArray.map((track, i) => (
+                    <ListGroup.Item className="favtrackscard my-2" key={i}>
+                      <div className="favtracksgrid d-flex align-items-center mx-auto">
+                        {" "}
+                        {i + 1}
+                        <div
+                          className="albumSong ml-4"
+                          style={{ cursor: "pointer" }}
+                          onClick={() => addToCurrentSong(track)}
+                        >
+                          {track.title}
+                        </div>
+                        <div className="favduration">
+                          {convertDuration(track.duration)}
+                        </div>
+                        <button
+                          className="removefavtrackbtn button-light ml-3"
+                          onClick={() => playlistAddFunction(track)}
+                        >
+                          <MDBIcon far icon="heart" className="trackFavorite" 
+                          />
+                        </button>
+                      </div>
+                    </ListGroup.Item>
+                  ))}
+                </ListGroup>
+              </MDBContainer>
+            </MDBCol>
+          </MDBRow>
+        </div>
+      </div>
+      <Row>
+        <Col xs={12} sm={12} lg={2}>
+          <div id="albumfootershadow"></div>
+        </Col>
+      </Row>
+    </div>
   );
 };
 

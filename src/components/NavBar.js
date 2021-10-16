@@ -17,14 +17,6 @@ const NavBar = () => {
     const handleCloseLogin = () => {
       setOpen(false);
     };
-
-    const handleOpenJoin = () => { 
-        setOpen(true);
-      };
-    
-      const handleCloseJoin = () => {
-        setOpen(false);
-      };
   
 
 return (

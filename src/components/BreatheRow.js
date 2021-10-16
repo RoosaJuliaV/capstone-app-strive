@@ -60,9 +60,9 @@ const BreatheRow = () => {
 
         <MDBRow>
           <MDBCard className="topbreathecard mb-5 ml-4">
-              <div className="text-white d-flex align-items-center py-5 px-4">
+              <div className="text-white d-flex align-items-center">
                 <div id="sleepcardtitletop">
-                  <h3 className="card-title px-3" id="topcardhead">
+                  <h3 className="card-title px-3 ml-4" id="topcardhead">
                     Listen to the clip of the day now
                   </h3>
                 </div>

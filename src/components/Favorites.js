@@ -14,13 +14,12 @@ import { Link, useParams } from "react-router-dom";
 import { removeSongFromPlaylist, playSong } from "../actions";
 
 const mapStateToProps = (state) => ({
-    currentSong: state.play.currentSong,
+  currentSong: state.play.currentSong,
   playList: state.playList.tracks,
-
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addToCurrentSong: (song) => dispatch(playSong(song)),
+  addToCurrentSong: (song) => dispatch(playSong(song)),
   removeFromPlaylist: (i) => dispatch(removeSongFromPlaylist(i)),
 });
 
@@ -43,7 +42,7 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
     return length;
   }
 
- /* const FetchAlbums = async () => {
+  /* const FetchAlbums = async () => {
     setIsLoading(true)
     const response = await fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=Relaxing_Sounds`
@@ -85,22 +84,21 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
           </div>
         </MDBRow>
         <MDBRow>
-        
-          <MDBCard className="mb-5 ml-4"  id="favtopcard">
-          <Link to="/favoritetrackslist" id="navText" className="topfavlink">
-            <div className="text-white d-flex align-items-center py-5 px-4">
-              <div id="sleepcardtitletop">
-                <h3 className="card-title px-3 ml-4" id="topcardhead">
-               All your favourites on one playlist<MDBIcon icon="angle-right" id="topfavicon"/>
-                </h3>
+          <MDBCard className="mb-5 ml-4" id="favtopcard">
+            <Link to="/favoritetrackslist" id="navText" className="topfavlink">
+              <div className="favtrackstopcard text-white d-flex align-items-center">
+                <div id="sleepcardtitletop">
+                  <h3 className="card-title px-3 ml-4" id="topcardhead">
+                    All your favourites on one playlist
+                    <MDBIcon icon="angle-right" id="topfavicon" />
+                  </h3>
+                </div>
               </div>
-            </div>
             </Link>
           </MDBCard>
-          
         </MDBRow>
         <MDBRow className="mx-0">
-        {/*  {isLoading && (
+          {/*  {isLoading && (
             <div className="spinnerdiv">
               <Spinner
                 animation="border"
@@ -112,35 +110,37 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
           {playList.map((track, i, albumObj) => (
             <MDBCard key={i} className="sleepcard2 px-0">
               <Card.Img
-                  variant="top"
-                  className="rounded-0"
-                 // src={track.albumId.cover_medium}
-                src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
-                  id="sleepcardimg"
-          />
-                <div className="text-white d-flex py-4 px-1">
+                variant="top"
+                className="rounded-0"
+                // src={track.albumId.cover_medium}
+                src={track.albumcover}
+                id="sleepcardimg"
+              />
+              <div className="text-white d-flex py-4 px-1">
+                <div
+                  className="rgba-black-light mt-auto pr-4 pr-1"
+                  id="sleepcardtitle"
+                >
                   <div
-                    className="rgba-black-light mt-auto pr-4 pr-1"
-                    id="sleepcardtitle"
+                    className="text-white"
+                    className="favcardlink"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => addToCurrentSong(track)}
                   >
-                      <div className="text-white" className="favcardlink"
-                      style={{ cursor: "pointer" }}
-                      onClick={() => addToCurrentSong(track)}
-                      >
                     <h5 className="sleepCardTitle card-title">
                       {track.title
                         .replace(/[^a-z\d\s]+/gi, "")
                         .substring(0, 25)}
                     </h5>
-                    </div>
-                    <button
-                      className="favbtncard button-round"
-                      onClick={() => removeFromPlaylist(i)}
-                    >
-                      <MDBIcon far icon="heart" className="trackFavorite" />
-                    </button>
                   </div>
+                  <button
+                    className="favbtncard button-round"
+                    onClick={() => removeFromPlaylist(i)}
+                  >
+                    <MDBIcon far icon="heart" className="trackFavorite" />
+                  </button>
                 </div>
+              </div>
             </MDBCard>
           ))}
           {/*  <div className="d-flex pr-5 pt-3">

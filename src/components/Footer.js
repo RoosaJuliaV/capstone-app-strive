@@ -77,6 +77,7 @@ const Footer = ({ currentSong, addToPlaylist }) => {
 
   const [trackArray, setTrackArray] = useState([]);
   const [albumName, setAlbumName] = useState("");
+  const [albumImage, setAlbumImage] = useState("");
 
   const searchTrackList = async () => {
     try {
@@ -86,6 +87,7 @@ const Footer = ({ currentSong, addToPlaylist }) => {
 
       let trackList = await response.json();
       setAlbumName(trackList.title);
+      console.log(trackList);
       setTrackArray(trackList.tracks.data);
     } catch (error) {
       console.log(error);
@@ -146,7 +148,7 @@ const Footer = ({ currentSong, addToPlaylist }) => {
                   <button id="footerButton">
                     <MDBIcon icon="record-vinyl" className="footerAlbum" />
                   </button>
-                  <button id="footerButton"  onClick={() => addToPlaylist(currentSong)}>
+                  <button id="footerButton" onClick={() => addToPlaylist(currentSong)}>
                     <MDBIcon far icon="heart" className="footerHeart" />
                   </button>
                 
@@ -177,7 +179,8 @@ const Footer = ({ currentSong, addToPlaylist }) => {
           )}
           <div className="footerCover">
                <img
-                 src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
+               src={currentSong.albumcover}
+                // src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"
                  alt=""
                  className="img-fluid"
                  id="footercover"
