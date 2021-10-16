@@ -45,6 +45,7 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
 
       let trackList = await response.json();
       setAlbumName(trackList.title);
+      console.log(trackList)
       setTrackArray(trackList.tracks.data);
     } catch (error) {
       console.log(error);

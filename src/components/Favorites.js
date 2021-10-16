@@ -43,7 +43,7 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
     return length;
   }
 
-  const FetchAlbums = async () => {
+ /* const FetchAlbums = async () => {
     setIsLoading(true)
     const response = await fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=Relaxing_Sounds`
@@ -57,7 +57,7 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
   };
   useEffect(() => {
     FetchAlbums();
-  }, []);
+  }, []); */
 
   return (
     <div className="sleepcontainer">
@@ -114,8 +114,8 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
               <Card.Img
                   variant="top"
                   className="rounded-0"
-                 // src={albumObj.cover_medium}
-                 src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
+                 // src={track.albumId.cover_medium}
+                src="https://c4.wallpaperflare.com/wallpaper/837/935/755/foggy-huawei-mate-10-morning-mountains-wallpaper-preview.jpg"
                   id="sleepcardimg"
           />
                 <div className="text-white d-flex py-4 px-1">

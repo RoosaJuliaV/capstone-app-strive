@@ -3,6 +3,8 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBCard, MDBIcon } from "mdbre
 import { Button, Nav, Card, CardImg, Spinner } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import TopCardHome from "./TopCardHome";
+import Home from "../pages/Home";
 
 
 const HomeMain = () => {

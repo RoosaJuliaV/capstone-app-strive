@@ -5,20 +5,36 @@ import { MDBInput, MDBIcon } from "mdbreact";
 import { Link } from "react-router-dom"
 
 
-const LoginMod = ({ open }) => {
+const JoinMod = ({ open }) => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
-        <div className="loginmodbg">
+        <div>
         <Modal
          open={open}
          onClose={handleClose}
         >{/*<button onClick={handleClose}>Button</button>*/}
         <div className="modaldiv col-lg-4 ml-auto">
-        <h4 className="text-white ml-2"><strong>Login</strong></h4>
+        <h4 className="text-white ml-2"><strong>Join now</strong></h4>
+        <div className="form-group">
+        <input
+          type="name"
+          className="form-control form-control-lg mt-3"
+          id="formGroupExampleInput"
+          placeholder="First name"
+        />
+      </div>
+        <div className="form-group">
+        <input
+          type="name"
+          className="form-control form-control-lg mt-3"
+          id="formGroupExampleInput"
+          placeholder="Last name"
+        />
+      </div>
         <div className="form-group">
         <input
           type="email"
@@ -37,13 +53,13 @@ const LoginMod = ({ open }) => {
       </div>
       <div className="modalbtndiv ml-auto d-flex">
       <Button id="modalbtnclose" className="ml-1" onClick={handleClose}>Close</Button>
-      <Link className="text-white ml-auto" to="/home"><Button id="modalbtn">Login</Button></Link>
+      <Link className="text-white ml-auto" to="/home"><Button id="joinmodbtn">Join</Button></Link>
       </div>
       </div>
       </Modal>
-        </div>
+      </div>
 
     )
 }
 
-export default LoginMod
+export default JoinMod
