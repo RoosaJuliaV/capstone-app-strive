@@ -1327,8 +1327,9 @@ background: linear-gradient(90deg, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, rg
   box-shadow: none !important;
   height: 8rem;
   border-radius: 0rem 0rem 0rem 1.5rem;
-  background: rgba(71, 27, 63, 0.74);
- /* background: rgb(30,20,60);
+  background: rgb(75, 45, 62);
+  background: linear-gradient(90deg, rgba(68, 27, 53, 0.918) 2%, rgba(75, 36, 50, 0.87) 74%, rgba(73, 37, 52, 0.884) 98%);
+ /* background: rgb(30,20,60); rgb(82, 47, 114) 98%)
   background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(28, 29, 80, 0.767) 37%, rgba(37, 42, 97, 0.685) 85%, rgba(255, 255, 255, 0.774) 1020%); */
  /* background: rgb(30,20,60);
   background: linear-gradient(90deg, rgba(30, 20, 60, 0.74) 14%, rgba(25, 27, 77, 0.767) 37%, rgba(19, 31, 82, 0.74) 58%, rgba(39, 45, 100, 0.719) 91%, rgba(38, 53, 104, 0.76) 1020%); */
