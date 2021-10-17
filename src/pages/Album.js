@@ -37,9 +37,9 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
   };
 
   const playlistAddNewFunction = (currentSong) => {
-    let editedTrack = { ...currentSong };
-    editedTrack.albumcover = albumImage;
-    addToPlaylist(editedTrack);
+    let editedSong = { ...currentSong };
+    editedSong.albumcover = albumImage;
+    addToCurrentSong(editedSong);
   };
 
   /* function handleClick() {
@@ -95,7 +95,7 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
               <div className="container-fluid" id="meditatenavdiv">
               <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="favoriteheading mb-4 ml-4 mr-auto">
-                <Link to="/favoritespage" className="favtrackslink">
+                <Link to="/home" className="favtrackslink">
                     <MDBIcon icon="angle-left" className="favarrow ml-1" />
                   </Link>
                   {/* <strong>Favourites</strong> */}
@@ -124,7 +124,7 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
               </div>
               <MDBContainer className="favtrackscard">
                 <ListGroup className="favtrackscards">
-                  {trackArray.map((track, i) => (
+                  {trackArray.map((track, i, currentSong) => (
                     <ListGroup.Item className="favtrackscard my-2" key={i}>
                       <div className="favtracksgrid d-flex align-items-center mx-auto">
                         {" "}
@@ -132,7 +132,7 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
                         <div
                           className="albumSong ml-4"
                           style={{ cursor: "pointer" }}
-                          onClick={() => addToCurrentSong(track)}
+                          onClick={() => playlistAddNewFunction(track)}
                         >
                           {track.title}
                         </div>
