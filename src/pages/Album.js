@@ -39,8 +39,11 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
   const playlistAddNewFunction = (currentSong) => {
     let editedSong = { ...currentSong };
     editedSong.albumcover = albumImage;
+    editedSong.albumName = albumName;
+    editedSong.albumId = albumId
     addToCurrentSong(editedSong);
   };
+
 
   /* function handleClick() {
     history.push("/home");

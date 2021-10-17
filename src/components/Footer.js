@@ -128,7 +128,13 @@ const Footer = ({ currentSong, addToPlaylist }) => {
   controls
 />
           )}
-          <div className="footerCover">
+          <div className="footerCover text-white"><div className="col-lg-12 mr-3">
+          <p className="card-text my-0 mt-1" id="footerArtistSmall">
+                  {/* {currentSong.artist.name} - */}
+                {currentSong.title}</p><p className="currentSong">
+                  {currentSong.albumName}
+                </p>
+                </div>
                <img
                src={currentSong.albumcover}
                 // src="https://www.sleek-mag.com/wp-content/uploads/2016/08/AlbumCovers_Blonde.jpg"

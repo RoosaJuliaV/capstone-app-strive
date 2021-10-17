@@ -5,11 +5,8 @@ import { MDBInput, MDBIcon } from "mdbreact";
 import { Link } from "react-router-dom"
 
 
-const JoinMod = ({ open }) => {
-
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+const JoinMod = ({ open, handleClose }) => {
+ 
 
     return (
         <div>
