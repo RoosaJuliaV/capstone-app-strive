@@ -93,12 +93,14 @@ const Footer = ({ currentSong, addToPlaylist }) => {
             "Song is Paused"}
          </p> */}
 
-                  <p className="footerTitle">
+                  <p className="footerTitle mt-1">
                     <strong>{currentSong.title}</strong>
                   </p>
+                  <Link className="favalbumlink text-white" to={"/Album/" + currentSong.albumId}>
                   <button id="footerButton">
                     <MDBIcon icon="record-vinyl" className="footerAlbum" />
                   </button>
+                  </Link>
                   <button id="footerButton" onClick={() => addToPlaylist(currentSong)}>
                     <MDBIcon far icon="heart" className="footerHeart" />
                   </button>
@@ -131,9 +133,12 @@ const Footer = ({ currentSong, addToPlaylist }) => {
           <div className="footerCover text-white"><div className="col-lg-12 mr-3">
           <p className="card-text my-0 mt-1" id="footerArtistSmall">
                   {/* {currentSong.artist.name} - */}
-                {currentSong.title}</p><p className="currentSong">
+                {currentSong.title}</p>
+                <Link className="favalbumlink text-white" to={"/Album/" + currentSong.albumId}>
+                <p className="currentSong">
                   {currentSong.albumName}
                 </p>
+                </Link>
                 </div>
                <img
                src={currentSong.albumcover}

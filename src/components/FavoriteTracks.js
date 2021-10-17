@@ -121,7 +121,7 @@ const FavoriteTracks = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
               </Link>
             </MDBCard>
           </div> */}
-          <MDBContainer className="favtrackscard">
+          <MDBContainer className="favtrackscard mt-2">
             <ListGroup className="favtrackscards">
               {playList.map((track, i) => (
                 <ListGroup.Item className="favtrackscard my-2" key={i}>

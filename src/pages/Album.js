@@ -33,6 +33,8 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
   const playlistAddFunction = (track) => {
     let editedTrack = { ...track };
     editedTrack.albumcover = albumImage;
+    editedTrack.albumName = albumName;
+    editedTrack.albumId = albumId
     addToPlaylist(editedTrack);
   };
 
@@ -42,6 +44,7 @@ const Album = ({ addToPlaylist, addToCurrentSong }) => {
     editedSong.albumName = albumName;
     editedSong.albumId = albumId
     addToCurrentSong(editedSong);
+    console.log(editedSong)
   };
 
 

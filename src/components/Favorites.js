@@ -129,10 +129,11 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                     className="favcardlink"
                     style={{ cursor: "pointer" }}
                     onClick={() => addToCurrentSong(track)}
-                  >
+                  ><Link className="favalbumlink text-white" to={"/Album/" + track.albumId}>
                     <h5 className="sleepCardTitle card-title">
                       {track.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}
                     </h5>
+                    </Link>
                   </div>
                   <button
                     className="favbtncard button-round"

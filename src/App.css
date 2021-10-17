@@ -396,6 +396,11 @@ z-index: 1 !important;
   height: 100% !important;
 }
 
+.favalbumlink {
+  text-decoration: none !important;
+  margin-top: 0.15rem !important;
+}
+
 #modalbtn:hover {
     border-radius: 2rem;
     color: white !important;
@@ -1738,6 +1743,12 @@ width: 370px !important;
 
 @media screen and (max-width: 1000px) {
   .favtrackstopcard {
+    padding-top: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 313px) {
+  .favtrackstopcard {
     padding-top: 1rem !important;
   }
   }
@@ -2097,7 +2108,7 @@ progress {
   }
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 330px) {
   .footerCover {
     display: none !important;
   }
