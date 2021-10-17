@@ -127,19 +127,21 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                   <div
                     className="text-white"
                     className="favcardlink"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => addToCurrentSong(track)}
-                  ><Link className="favalbumlink text-white" to={"/Album/" + track.albumId}>
-                    <h5 className="sleepCardTitle card-title">
-                      {track.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}
+                  >
+                    <h5 className="sleepCardTitleFav card-title" style={{ cursor: "pointer" }}
+                    onClick={() => addToCurrentSong(track)}>
+                      {track.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}</h5>
+                    <h5 className="favalbumlink text-white">
+                    <Link className="albumlinkfav text-white" to={"/Album/" + track.albumId}>
+                    {track.albumName.replace(/[^a-z\d\s]+/gi, "")}
+              </Link>
                     </h5>
-                    </Link>
                   </div>
                   <button
                     className="favbtncard button-round"
                     onClick={() => removeFromPlaylist(i)}
                   >
-                    <MDBIcon far icon="heart" className="trackFavorite" />
+                    <MDBIcon icon="heart" className="trackFavoriteFav" />
                   </button>
                 </div>
               </div>

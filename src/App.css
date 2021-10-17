@@ -22,6 +22,22 @@ background-color: rgb(7, 3, 12) !important;
   filter: invert(100%);
 }
 
+#footerFav {
+  position: fixed !important;
+  bottom: 1.3rem !important;
+  right: 19rem !important;
+  margin-left: 0rem;
+  color: white !important;
+  background-color: transparent !important;
+  border: 0;
+}
+
+@media screen and (max-width: 575px) {
+  #footerFav {
+    display: none !important;
+  }
+  }
+
 .loginfooterdiv {
   justify-content: center !important;
   margin-left:  0rem !important;
@@ -157,7 +173,7 @@ background-color: rgb(7, 3, 12) !important;
 .currentSong {
   position: fixed !important;
   bottom: 0.4rem !important;
-  right: 7rem !important;
+  right: 6.9rem !important;
   font-size: 0.9rem !important;
   overflow: hidden;
   white-space:nowrap;
@@ -398,7 +414,39 @@ z-index: 1 !important;
 
 .favalbumlink {
   text-decoration: none !important;
-  margin-top: 0.15rem !important;
+  margin-top: none !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  max-width: 10rem !important;
+  font-size: 0.8rem !important;
+  margin-left: 1rem !important;
+}
+
+.favalbumlinkfooterright {
+  text-decoration: none !important;
+  margin-top: 0.2rem !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  max-width: 10rem !important;
+  font-size: 0.8rem !important;
+  margin-left: 1rem !important;
+}
+
+.albumlinkfav {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.favalbumlinkfooter {
+  text-decoration: none !important;
+  margin-top: none !important;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  max-width: 10rem !important;
+  font-size: 0.8rem !important;
 }
 
 #modalbtn:hover {
@@ -798,6 +846,16 @@ border: none;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 1.2rem !important;
+}
+
+.sleepCardTitleFav {
+  max-width: 12rem !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
 }
 
 .sleepCardTitleHome {
@@ -1102,6 +1160,10 @@ border: none !important;
 .favcardlink {
   text-decoration: none !important;
   color: white !important;
+  width: 11rem !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
 }
 
 #sleepnavdiv {
@@ -1432,6 +1494,12 @@ background: linear-gradient(90deg, rgba(30, 20, 60, 0.712) 0%, rgba(25, 41, 94, 
   margin-top: 2.5rem;
 }
 
+@media screen and (min-width: 1900px) {
+  .favoriteheading, .meditateheading, .breatheheading, .sleepheading  {
+    margin-left: 8rem !important;
+  }
+  }
+
 
 
 #sideinput {
@@ -1617,6 +1685,12 @@ object-fit:cover;
   margin-left: 0.2rem;
 }
 
+.trackFavoriteFav {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255) !important;
+  margin-left: 0.2rem;
+}
+
 .trackDuration {
   font-size: 0.9rem;
   margin-bottom: 0.4rem;
@@ -1708,6 +1782,9 @@ background: radial-gradient(circle, rgba(102,29,79,1) 0%, rgba(20,30,64,1) 0%, r
   width: 1rem;
   border-radius: 50% !important;
   margin-left: 11.5rem;
+  position: relative !important;
+  bottom: 1.8rem !important;
+  right: 0.2rem !important;
 }
 
 .favtracks {

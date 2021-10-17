@@ -96,7 +96,7 @@ const Footer = ({ currentSong, addToPlaylist }) => {
                   <p className="footerTitle mt-1">
                     <strong>{currentSong.title}</strong>
                   </p>
-                  <Link className="favalbumlink text-white" to={"/Album/" + currentSong.albumId}>
+                  <Link className="favalbumlinkfooterright text-white" to={"/Album/" + currentSong.albumId}>
                   <button id="footerButton">
                     <MDBIcon icon="record-vinyl" className="footerAlbum" />
                   </button>
@@ -131,10 +131,13 @@ const Footer = ({ currentSong, addToPlaylist }) => {
 />
           )}
           <div className="footerCover text-white"><div className="col-lg-12 mr-3">
+          <button id="footerFav" onClick={() => addToPlaylist(currentSong)}>
+                    <MDBIcon far icon="heart" className="footerHeart" />
+                  </button>
           <p className="card-text my-0 mt-1" id="footerArtistSmall">
                   {/* {currentSong.artist.name} - */}
                 {currentSong.title}</p>
-                <Link className="favalbumlink text-white" to={"/Album/" + currentSong.albumId}>
+                <Link className="favalbumlinkfooter text-white" to={"/Album/" + currentSong.albumId}>
                 <p className="currentSong">
                   {currentSong.albumName}
                 </p>
