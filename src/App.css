@@ -1027,7 +1027,11 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 
 #favtopcard {
-  background-image: url("http://wallpaperstock.net/valley%2C-mountain%2C-lion_wallpapers_54693_1920x1080.jpg");
+ /* background-image: url("https://i.pinimg.com/originals/6e/39/4a/6e394a3a732e80778b0bdef4fcf07112.jpg"); */
+ /* background-image: url("https://i.pinimg.com/originals/6e/39/4a/6e394a3a732e80778b0bdef4fcf07112.jpg"); */
+/*  background-image: url("https://wallpapercave.com/wp/wp7239893.jpg"); */
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a89df14b-a790-4e2c-aec6-f6d4f7b7e810/d3k9c9v-d21fea76-38a0-4324-865f-5c4bd399c98d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4OWRmMTRiLWE3OTAtNGUyYy1hZWM2LWY2ZDRmN2I3ZTgxMFwvZDNrOWM5di1kMjFmZWE3Ni0zOGEwLTQzMjQtODY1Zi01YzRiZDM5OWM5OGQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g0w4jiYKLZz1m8tGZLh6XaeuqLGFGMbc8t9GbAM2e58"); 
+ /* background-image: url("http://wallpaperstock.net/valley%2C-mountain%2C-lion_wallpapers_54693_1920x1080.jpg"); */
   width: 82%;
   height: 10rem;
   margin-bottom: 1rem;

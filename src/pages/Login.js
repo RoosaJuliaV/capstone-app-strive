@@ -31,7 +31,7 @@ const Login = () => {
         <h2 className="display-3" id="jumbotitle">Music for mindfulness</h2>
         <p className="lead mt-3 mb-4">Listen and set timed alerts for moments of relaxation.</p>
         {/* <Link to="/login"><Button variant="outline-dark" id="navbutton" className="mt-3">Get Started</Button></Link> */}
-        <div className="header__search mt-2"><Button onClick={handleOpen} variant="outline-dark" id="joinbtn">  <JoinMod open={open} handleOpen={handleOpen} handleClose={handleClose}  />Get started</Button></div>
+        <div className="header__search mt-2"><Link className="text-white ml-auto" to="/home"><Button variant="outline-dark" id="joinbtn">Get started</Button></Link></div>
       </MDBContainer>
       </div>
     </MDBJumbotron>

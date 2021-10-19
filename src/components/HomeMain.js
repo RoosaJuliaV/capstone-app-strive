@@ -55,6 +55,12 @@ const HomeMain = () => {
         </MDBRow>
 
         <MDBRow>
+        {
+                    isLoading &&
+                    <div className="spinnerdiv">
+                    <Spinner animation="border" variant="light" className="spinner mb-3"/>
+                    </div>
+       }
           <TopCardHome/>
          {/* <MDBCard className="tophomecard mb-5 ml-4">
               <div className="text-white d-flex align-items-center">

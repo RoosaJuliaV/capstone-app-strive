@@ -50,9 +50,9 @@ const SideBar = () => {
             <Nav.Item>
             <Nav.Link id="navText" href="/sleep"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="moon" id="sidenavicon"/></Button>Sleep</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+          {/*  <Nav.Item>
                 <Nav.Link id="navText" eventKey="disabled"><Button className="btn- btn-primary btn-floating mr-3 mb-2" id="naviconbutton"><MDBIcon icon="bell" id="sidenavicon"/></Button>Alerts</Nav.Link>
-            </Nav.Item>
+          </Nav.Item> */}
             <br/>
             </Nav>
             <div id="sideMenu">
