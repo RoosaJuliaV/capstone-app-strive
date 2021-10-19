@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import TopCardHome from "./TopCardHome";
 import Home from "../pages/Home";
+import PlayMod from "./PlayMod";
 
 
 const HomeMain = () => {
@@ -54,7 +55,8 @@ const HomeMain = () => {
         </MDBRow>
 
         <MDBRow>
-          <MDBCard className="tophomecard mb-5 ml-4">
+          <TopCardHome/>
+         {/* <MDBCard className="tophomecard mb-5 ml-4">
               <div className="text-white d-flex align-items-center">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3 ml-4" id="topcardhead">
@@ -62,8 +64,8 @@ const HomeMain = () => {
                   </h3>
                 </div>
               </div>
-          </MDBCard>
-        </MDBRow>
+  </MDBCard> */}
+  </MDBRow>
         <h3 className="heading mb-4 ml-3 mr-auto text-white">
                   <strong>Categories</strong></h3>
         <MDBRow className="mx-0">

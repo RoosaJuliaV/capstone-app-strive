@@ -133,7 +133,7 @@ const Favorites = ({ playList, removeFromPlaylist, addToCurrentSong }) => {
                       {track.title.replace(/[^a-z\d\s]+/gi, "").substring(0, 25)}</h5>
                     <h5 className="favalbumlink text-white">
                     <Link className="albumlinkfav text-white" to={"/Album/" + track.albumId}>
-                    {track.albumName.replace(/[^a-z\d\s]+/gi, "")}
+                    {track.albumName}
               </Link>
                     </h5>
                   </div>

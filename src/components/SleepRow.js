@@ -118,7 +118,7 @@ const SleepRow = () => {
             <div className="text-white d-flex align-items-center">
               <div id="sleepcardtitletop">
                 <h3 className="card-title px-3 ml-4" id="topcardhead">
-                  Listen to the clip of the day now
+                  Listen to the album of the day now
                 </h3>
               </div>
             </div>

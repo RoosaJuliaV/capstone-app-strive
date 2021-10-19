@@ -195,7 +195,7 @@ background-color: rgb(7, 3, 12) !important;
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
-  max-width: 12rem !important;
+  max-width: 11rem !important;
   font-weight: 600 !important;
 }
 
@@ -472,6 +472,23 @@ z-index: 1 !important;
 
 .modaldiv {
   margin-top: 10rem;
+  background-color: transparent !important;
+  margin-right: 7rem !important;
+}
+
+.modalBtn {
+  margin-top: 10rem !important;
+}
+
+.playModalDiv {
+  background-color: tomato !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1000000000 !important;
+}
+
+.playmodaldiv {
+  margin-top: 3rem;
   background-color: transparent !important;
   margin-right: 7rem !important;
 }

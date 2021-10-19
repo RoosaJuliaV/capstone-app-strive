@@ -3,6 +3,7 @@ import Modal from '@mui/material/Modal'
 import { Button } from "react-bootstrap"
 import { MDBInput, MDBIcon } from "mdbreact";
 import { Link } from "react-router-dom"
+// import Modal from "react-modal";
 
 
 const LoginMod = ({ open }) => {
