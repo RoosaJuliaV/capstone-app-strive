@@ -1,7 +1,6 @@
-import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBCard, MDBIcon } from "mdbreact";
 import { Button, Nav, Card, CardImg, Spinner } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { addSongToPlaylist, playSong } from "../actions";
@@ -18,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
   addToPlaylist: (song) => dispatch(addSongToPlaylist(song)),
 });
 
-const TopCardHome = ({ addToPlaylist, addToCurrentSong }) => {
+const TopCardBreathe = ({ addToPlaylist, addToCurrentSong }) => {
 
     const [trackArray, setTrackArray] = useState([]);
     const [albumName, setAlbumName] = useState("");
@@ -86,7 +85,7 @@ console.log(shuffled_array)
         <MDBRow>
 
         {shuffled_array.slice(0, 1).map((track, i) => (
-          <MDBCard className="tophomecard mb-5 ml-4" key={i}>
+          <MDBCard className="topbreathecard mb-5 ml-4" key={i}>
               <div className="text-white d-flex align-items-center py-5 px-4">
                 <div id="sleepcardtitletop">
                   <h3 className="card-title px-3" id="topcardhead"
@@ -109,5 +108,5 @@ console.log(shuffled_array)
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(TopCardHome);
+  )(TopCardBreathe);
  

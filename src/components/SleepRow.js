@@ -61,6 +61,7 @@ import {
 import { Button, Nav, Card, CardImg, Spinner } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import TopCardSleep from "./TopCardSleep";
 
 const SleepRow = () => {
   const [albumsArray, setAlbumsArray] = useState([]);
@@ -114,15 +115,16 @@ const SleepRow = () => {
           </div>
         </MDBRow>
         <MDBRow>
-          <MDBCard className="topsleepcard mb-5 ml-4">
+            <TopCardSleep/>
+         {/* <MDBCard className="topsleepcard mb-5 ml-4">
             <div className="text-white d-flex align-items-center">
               <div id="sleepcardtitletop">
                 <h3 className="card-title px-3 ml-4" id="topcardhead">
-                  Listen to the album of the day now
+                  Listen to the track of the day now
                 </h3>
               </div>
             </div>
-          </MDBCard>
+  </MDBCard> */}
         </MDBRow>
         <MDBRow className="mx-0">
         {
