@@ -53,7 +53,7 @@ return (
   
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navleft d-flex flex-row">
-        <Nav.Link href="/login"><Button variant="outline-dark" id="navbutton">About me</Button></Nav.Link>
+        <Nav.Link href="/login"><Button variant="outline-dark" id="navbutton">About</Button></Nav.Link>
       <div className="header__search mt-2"><Link className="text-white ml-auto" to="/home"><Button variant="outline-dark" id="navbuttonlogin">Home</Button></Link></div>
   </Nav>
   </Navbar.Collapse>

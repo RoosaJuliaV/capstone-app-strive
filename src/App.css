@@ -1129,7 +1129,7 @@ background: linear-gradient(90deg, rgba(59,17,83,1) 3%, rgba(50,19,70,1) 58%, rg
 
 .removefavtrackbtn {
 background-color: transparent !important;
-border: none !important;
+border: white !important;
 }
 
 #favheart {
