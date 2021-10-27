@@ -13,7 +13,7 @@
 .loginwrap {
   /* background-image: url("https://3.bp.blogspot.com/-0uTYbhRviZo/XFUltMXwpmI/AAAAAAAABz0/8qFN2fjMUBYCb8MOlLia1gRbRrrH9sNBQCKgBGAs/w1440-h900-c/mountain-purple-sky-nature-scenery-4-4K.jpg"); url("https://www.teahub.io/photos/full/226-2263628_wallpaper-winter-cold-mountain-shadow-lake-landscape-klntalersee.jpg"); */
 width: 120rem !important;
-height: 60rem !important;
+height: 100vh !important;
 background-color: rgb(7, 3, 12) !important;
 }
 
@@ -216,7 +216,7 @@ background-color: rgb(7, 3, 12) !important;
   transform: scale(1.10); 
 }
 
-#navbutton:hover, #joinbtn:hover {
+#navbutton:hover, #joinbtn:hover, #aboutbtn:hover {
   border-radius: 2rem;
   background-color: rgb(68, 1, 155) !important;
   color: white !important;
@@ -666,6 +666,13 @@ z-index: 1 !important;
 .loginwrap {
   background-color: rgb(7, 3, 12) !important;
   height: 60rem !important;
+  width: 100rem !important;
+  z-index: 100;
+}
+
+.aboutwrap {
+  background-color: rgb(7, 3, 12) !important;
+  height: 51.3rem !important;
   width: 100rem !important;
   z-index: 100;
 }
@@ -2225,116 +2232,103 @@ progress {
   }
 }
 
-/*
-.playIconAlbum {
-  margin-left: 1rem;
-  color: white;
+.aboutbgdiv {
+  background-color: rgb(23, 0, 49) !important;
+  height: 100% !important;
 }
 
-.footer-container .col-4 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.abouticoncontact {
+  margin-right: 2rem !important;
+  font-size: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 0.5rem !important;
 }
 
-.playbar {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background-color: rgb(31, 27, 27);
-  height: 80px;
-  z-index: 2;
-  padding-top: 3px;
-  padding-bottom: 3px;
+.abouticonts {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(89, 89, 240) !important;
 }
 
-.playbar .leftFooter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.abouticonjs {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(241, 204, 40) !important;
 }
 
-.playbar .middleFooter .col-12 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.abouticonreact {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(4, 148, 196) !important;
+}
+.abouticonredux {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(157, 78, 247) !important;
 }
 
-.playbar img {
-  height: 4rem;
-  width: 4rem;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  bottom: 0.3rem;
+.abouticoncss {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(68, 80, 245) !important;
 }
 
-.playbar .card {
-  background-color: #181818;
+.abouticonhtml {
+  margin-right: 2rem !important;
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1.5rem !important;
+  color: rgb(255, 145, 0) !important;
 }
 
-#footerButton {
-  margin-left: 0.3rem;
-  background-color: transparent;
-  border: 0;
+.iconcontainerabout {
+  position: fixed !important;
+  right: 12rem !important;
+  top: 11.5rem !important;
+  font-size: 3rem !important;
 }
 
-::-webkit-progress-value {
-  background: rgb(131, 129, 129);
-  border-radius: 100px;
+.contactcontainerabout {
+  position: fixed !important;
+  left: 5rem !important;
+  top: 30rem !important;
+  font-size: 1.5rem !important;
 }
 
-progress::-moz-progress-bar {
-  background: rgb(255, 255, 255);
-  border-radius: 100px;
+.skills {
+  font-size: 2.6rem !important;
 }
 
-progress::-webkit-progress-value {
-  background: rgb(255, 255, 255);
-  border-radius: 100px;
+.loginheading {
+  font-size: 2.3rem !important;
+  margin-bottom: 1rem !important;
 }
 
-progress::-webkit-progress-bar {
-  background: rgb(131, 129, 129);
-  border-radius: 100px;
+#aboutbtn {
+  border-radius: 2rem;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  height: 3.5rem !important;
+  width: 10rem !important;
+  background-color: rgb(87, 45, 143) !important;
+  color: white !important;
+  border-color: transparent !important;
+  font-size: 1.25rem !important;
+  position: fixed !important;
+  bottom: 6rem !important;
+  right: 13rem !important;
+ /* color: white !important;
+  background-color: transparent !important;
+  border-color: white !important; */
 }
 
-progress {
-  margin-top: 10px;
-  display: inline-block;
-  width: 50%;
-  max-height: 5px;progress
-  left: 490px;
-  top: 60px;
-  background: rgb(255, 255, 255);
-  border-radius: 60px;
-}
-
-.rightFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.playbar .card-text {
-  color: lightgrey;
-  font-size: 15px;
-}
-
-#minute1 {
-  color: lightgrey;
-  font-size: 13px;
-}
-
-#minute2 {
-  color: lightgrey;
-  font-size: 13px;
-}
-
-#footerAlbum {
-  color: white;
-  font-size: 13px;
-}
-
-*/

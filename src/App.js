@@ -19,6 +19,7 @@ import Breathe from "./pages/Breathe"
 import FavoritesPage from "./pages/FavoritesPage"
 import FavoriteTracksList from "./pages/FavoriteTracksList"
 import Album from "./pages/Album"
+import About from "./pages/About"
 
 
     function App() {
@@ -34,6 +35,8 @@ import Album from "./pages/Album"
         </Route>
         <Route path="/home"><Home/>
         </Route>
+        <Route path="/about"><About/>
+        </Route>
         <Route path="/favoritespage"> <FavoritesPage/>
         </Route>
         <Route path="/favoritetrackslist"> <FavoriteTracksList/>
@@ -47,7 +50,6 @@ import Album from "./pages/Album"
         <Route path="/album/:id"> <Album/>
         </Route>
         </Switch>
-        
         </div>
         {/* <Footer/> */}
             </Router>

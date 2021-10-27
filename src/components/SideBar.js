@@ -5,7 +5,7 @@ import { MDBIcon } from "mdbreact"
 import { Link } from "react-router-dom"
 import Footer from "./Footer"
 
-const withouSidebarRoutes = ["/login"];
+const withouSidebarRoutes = ["/login", "/about"];
 
 const SideBar = () => {
 

@@ -23,7 +23,7 @@ const About = () => {
     };
 
     return (
-        <div className="loginwrap">
+        <div className="aboutwrap">
         <div className="aboutbgdiv">
             <NavBar/>
             <MDBJumbotron fluid id="homejumbo">
