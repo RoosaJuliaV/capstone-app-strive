@@ -42,7 +42,7 @@ const MeditateRow = () => {
               <div className="container-fluid" id="meditatenavdiv">
                 <div className="col-lg-2 d-none d-lg-block"></div>
                 <h1 className="meditateheading mb-4 ml-4 mr-auto">
-                <Link to="/home" className="favtrackslink">
+                  <Link to="/home" className="favtrackslink">
                     <MDBIcon icon="angle-left" className="favarrow ml-1 mr-4" />
                   </Link>
                   <strong>Meditate</strong>
@@ -62,18 +62,7 @@ const MeditateRow = () => {
           </div>
         </MDBRow>
         <MDBRow>
-            <TopCardMeditate/>
-         {/* <MDBCard className="topmeditatecard mb-5 ml-4">
-         
-              <div className="text-white d-flex align-items-center">
-                <div id="sleepcardtitletop">
-                  <h3 className="card-title px-3 ml-4" id="topcardhead">
-                    Listen to the track of the day now<MDBIcon icon="angle-right" id="topfavicon"/>
-                  </h3>
-                </div>
-              </div>
-        
-  </MDBCard> */}
+          <TopCardMeditate />
         </MDBRow>
 
         <MDBRow className="mx-0">
